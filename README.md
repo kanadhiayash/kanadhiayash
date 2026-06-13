@@ -1,11 +1,11 @@
 # Hi, I'm Yash Kanadhia 👋
 
-**AI Product Designer · UX Systems · Agentic Workflow Engineering**  
+**Product Designer · UX Systems · Agentic Workflow Engineering**  
 📍 Toronto, Canada · Open to Ontario-based and remote-Ontario roles
 
 ---
 
-I design and build AI-native systems that connect people to outcomes, not just features.
+I design and build systems that connect people to outcomes, not just features.
 
 My work sits at the intersection of product strategy, UX design, and AI workflow engineering. I translate ambiguous problems into clean, repeatable systems. I've shipped mobile apps, full-stack platforms, and an AI operating system I use to run my own work every day.
 
@@ -38,7 +38,7 @@ Building toward agentic pipeline scripting and AI evaluation frameworks.
 
 ## Core Stack
 
-`React` · `React Native` · `Swift` · `Firebase` · `Figma` · `Node.js` · `MongoDB` · `Cloudflare R2`
+`React` · `React Native` · `Swift` · `Firebase` · `Figma` · `Node.js` · `MongoDB`
 
 ---
 
@@ -67,7 +67,7 @@ Ontario-based roles (or remote with Ontario companies) where I can own AI produc
 
 Fellowship programs at organizations pushing the frontier of AI collaboration (Perplexity, Anthropic, Google) are also on my radar.
 
-**Target role:** Associate Product Designer / AI Product Designer · Toronto · mid-2027
+**Target role:** Associate Product Designer / AI Product Designer · Toronto · 2027
 
 ---
 
