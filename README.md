@@ -1,90 +1,122 @@
 # Hi, I'm Yash Kanadhia 👋
 
-**Product Designer · UX Systems · Agentic Workflow Engineering**  
-📍 Toronto, Canada · Open to Ontario-based and remote-Ontario roles
+**AI Product & UX Systems Designer**  
+Toronto, Canada · Product Design · UX Systems · AI Workflow Design · Mobile/Web Product Building
+
+I design and build AI‑native products and operating systems that connect people to outcomes, not just features.
+
+My work sits across product strategy, UX systems, interface design, mobile/web development, and agentic workflows. I translate ambiguous problems into structured systems, working prototypes, public documentation, and recruiter‑readable proof.
+
+Before product design, I spent over five years in digital marketing and brand strategy. That background shaped how I think about user behaviour, distribution, constraints, and systems before any screen gets designed.
 
 ---
 
-I design and build systems that connect people to outcomes, not just features.
+## Current focus
 
-My work sits at the intersection of product strategy, UX design, and AI workflow engineering. I translate ambiguous problems into clean, repeatable systems. I've shipped mobile apps, full-stack platforms, and an AI operating system I use to run my own work every day.
+Building toward 2027 Product Designer, AI Product Designer, and Design Technologist roles through:
 
-Before I opened Figma, I spent 5+ years in digital marketing and brand strategy — leading social, content, and campaign systems for agencies and brands including Chakli Art (Mumbai) and conducting CX research at Onion Insights (Mumbai). Thinking in systems before I ever wrote a line of code made me a better product designer than any tutorial.
-
-I retrained at Centennial College (Interactive Media Management, 2024–2025), picking up UX research, information architecture, interaction design, mobile development, and full-stack thinking. Currently finishing a Mobile Application Development and Strategy program at George Brown College, graduating Fall 2026.
-
----
-
-## What I Build
-
-| Project | What it is | Stack | Status |
-|---------|------------|-------|--------|
-| [Zeref OS](https://github.com/kanadhiayash/zeref-os) | Local-first context and memory engine for AI-assisted work. Harness-agnostic, model-agnostic, privacy-first. Works across Claude, Cursor, Codex, Gemini, Windsurf, Aider. | Claude Agent SDK, AI workflows | Live |
-| PerFin OS | Personal finance intelligence app focused on behavioral insight UX, not just balance tracking. Rebuilt from an earlier project (SpendSight). | React Native, Gemini AI, Cloudflare R2, MongoDB | Final sprint |
-| FourRent | Swift iOS app for rental discovery and real-time communication. Designed and shipped independently. | SwiftUI, iOS | In progress |
-| StreamNexus | Full-stack streaming platform built end-to-end — product thinking from schema design to deployment. | Node.js, full-stack | Pushed · 85/100 |
-| Arthenticate | UX and design system project across digital ownership and media verticals. | Figma, UX Research | Case study in progress |
-| DriveDeal | UX and design system project in the automotive vertical. | Figma, UX Research | Case study in progress |
+- Shipped product proof across mobile, web, full‑stack, and AI workflow projects
+- Public operating manuals for project hygiene, GitHub velocity, software architecture, and design systems
+- Case studies with clear problem framing, design decisions, technical constraints, and evidence
+- AI workflow systems that make work easier to continue, audit, and improve
 
 ---
 
-## Current Learning Stack
+## What I build
 
-Building toward agentic pipeline scripting and AI evaluation frameworks.
-
-`Python` · `LangChain` · `LangGraph` · `RAG` · `Vector Databases` · `Claude API` · `Anthropic SDK`
-
----
-
-## Core Stack
-
-`React` · `React Native` · `Swift` · `Firebase` · `Figma` · `Node.js` · `MongoDB`
-
----
-
-## Certifications
-
-- **Scrum Fundamentals Certified** — SCRUMstudy · June 2026
+| Project | Focus | Stack / Medium | Status |
+|---|---|---|---|
+| [Zeref OS](https://github.com/kanadhiayash/zeref-os) | Local‑first context and memory engine for AI‑assisted work | Markdown, agent workflows, prompt systems | Live |
+| PerFin OS | AI‑native personal finance product focused on behavioural insight UX | React Native, Firebase, Gemini AI | Public packaging |
+| StreamNexus | Full‑stack streaming platform from schema to interface | Node.js, Firebase, React | GitHub proof |
+| FourRent | iOS rental product for discovery and communication | SwiftUI, Firebase | Public packaging |
+| Arthenticate | Digital ownership and AI‑resistant art protection case study | UX research, information architecture, design system | Case study in progress |
+| DriveDeal | Automotive deal‑flow UX redesign | UX research, journey mapping, prototyping | Case study in progress |
 
 ---
 
-## Education
+## Public practice manuals
 
-| Program | Institution | Period |
-|---------|------------|--------|
-| Mobile Application Development & Strategy (MADS) | George Brown College | 2025 – Fall 2026 |
-| Interactive Media Management | Centennial College | Fall 2024 – Fall 2025 |
+These repos document the operating standards I use across product, UX, engineering, AI‑assisted development, and portfolio‑grade work.
 
----
-
-## What I'm Looking For
-
-Ontario-based roles (or remote with Ontario companies) where I can own AI product and workflow strategy, not just execute a backlog. Especially interested in:
-
-- AI-native products and internal tooling
-- Workflow automation and human-AI systems design
-- Agentic systems and AI evaluation frameworks
-
-Fellowship programs at organizations pushing the frontier of AI collaboration (Perplexity, Anthropic, Google) are also on my radar.
-
-**Target role:** Associate Product Designer / AI Product Designer · Toronto · 2027
+| Manual | What it covers |
+|---|---|
+| [project‑practices](https://github.com/kanadhiayash/project-practices) | Folder architecture, naming, documentation, evidence handling, decision records, audits, and release readiness |
+| [github‑velocity‑practices](https://github.com/kanadhiayash/github-velocity-practices) | Branch discipline, PR review, CI/CD gates, release hygiene, dependency review, and safe AI‑assisted changes |
+| [development‑architecture‑practices](https://github.com/kanadhiayash/development-architecture-practices) | MVVM, MVC, layered systems, clean architecture, feature boundaries, state ownership, testing, and refactor decisions |
+| [design‑system‑practices](https://github.com/kanadhiayash/design-system-practices) | Design tokens, accessibility gates, component governance, UX standards, and design‑development handoff |
 
 ---
 
-## Background
+## Operating principles
 
-Prior to tech, I built and ran content, social, and campaign systems for agencies and brands across Mumbai and Toronto. That experience taught me to think about user behavior, distribution, and system constraints before any screen was ever designed.
+- Facts, assumptions, unknowns, and risks are separate.
+- Every public repo should be understandable in 30 seconds.
+- README files are product surfaces, not afterthoughts.
+- AI‑assisted work still needs human review, testing, and source discipline.
+- Public releases require privacy, secrets, setup, and claim verification.
+- Good systems reduce continuation cost for the next person, including future me.
+
+---
+
+## Stack
+
+| Area | Tools and practices |
+|---|---|
+| Product and UX | Product strategy, user flows, information architecture, design systems, UX writing, accessibility |
+| Design | Figma, interaction design, prototyping, component documentation |
+| Web and mobile | React, React Native, SwiftUI, Firebase, Node.js, MongoDB |
+| AI workflow | Claude, Cursor, GPT, Gemini, prompt systems, agent workflows, MCP learning |
+| Delivery | GitHub, branch discipline, README systems, checklists, release notes, documentation |
+
+---
+
+## Current learning
+
+Building deeper capability in:
+
+- Python for AI workflow scripting
+- Retrieval‑augmented generation (RAG) and vector database fundamentals
+- LangGraph and agentic workflow architecture
+- AI evaluation frameworks
+- Claude API and Anthropic tooling
+- Cloud AI fundamentals
+
+---
+
+## Selected credentials
+
+According to public LinkedIn search snippets, I completed the following certifications:
+
+- **Scrum Fundamentals Certified (SFC)** – Upskill with SCRUMStudy, issued June 2026【544734469886129†L0-L4】.
+- **Claude Code in Action** – Anthropic, issued June 2026【862171974340523†L0-L3】.
+
+Queued learning is tracked separately and will be added here only after completion.
+
+---
+
+## 2027 direction
+
+In 2027, I am targeting Product Designer, AI Product Designer, and Design Technologist roles in Toronto or remote Canada contexts.
+
+I am especially interested in:
+
+- AI‑native products and internal tools
+- Human–AI workflow design
+- Design systems and product infrastructure
+- Mobile and web products where design decisions connect to shipping constraints
+- Teams that value product thinking, execution hygiene, and clear documentation
 
 ---
 
 ## Connect
 
-- 🌐 [Portfolio](https://yashkanadhia.framer.website)
-- 💼 [LinkedIn](https://linkedin.com/in/yashkanadhia)
-- 🐙 [GitHub](https://github.com/kanadhiayash)
+- [Portfolio](https://yashkanadhia.framer.website)
+- [LinkedIn](https://www.linkedin.com/in/yashkanadhia)
+- [GitHub](https://github.com/kanadhiayash)
 
-Open to conversations. DM or connect.
+Open to conversations around product design, AI workflows, UX systems, mobile/web products, and public operating manuals.
 
 ---
 
-_This profile is the public build log. Updated as projects ship._
+_This profile is a public build log. Updated as projects ship and evidence improves._
