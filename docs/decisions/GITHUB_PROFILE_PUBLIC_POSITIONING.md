@@ -7,6 +7,8 @@
 
 This file is the canonical decision record for the public GitHub profile. Later changes require an explicit replacement decision.
 
+The locked future README structure is defined in `docs/decisions/GITHUB_PROFILE_INTERACTIVE_IA.md`. That decision explicitly excludes a profile changelog, memorabilia section, public version-history timeline, and decorative activity archive.
+
 ## Primary public title
 
 Use:
@@ -138,9 +140,11 @@ Static alternative:
 - The static alternative must remain directly accessible from the README.
 - The hero must remain understandable when animation is blocked or ignored.
 
-### Profile memorabilia rule
+### Profile personality guardrail
 
-The motion layer is the profile’s primary memorable signature. It should feel like an active product console rather than a generic developer decoration.
+The motion layer is the profile's primary memorable signature. It should feel like an active product console rather than generic developer decoration.
+
+Do not add a separate profile changelog, memorabilia section, public version-history timeline, or decorative activity archive.
 
 Do not add:
 
@@ -182,4 +186,5 @@ The static SVG wrapper contains embedded raster artwork and must not be describe
 - Exclude Six Sigma Yellow Belt from GitHub profile presentation.
 - Do not turn selected credential counts into a claim about the complete credential inventory.
 - Use the dark Living Product Console hero for the current release.
-- Preserve exact project, role, location, metric, credential, tool, hero-direction, and motion wording from this decision record unless a later explicit decision replaces it.
+- Follow the locked future IA in `docs/decisions/GITHUB_PROFILE_INTERACTIVE_IA.md`.
+- Preserve exact project, role, location, metric, credential, tool, hero-direction, motion, and future-IA wording from these decision records unless a later explicit decision replaces them.
