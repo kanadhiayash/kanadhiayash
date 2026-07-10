@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Living Product Console motion system using only the standard library."""
+"""Validate the staged interactive profile media contract using the standard library."""
 
 from __future__ import annotations
 
@@ -10,105 +10,124 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 
-PAIRS = (
+HERO_MOTION = ROOT / "assets/hero/yash-kanadhia-living-product-console-dark-motion.svg"
+HERO_STATIC = ROOT / "assets/hero/yash-kanadhia-living-product-console-dark.png"
+HERO_MOTION_REF = "./assets/hero/yash-kanadhia-living-product-console-dark-motion.svg"
+HERO_STATIC_REF = "./assets/hero/yash-kanadhia-living-product-console-dark.png"
+
+PROJECTS = (
     (
-        ROOT / "assets/hero/yash-kanadhia-living-product-console-dark-motion.svg",
-        ROOT / "assets/hero/yash-kanadhia-living-product-console-dark.png",
-        "./assets/hero/yash-kanadhia-living-product-console-dark-motion.svg",
-        "./assets/hero/yash-kanadhia-living-product-console-dark.png",
+        "PerFin OS",
+        ROOT / "assets/projects/perfin-os/cover.svg",
+        ROOT / "assets/projects/perfin-os/media-pending.svg",
+        "./assets/projects/perfin-os/cover.svg",
+        "./assets/projects/perfin-os/media-pending.svg",
     ),
     (
-        ROOT / "assets/projects/flagship-systems-motion.svg",
-        ROOT / "assets/projects/flagship-systems.svg",
-        "./assets/projects/flagship-systems-motion.svg",
-        "./assets/projects/flagship-systems.svg",
+        "For Rent",
+        ROOT / "assets/projects/for-rent/cover.svg",
+        ROOT / "assets/projects/for-rent/media-pending.svg",
+        "./assets/projects/for-rent/cover.svg",
+        "./assets/projects/for-rent/media-pending.svg",
     ),
     (
-        ROOT / "assets/projects/built-product-proof-motion.svg",
-        ROOT / "assets/projects/built-product-proof.svg",
-        "./assets/projects/built-product-proof-motion.svg",
-        "./assets/projects/built-product-proof.svg",
-    ),
-    (
-        ROOT / "assets/projects/product-design-studies-motion.svg",
-        ROOT / "assets/projects/product-design-studies.svg",
-        "./assets/projects/product-design-studies-motion.svg",
-        "./assets/projects/product-design-studies.svg",
+        "StreamNexus",
+        ROOT / "assets/projects/streamnexus/cover.svg",
+        ROOT / "assets/projects/streamnexus/media-pending.svg",
+        "./assets/projects/streamnexus/cover.svg",
+        "./assets/projects/streamnexus/media-pending.svg",
     ),
 )
 
 DURATION = re.compile(r'\bdur=["\'](?P<value>\d+(?:\.\d+)?)s["\']')
-FORBIDDEN = ("<script", "javascript:", "onload=", "onclick=", "<foreignObject")
+FORBIDDEN = ("<script", "javascript:", "onload=", "onclick=", "<foreignobject")
 
 
-def error(message: str, errors: list[str]) -> None:
+def add_error(errors: list[str], message: str) -> None:
     errors.append(message)
 
 
-def validate_svg(path: Path, errors: list[str]) -> None:
+def validate_svg(path: Path, errors: list[str], *, motion: bool) -> None:
     if not path.is_file() or path.stat().st_size == 0:
-        error(f"Motion asset missing or empty: {path.relative_to(ROOT)}", errors)
+        add_error(errors, f"SVG asset missing or empty: {path.relative_to(ROOT)}")
         return
 
     text = path.read_text(encoding="utf-8")
     lowered = text.lower()
 
-    if "<svg" not in text or 'role="img"' not in text:
-        error(f"Motion SVG must contain an SVG root and role=img: {path.relative_to(ROOT)}", errors)
-    if "<title" not in text or "<desc" not in text:
-        error(f"Motion SVG must contain title and description elements: {path.relative_to(ROOT)}", errors)
-    if not any(token in text for token in ("<animate", "<animateMotion", "@keyframes")):
-        error(f"Motion SVG contains no detectable animation: {path.relative_to(ROOT)}", errors)
+    if "<svg" not in lowered or 'role="img"' not in lowered:
+        add_error(errors, f"SVG must contain an SVG root and role=img: {path.relative_to(ROOT)}")
+    if "<title" not in lowered or "<desc" not in lowered:
+        add_error(errors, f"SVG must contain title and description elements: {path.relative_to(ROOT)}")
 
     for token in FORBIDDEN:
-        if token.lower() in lowered:
-            error(f"Unsafe or unsupported SVG token {token}: {path.relative_to(ROOT)}", errors)
+        if token in lowered:
+            add_error(errors, f"Unsafe or unsupported SVG token {token}: {path.relative_to(ROOT)}")
+
+    if not motion:
+        return
+
+    if not any(token in text for token in ("<animate", "<animateMotion", "@keyframes")):
+        add_error(errors, f"Motion SVG contains no detectable animation: {path.relative_to(ROOT)}")
 
     for match in DURATION.finditer(text):
         duration = float(match.group("value"))
         if duration < 4.0:
-            error(
-                f"Animation duration below four seconds in {path.relative_to(ROOT)}: {duration}s",
+            add_error(
                 errors,
+                f"Animation duration below four seconds in {path.relative_to(ROOT)}: {duration}s",
             )
 
 
 def validate_readme(text: str, errors: list[str]) -> None:
-    last_position = -1
-    for motion, static, motion_ref, static_ref in PAIRS:
-        validate_svg(motion, errors)
-        if not static.is_file() or static.stat().st_size == 0:
-            error(f"Static alternative missing or empty: {static.relative_to(ROOT)}", errors)
+    validate_svg(HERO_MOTION, errors, motion=True)
+    if not HERO_STATIC.is_file() or HERO_STATIC.stat().st_size == 0:
+        add_error(errors, f"Static hero missing or empty: {HERO_STATIC.relative_to(ROOT)}")
 
-        if text.count(motion_ref) != 1:
-            error(f"README must reference motion asset exactly once: {motion_ref}", errors)
-        if text.count(static_ref) != 1:
-            error(f"README must reference static alternative exactly once: {static_ref}", errors)
+    if text.count(HERO_MOTION_REF) != 1:
+        add_error(errors, "README must reference the motion hero exactly once.")
+    if text.count(HERO_STATIC_REF) != 1:
+        add_error(errors, "README must reference the static hero exactly once.")
+    if text.find(HERO_STATIC_REF) < text.find(HERO_MOTION_REF):
+        add_error(errors, "The static hero alternative must follow the motion hero.")
 
-        motion_position = text.find(motion_ref)
-        static_position = text.find(static_ref)
-        if motion_position == -1 or static_position == -1:
-            continue
-        if motion_position <= last_position:
-            error(f"Motion asset is out of expected page order: {motion_ref}", errors)
-        if static_position < motion_position:
-            error(f"Static alternative must follow its motion asset: {static_ref}", errors)
-        last_position = motion_position
+    last_cover_position = -1
+    for name, cover, pending, cover_ref, pending_ref in PROJECTS:
+        validate_svg(cover, errors, motion=False)
+        validate_svg(pending, errors, motion=False)
 
-    if text.count("<details>") < 4:
-        error("README must provide expandable static alternatives for all four motion surfaces.", errors)
+        if text.count(cover_ref) != 1:
+            add_error(errors, f"README must reference the {name} cover exactly once.")
+        if text.count(pending_ref) != 1:
+            add_error(errors, f"README must reference the {name} media state exactly once.")
+
+        cover_position = text.find(cover_ref)
+        pending_position = text.find(pending_ref)
+        if cover_position <= last_cover_position:
+            add_error(errors, f"Project cover is out of active order: {name}")
+        if pending_position < cover_position:
+            add_error(errors, f"Media state must follow the visible project cover: {name}")
+        last_cover_position = cover_position
+
+    if text.count("<details>") != 4:
+        add_error(errors, "README must contain one static-hero drawer and three project case-file drawers.")
     if "Slow ambient motion only" not in text:
-        error("README motion disclosure is missing.", errors)
+        add_error(errors, "README motion disclosure is missing.")
+    if text.count("Verified walkthrough capture pending") != 0:
+        add_error(
+            errors,
+            "Capture-state wording must remain inside accessible SVG metadata rather than duplicated as README image text.",
+        )
 
 
 def main() -> int:
     errors: list[str] = []
     if not README.is_file():
-        error("README.md is missing.", errors)
+        add_error(errors, "README.md is missing.")
     else:
         validate_readme(README.read_text(encoding="utf-8"), errors)
 
-    print("Profile motion validation")
+    print("Profile staged-media validation")
     if errors:
         print("Result: BLOCKED")
         for item in errors:
@@ -116,9 +135,10 @@ def main() -> int:
         return 1
 
     print("Result: PASS")
-    print("  OK: Four motion surfaces are present and ordered.")
-    print("  OK: Four static alternatives are present and ordered.")
-    print("  OK: Motion assets contain accessible metadata and slow animation timings.")
+    print("  OK: Motion hero and static alternative are present and ordered.")
+    print("  OK: Three active project covers are present and ordered.")
+    print("  OK: Three accessible media-capture states follow their covers.")
+    print("  OK: README provides one identity drawer and three case-file drawers.")
     return 0
 
 

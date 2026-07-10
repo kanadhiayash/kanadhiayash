@@ -1,145 +1,154 @@
 # GitHub Profile Release Checklist
 
-**Status:** MOTION BRANCH AUTOMATED GATES PASS, MANUAL RENDER AND FINAL APPROVAL OPEN  
+**Status:** STAGED INTERACTIVE BRANCH UNDER REVIEW  
 **Release surface:** `kanadhiayash/kanadhiayash` profile README  
+**Branch:** `docs/profile__interactive-built-products`  
 **Quality gate:** `.github/workflows/profile-quality.yml`
 
 ## Release rule
 
-Do not merge or call the Living Product Console motion layer released until every remaining manual blocking item is complete.
+Do not merge or describe the staged interactive profile as released until automated gates pass and every remaining manual blocking item is reviewed.
 
-## Automated blocking checks
+## Locked public copy
 
-The release validator checks:
+The release validator must preserve:
 
-- `README.md` exists and is valid UTF-8 text.
-- Product Designer remains the sole hero title.
-- Toronto, Ontario, Canada remains the public location.
-- The approved tagline remains unchanged.
-- The metric row remains exactly:
-  - 2 shipped projects
-  - 1 MADS team project
-  - 5 selected certifications
-- The tool row remains exactly:
-  - Figma
-  - React
-  - Swift
-  - Firebase
-  - Claude
-  - Codex
-- Zeref Memory Engine and PerFin OS remain the flagship systems.
-- PerFin OS remains credited to Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq.
-- The five selected credentials remain present.
-- Six Sigma Yellow Belt remains excluded from the GitHub profile.
-- The four dynamic-module markers each appear exactly once.
-- Every README local image and local link resolves inside the repository.
-- Every README image has non-empty alt text.
-- Every README internal anchor resolves.
-- External links use HTTPS.
-- Definitive external 404 and 410 responses block release.
-- Temporary rate limits, access restrictions, and network failures produce warnings rather than false release failures.
-- README placeholders are absent.
-- Public text files contain no detected credentials, private keys, credentialed MongoDB URIs, or private workstation paths.
-- The superseded banner is not referenced by the README.
+- Yash Kanadhia
+- Product Designer as the sole hero title
+- Toronto, Ontario, Canada
+- I design and build systems that connect people to outcomes.
+- 2 shipped projects · 1 MADS team project · 5 selected certifications
+- Figma · React · Swift · Firebase · Claude · Codex
 
-## Required motion and static pairs
+## Active information architecture
 
-The following files must remain under the locked paths:
+The staged branch must render in this order:
+
+1. Motion hero
+2. Command palette
+3. Featured work
+4. Built product case files
+5. Evidence and practice
+6. Live build console
+7. Selected credentials
+8. Connect
+
+Product Design and AI Systems are parked for this stage. Their long-term positions remain documented in `docs/decisions/GITHUB_PROFILE_INTERACTIVE_IA.md`.
+
+## Active project contract
+
+The active order is:
+
+1. PerFin OS
+2. For Rent
+3. StreamNexus
+
+Each project must have:
+
+- one visible metadata cover;
+- compact public metadata;
+- one user-triggered case-file drawer;
+- one clearly labeled media-capture state;
+- problem statement;
+- role and ownership wording;
+- key workflow;
+- system map;
+- evidence links;
+- known limitations;
+- return route to Featured Work.
+
+PerFin OS must credit:
+
+- Yash Kanadhia
+- Alexis Gorospe
+- Sarmad Tariq
+
+The profile must not imply solo ownership.
+
+## Required active assets
 
 ```text
 assets/hero/yash-kanadhia-living-product-console-dark-motion.svg
 assets/hero/yash-kanadhia-living-product-console-dark.png
-assets/projects/flagship-systems-motion.svg
-assets/projects/flagship-systems.svg
-assets/projects/built-product-proof-motion.svg
-assets/projects/built-product-proof.svg
-assets/projects/product-design-studies-motion.svg
-assets/projects/product-design-studies.svg
+assets/hero/yash-kanadhia-living-product-console-dark.jpg
+assets/hero/yash-kanadhia-living-product-console-dark.svg
+assets/projects/perfin-os/cover.svg
+assets/projects/perfin-os/media-pending.svg
+assets/projects/for-rent/cover.svg
+assets/projects/for-rent/media-pending.svg
+assets/projects/streamnexus/cover.svg
+assets/projects/streamnexus/media-pending.svg
 ```
 
-The animated SVGs are the primary README visuals. Their paired static assets are directly accessible through collapsed alternatives.
+## Automated blocking checks
 
-Required motion checks:
+The quality gate checks:
 
-- Each animated SVG contains an SVG root and `role="img"`.
-- Each animated SVG has a title and description.
-- Motion remains slow and ambient.
-- No rapid flashing, hard strobing, or large jumps are present.
-- No claim or project fact exists only in motion.
-- The README references each motion asset exactly once.
-- The README references each static alternative exactly once.
-- Each static alternative follows its motion asset.
-- The README order remains hero, flagship systems, built product proof, product design studies.
-- Alt text preserves role, project, attribution, and limitation context.
+- all Python profile scripts compile;
+- controlled dynamic modules remain structurally valid;
+- the motion hero and static alternative remain present and ordered;
+- the hero uses slow, accessible motion metadata;
+- all six active project SVGs exist and include accessible title and description elements;
+- the three project covers appear in the active project order;
+- the three media-capture states remain inside project drawers;
+- the README contains exactly four `<details>` elements: one static hero alternative and three project drawers;
+- every README local image and link resolves;
+- every README image has descriptive alt text;
+- every internal anchor resolves;
+- external links use HTTPS;
+- definitive external 404 and 410 responses block release;
+- transient source failures produce warnings rather than false release failures;
+- disallowed draft markers are absent from the README;
+- public text files contain no detected credentials, private keys, credentialed MongoDB URIs, or private workstation paths;
+- PerFin OS ownership and all three team names remain present;
+- every active project includes a known-limitations section and at least one verified evidence destination;
+- the five selected credentials remain present once each;
+- Six Sigma Yellow Belt remains excluded;
+- the four dynamic-module markers each appear exactly once.
 
-Required static checks:
+## Automated status
 
-- Hero PNG dimensions are at least 1600 by 700 pixels.
-- The hero PNG uses the approved wide aspect ratio.
-- The hero JPG has a valid JPEG signature.
-- The static SVG files contain SVG roots and image roles.
+- [ ] Profile scripts compile
+- [ ] Dynamic modules validate
+- [ ] Motion hero validates
+- [ ] Interactive structure validates
+- [ ] Local image and link contract validates
+- [ ] Public-copy and ownership contract validates
+- [ ] Secret and private-path scan passes
+- [ ] Online link gate passes or reports warnings only
 
-## Verified automated status
-
-### PASS: profile foundation
-
-- Code and configuration whitespace passed.
-- All profile scripts compiled.
-- The dynamic updater passed its structural checks.
-- The motion validator passed all four motion surfaces and all four static alternatives.
-- Locked copy, attribution, metrics, credentials, tools, local assets, anchors, alt text, placeholders, private paths, and secret-pattern checks passed.
-
-### PASS: release readiness
-
-- The complete hero bundle remains present under `assets/hero/`.
-- The hero dimensions and aspect ratio passed.
-- The motion and static README references passed.
-- The superseded banner files remain removed.
-
-### PASS: online link gate
-
-- The definitive external-link scan passed.
-- The unpublished Zeref GitHub Release URL remains replaced by the verified `docs/RELEASE_LOG.md` record.
-- LinkedIn and Substack access restrictions remain warnings because those public profile pages do not provide reliable automated HEAD or unauthenticated GET responses.
-- The workflow publishes `profile-link-report` as a review artifact.
-
-## Motion-branch verification
-
-- [x] Profile foundation passes.
-- [x] Motion consistency gate passes.
-- [x] Release readiness passes.
-- [x] Online link gate passes.
-- [x] All four animated SVG files resolve as local repository assets.
-- [x] All four static alternatives resolve as local repository assets.
-- [x] No locked title, metric, tool, credential, attribution, or dynamic-marker value drifted.
-
-## Remaining manual blocking checks
+## Manual blocking checks
 
 Review the rendered README in GitHub:
 
-- [ ] Desktop width in GitHub light appearance.
-- [ ] Desktop width in GitHub dark appearance.
-- [ ] Narrow mobile width.
-- [ ] The SVG animations actually play through GitHub or its image proxy.
-- [ ] The scan, pulses, orbit, and lower signals remain subtle.
-- [ ] No motion flashes or distracts from the profile content.
-- [ ] Name, title, location, and tagline remain readable.
-- [ ] Hero metrics and tool labels remain legible without zooming.
-- [ ] Zeref and PerFin remain visually dominant.
-- [ ] PerFin is visibly identified as a team project.
-- [ ] All four expandable static alternatives render correctly.
-- [ ] All three project media boards render without clipping.
-- [ ] Dynamic modules do not overpower selected work.
-- [ ] The page remains understandable when images fail to load because alt text and written project sections remain complete.
+- [ ] Desktop width in GitHub light appearance
+- [ ] Desktop width in GitHub dark appearance
+- [ ] Narrow mobile width
+- [ ] Motion hero plays or fails gracefully through GitHub image proxy
+- [ ] Static hero alternative renders correctly
+- [ ] Command-palette routes reach the correct sections
+- [ ] PerFin OS, For Rent, and StreamNexus covers remain readable without zooming
+- [ ] Cover text does not clip at narrow widths
+- [ ] Every case-file drawer opens and closes correctly
+- [ ] Mermaid diagrams render and remain understandable from surrounding text
+- [ ] Media-capture states cannot be mistaken for product screenshots
+- [ ] PerFin OS team ownership is visible before contribution claims
+- [ ] For Rent does not imply App Store release or deployed production backend
+- [ ] StreamNexus does not imply real payments, playback, subscriptions, users, or production deployment
+- [ ] Dynamic modules remain secondary to selected work
+- [ ] The page remains understandable when images and diagrams fail to load
+- [ ] All external evidence destinations open the intended public source
+- [ ] Product Design and AI Systems do not appear as incomplete public sections
+- [ ] No profile changelog, memorabilia, counter, music widget, quote widget, or decorative activity archive appears
 
 ## Dynamic-module operational check
 
 1. Run **Profile Refresh** manually from GitHub Actions.
-2. Confirm it creates or updates `automation/profile-refresh` only when content changes.
+2. Confirm it creates or updates `automation/profile-refresh` only when reviewed content changes.
 3. Review the generated pull request.
 4. Confirm changes stay inside the two marker regions.
-5. Confirm a failed Substack source preserves the previous reviewed content.
-6. Merge the automation pull request only after titles, URLs, dates, attribution, and relevance are verified.
+5. Confirm a failed writing source preserves the previous reviewed content.
+6. Merge the automation pull request only after titles, URLs, attribution, and relevance are verified.
 
 ## Local verification commands
 
@@ -157,31 +166,28 @@ python3 scripts/validate_profile_links.py
 git diff --check
 ```
 
-## Release approval record
+## Approval record
 
 ```text
-Automated quality gate: PASS
-Motion consistency gate: PASS
-Online link gate: PASS
-GitHub light motion render: BLOCKED
-GitHub dark motion render: BLOCKED
-Mobile motion render: BLOCKED
-Static alternatives render: BLOCKED
-Profile Refresh review PR: BLOCKED
-Final public-claim review: BLOCKED
-Approved by: ____________________
-Approval date: __________________
-Release commit: _________________
+Automated quality gate: __________________
+GitHub light render: _____________________
+GitHub dark render: ______________________
+Mobile render: ___________________________
+Case-file interaction review: ___________
+Ownership and limitations review: _______
+Final public-claim review: ______________
+Approved by: _____________________________
+Approval date: ___________________________
+Release commit: __________________________
 ```
 
-## Non-blocking enhancement backlog
+## Non-blocking media backlog
 
-These items improve the portfolio but do not block the Living Product Console motion release:
+- PerFin OS reviewed workflow capture and static snapshots
+- For Rent renter or landlord workflow capture and static snapshots
+- StreamNexus browse, search, detail, or rental workflow capture and static snapshots
+- Arthenticate module and approved prototype media
+- DriveDeal module and approved prototype media
+- Zeref Memory Engine case file and verified demonstration media
 
-- Zeref product demonstration loop beyond the profile hero, with a still equivalent.
-- Verified PerFin OS screenshots and workflow recording.
-- Verified For Rent renter and landlord captures.
-- Verified StreamNexus runtime captures.
-- Approved Arthenticate and DriveDeal prototype media.
-
-Do not describe the profile as media-complete until that enhancement backlog is finished.
+Do not describe the profile as media-complete until the active project media states have been replaced with reviewed captures.
