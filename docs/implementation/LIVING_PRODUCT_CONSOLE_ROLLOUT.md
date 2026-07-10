@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE  
 **Decision source:** `docs/decisions/GITHUB_PROFILE_PUBLIC_POSITIONING.md`  
-**Current branch:** `docs/profile__lock-dark-hero`
+**Current branch:** `feat/profile__controlled-dynamic-modules`
 
 This file tracks the controlled rollout of the GitHub profile redesign. Each phase should remain reviewable and should preserve the locked public positioning decisions.
 
@@ -89,18 +89,35 @@ The enhancement backlog does not block the static Phase 3 release. It remains re
 
 ## Phase 4: Controlled dynamic modules
 
-**Status:** NEXT
+**Status:** COMPLETE ON REVIEW BRANCH
 
-Planned:
+Delivered:
 
-- Add bounded latest-writing updates from Substack.
-- Add selected build or release signals only when they are meaningful and verified.
-- Keep generated content inside explicit README markers.
-- Do not add vanity counters, streak cards, random quotes, Spotify widgets, or raw commit feeds.
+- Added bounded latest-writing and selected-build-signal regions to `README.md`.
+- Added explicit start and end markers for both generated regions.
+- Added `data/profile_sources.json` as the small reviewed source allowlist.
+- Added `scripts/update_dynamic_modules.py` using only the Python standard library.
+- Limited writing output to three public Substack entries.
+- Limited build output to two signals from Zeref Memory Engine and PerFin OS.
+- Added HTTPS and host allowlists for Substack and GitHub.
+- Preserved the last reviewed README content when a source fails.
+- Added offline marker and configuration validation.
+- Added `.github/workflows/profile-refresh.yml` for weekly and manual refreshes.
+- Configured automation to open or update `automation/profile-refresh` instead of committing directly to `main`.
+- Added `docs/automation/PROFILE_DYNAMIC_MODULES.md` as the operating and review guide.
+- Excluded vanity counters, streak cards, random quotes, Spotify widgets, and raw commit feeds.
+
+Verification required before merge:
+
+- Run `python3 scripts/update_dynamic_modules.py --check`.
+- Run the updater once with public network access and review the README diff.
+- Confirm a source failure leaves the previous content unchanged.
+- Confirm the workflow can create a review pull request with repository permissions.
+- Confirm generated output changes only the two marker regions.
 
 ## Phase 5: Quality gates and release
 
-**Status:** PLANNED
+**Status:** NEXT
 
 Planned:
 
@@ -114,5 +131,6 @@ Planned:
 ## Current risks
 
 - The approved dark hero is generated raster artwork. The SVG export is a faithful embedded-image wrapper rather than editable vector paths.
-- The connector-visible PR does not yet contain the approved hero PNG, JPG, or SVG under `assets/hero/`.
+- The connector-visible repository does not yet contain the approved hero PNG, JPG, or SVG under `assets/hero/`.
 - Verified product screenshots and recordings remain an enhancement backlog and must not be represented as already published.
+- The Substack feed candidates require a live workflow run to confirm which endpoint currently returns the public feed.

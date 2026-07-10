@@ -147,6 +147,23 @@ I use AI as an implementation partner, not as a substitute for product or engine
 
 ---
 
+## Latest writing
+
+<!-- DYNAMIC:WRITING:START -->
+- [View all writing on Substack](https://substack.com/@yashkanadhia)
+<!-- DYNAMIC:WRITING:END -->
+
+## Selected build signals
+
+<!-- DYNAMIC:SIGNALS:START -->
+- **Zeref Memory Engine:** [v1.0.0 release](https://github.com/kanadhiayash/zeref-memory-engine/releases/tag/v1.0.0)
+- **PerFin OS:** [PR #69: extract session and authentication ownership](https://github.com/SarmadTariq/PerfinOS/pull/69)
+<!-- DYNAMIC:SIGNALS:END -->
+
+These sections update only through a reviewable automation pull request. Source failures preserve the last reviewed content.
+
+---
+
 ## Selected credentials
 
 - **AI Fluency: Framework & Foundations**, Anthropic, June 2026
