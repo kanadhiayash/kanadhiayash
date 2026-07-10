@@ -7,8 +7,19 @@
 </p>
 
 <p align="center">
-  <sub>Motion is decorative. <a href="./assets/hero/yash-kanadhia-living-product-console-dark.png">View the static hero</a>.</sub>
+  <sub>Slow ambient motion only. The same content is available in the static alternative below.</sub>
 </p>
+
+<details>
+  <summary>View static hero</summary>
+  <p align="center">
+    <img
+      src="./assets/hero/yash-kanadhia-living-product-console-dark.png"
+      alt="Static Living Product Console for Yash Kanadhia, Product Designer, featuring Zeref Memory Engine and PerFin OS as a MADS team project."
+      width="100%"
+    />
+  </p>
+</details>
 
 <h1 align="center">Yash Kanadhia</h1>
 
