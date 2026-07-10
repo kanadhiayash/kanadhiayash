@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the staged interactive profile media contract using the standard library."""
+"""Validate the dual-layer profile media and interaction contract."""
 
 from __future__ import annotations
 
@@ -15,32 +15,23 @@ HERO_STATIC = ROOT / "assets/hero/yash-kanadhia-living-product-console-dark.png"
 HERO_MOTION_REF = "./assets/hero/yash-kanadhia-living-product-console-dark-motion.svg"
 HERO_STATIC_REF = "./assets/hero/yash-kanadhia-living-product-console-dark.png"
 
-PROJECTS = (
-    (
-        "PerFin OS",
-        ROOT / "assets/projects/perfin-os/cover.svg",
-        ROOT / "assets/projects/perfin-os/media-pending.svg",
-        "./assets/projects/perfin-os/cover.svg",
-        "./assets/projects/perfin-os/media-pending.svg",
-    ),
-    (
-        "For Rent",
-        ROOT / "assets/projects/for-rent/cover.svg",
-        ROOT / "assets/projects/for-rent/media-pending.svg",
-        "./assets/projects/for-rent/cover.svg",
-        "./assets/projects/for-rent/media-pending.svg",
-    ),
-    (
-        "StreamNexus",
-        ROOT / "assets/projects/streamnexus/cover.svg",
-        ROOT / "assets/projects/streamnexus/media-pending.svg",
-        "./assets/projects/streamnexus/cover.svg",
-        "./assets/projects/streamnexus/media-pending.svg",
-    ),
+MEDIA_SLOTS = (
+    ("Zeref Memory Engine", ROOT / "assets/profile-media/zeref-media-slot.svg", "./assets/profile-media/zeref-media-slot.svg"),
+    ("PerFin OS", ROOT / "assets/profile-media/perfin-os-media-slot.svg", "./assets/profile-media/perfin-os-media-slot.svg"),
+    ("For Rent", ROOT / "assets/profile-media/for-rent-media-slot.svg", "./assets/profile-media/for-rent-media-slot.svg"),
+    ("StreamNexus", ROOT / "assets/profile-media/streamnexus-media-slot.svg", "./assets/profile-media/streamnexus-media-slot.svg"),
 )
 
 DURATION = re.compile(r'\bdur=["\'](?P<value>\d+(?:\.\d+)?)s["\']')
-FORBIDDEN = ("<script", "javascript:", "onload=", "onclick=", "<foreignobject")
+FORBIDDEN_SVG = ("<script", "javascript:", "onload=", "onclick=", "<foreignobject")
+LEGACY_README_REFERENCES = (
+    "./assets/projects/perfin-os/cover.svg",
+    "./assets/projects/perfin-os/media-pending.svg",
+    "./assets/projects/for-rent/cover.svg",
+    "./assets/projects/for-rent/media-pending.svg",
+    "./assets/projects/streamnexus/cover.svg",
+    "./assets/projects/streamnexus/media-pending.svg",
+)
 
 
 def add_error(errors: list[str], message: str) -> None:
@@ -54,29 +45,21 @@ def validate_svg(path: Path, errors: list[str], *, motion: bool) -> None:
 
     text = path.read_text(encoding="utf-8")
     lowered = text.lower()
-
     if "<svg" not in lowered or 'role="img"' not in lowered:
         add_error(errors, f"SVG must contain an SVG root and role=img: {path.relative_to(ROOT)}")
     if "<title" not in lowered or "<desc" not in lowered:
         add_error(errors, f"SVG must contain title and description elements: {path.relative_to(ROOT)}")
-
-    for token in FORBIDDEN:
+    for token in FORBIDDEN_SVG:
         if token in lowered:
             add_error(errors, f"Unsafe or unsupported SVG token {token}: {path.relative_to(ROOT)}")
 
-    if not motion:
-        return
-
-    if not any(token in text for token in ("<animate", "<animateMotion", "@keyframes")):
-        add_error(errors, f"Motion SVG contains no detectable animation: {path.relative_to(ROOT)}")
-
-    for match in DURATION.finditer(text):
-        duration = float(match.group("value"))
-        if duration < 4.0:
-            add_error(
-                errors,
-                f"Animation duration below four seconds in {path.relative_to(ROOT)}: {duration}s",
-            )
+    if motion:
+        if not any(token in text for token in ("<animate", "<animateMotion", "@keyframes")):
+            add_error(errors, f"Motion SVG contains no detectable animation: {path.relative_to(ROOT)}")
+        for match in DURATION.finditer(text):
+            duration = float(match.group("value"))
+            if duration < 4.0:
+                add_error(errors, f"Animation duration below four seconds in {path.relative_to(ROOT)}: {duration}s")
 
 
 def validate_readme(text: str, errors: list[str]) -> None:
@@ -91,52 +74,36 @@ def validate_readme(text: str, errors: list[str]) -> None:
     if text.find(HERO_STATIC_REF) < text.find(HERO_MOTION_REF):
         add_error(errors, "The static hero alternative must follow the motion hero.")
 
-    featured_start = text.find("## Featured work")
-    case_files_start = text.find("## Built product case files")
-    if featured_start == -1 or case_files_start == -1 or featured_start >= case_files_start:
-        add_error(errors, "Featured Work and Built Product Case Files sections are missing or out of order.")
-        featured = ""
-    else:
-        featured = text[featured_start:case_files_start]
+    scan = text.find("## 60-second profile")
+    evidence = text.find("## Deep evidence")
+    if scan == -1 or evidence == -1 or scan >= evidence:
+        add_error(errors, "The visible 60-second profile must precede Deep evidence.")
 
-    if featured.count('<table role="presentation">') != 1:
-        add_error(errors, "Featured Work must contain one presentation table for compact project cards.")
-    if featured.count('<td width="33%" valign="top">') != 3:
-        add_error(errors, "Featured Work must contain three equal-width compact project cards.")
+    for legacy in LEGACY_README_REFERENCES:
+        if legacy in text:
+            add_error(errors, f"Legacy thumbnail or media-state reference must not appear in README: {legacy}")
 
-    last_thumbnail_position = -1
-    for name, cover, pending, cover_ref, pending_ref in PROJECTS:
-        validate_svg(cover, errors, motion=False)
-        validate_svg(pending, errors, motion=False)
+    last_position = evidence
+    for name, path, reference in MEDIA_SLOTS:
+        validate_svg(path, errors, motion=False)
+        if text.count(reference) != 1:
+            add_error(errors, f"README must reference the {name} media slot exactly once.")
+            continue
+        current = text.find(reference)
+        if current <= last_position:
+            add_error(errors, f"Media slot is missing or out of deep-evidence order: {name}")
+        last_position = current
 
-        if text.count(cover_ref) != 2:
-            add_error(errors, f"README must reference the {name} cover twice: thumbnail and case-file cover.")
-        if featured.count(cover_ref) != 1:
-            add_error(errors, f"Featured Work must reference the {name} cover exactly once as a thumbnail.")
-        if text.count(pending_ref) != 1:
-            add_error(errors, f"README must reference the {name} media state exactly once.")
-
-        thumbnail_position = featured.find(cover_ref)
-        second_cover_position = text.find(cover_ref, text.find(cover_ref) + 1)
-        pending_position = text.find(pending_ref)
-
-        if thumbnail_position <= last_thumbnail_position:
-            add_error(errors, f"Project thumbnail is out of active order: {name}")
-        if second_cover_position == -1 or second_cover_position < case_files_start:
-            add_error(errors, f"Full-width case-file cover is missing for: {name}")
-        if pending_position < second_cover_position:
-            add_error(errors, f"Media state must follow the full-width case-file cover: {name}")
-        last_thumbnail_position = thumbnail_position
-
-    if text.count("<details>") != 4:
-        add_error(errors, "README must contain one static-hero drawer and three project case-file drawers.")
+    if text.count("<details>") != 5 or text.count("</details>") != 5:
+        add_error(errors, "README must contain one static-hero drawer and four evidence drawers.")
+    if text.count("<summary><strong>Inspect ") != 4:
+        add_error(errors, "README must provide exactly four evidence-drawer summaries.")
     if "Slow ambient motion only" not in text:
         add_error(errors, "README motion disclosure is missing.")
-    if text.count("Verified walkthrough capture pending") != 0:
-        add_error(
-            errors,
-            "Capture-state wording must remain inside accessible SVG metadata rather than duplicated as README image text.",
-        )
+    if '<table role="presentation">' in text:
+        add_error(errors, "README must not restore the compact project-card presentation table.")
+    if "```mermaid" in text:
+        add_error(errors, "README must keep architecture diagrams in project repositories, not the profile surface.")
 
 
 def main() -> int:
@@ -146,7 +113,7 @@ def main() -> int:
     else:
         validate_readme(README.read_text(encoding="utf-8"), errors)
 
-    print("Profile staged-media validation")
+    print("Profile dual-layer media validation")
     if errors:
         print("Result: BLOCKED")
         for item in errors:
@@ -155,9 +122,9 @@ def main() -> int:
 
     print("Result: PASS")
     print("  OK: Motion hero and static alternative are present and ordered.")
-    print("  OK: Three compact Featured Work thumbnails are present and ordered.")
-    print("  OK: Three full-width case-file covers precede accessible media states.")
-    print("  OK: README provides one identity drawer and three case-file drawers.")
+    print("  OK: The visible 60-second profile precedes the deep-evidence layer.")
+    print("  OK: Four accessible media slots are reserved inside evidence drawers.")
+    print("  OK: Legacy thumbnail cards, duplicate covers, and profile Mermaid diagrams are absent.")
     return 0
 
 

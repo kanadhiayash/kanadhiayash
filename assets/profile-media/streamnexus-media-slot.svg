@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">StreamNexus media slot</title>
+  <desc id="desc">Verified browse, detail, or rental workflow captures will be added after review.</desc>
+  <rect width="1600" height="900" fill="#F8F6F1"/>
+  <rect x="48" y="48" width="1504" height="804" rx="24" fill="#EEEAE4" stroke="#4A5240" stroke-width="2"/>
+  <path d="M96 152H1504M96 748H1504" stroke="#E1DDD5" stroke-width="2"/>
+  <rect x="96" y="96" width="216" height="44" rx="6" fill="#4A5240"/>
+  <text x="204" y="124" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing="1.5" fill="#F8F6F1">MEDIA SLOT</text>
+  <g fill="none" stroke="#706D69" stroke-width="3">
+    <rect x="560" y="266" width="480" height="270" rx="18" stroke-dasharray="12 12"/>
+    <path d="M650 466l92-84 78 64 72-54 76 74"/>
+    <circle cx="720" cy="346" r="28"/>
+  </g>
+  <text x="800" y="620" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="54" font-weight="700" fill="#1C1B18">StreamNexus</text>
+  <text x="800" y="674" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="500" fill="#4B4944">Product media reserved</text>
+  <text x="800" y="790" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#706D69">Verified public-safe media will be added later.</text>
+</svg>
