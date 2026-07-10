@@ -2,13 +2,13 @@
 
 **Status:** ACTIVE  
 **Decision source:** `docs/decisions/GITHUB_PROFILE_PUBLIC_POSITIONING.md`  
-**Branch:** `docs/profile__lock-public-positioning`
+**Current branch:** `docs/profile__lock-dark-hero`
 
 This file tracks the controlled rollout of the GitHub profile redesign. Each phase should remain reviewable and should preserve the locked public positioning decisions.
 
 ## Phase 1: Information architecture and copy
 
-**Status:** COMPLETE ON REVIEW BRANCH
+**Status:** COMPLETE
 
 Delivered:
 
@@ -26,33 +26,44 @@ Delivered:
 - The approved tool row is Figma, React, Swift, Firebase, Claude, and Codex.
 - Development and AI-assisted execution remain supporting proof.
 
-Verification required before merge:
-
-- Render README in GitHub light theme.
-- Render README in GitHub dark theme.
-- Check mobile-width readability.
-- Confirm every public link resolves.
-- Confirm project attribution and limitations remain accurate.
-
 ## Phase 2: Hero visual system
 
-**Status:** NEXT
+**Status:** COMPLETE, ASSET PLACEMENT PENDING
 
-Planned:
+Locked decisions:
 
-- Replace the existing static banner with the approved Living Product Console hero.
+- Use the approved dark Living Product Console hero as the only active banner direction.
+- Do not produce or publish a light-mode hero for the current release.
 - Use Product Designer as the sole title.
 - Show Toronto, Ontario, Canada.
 - Show the approved tagline.
 - Use exactly these metrics: 2 shipped projects, 1 MADS team project, 5 selected certifications.
 - Use only Figma, React, Swift, Firebase, Claude, and Codex in the tool row.
-- Produce light and dark static assets.
-- Produce one restrained animated asset only after the static composition is approved.
-- Include accessible alt text and a still equivalent.
+- Keep Zeref Memory Engine and PerFin OS as the dominant visual cards.
+- PerFin OS must carry the MADS team project cue and must not imply solo ownership.
+- Keep one static hero as the approved baseline before any later motion experiment.
+
+Exported asset stem:
+
+`yash-kanadhia-living-product-console-dark`
+
+Prepared formats:
+
+- PNG, high-resolution raster master.
+- JPG, high-quality compressed export.
+- SVG, raster-faithful placement wrapper. It is not a fully editable vector reconstruction.
+
+Pending repository action:
+
+- Save the approved files under `assets/hero/`.
+- Reference the PNG from `README.md`.
+- Add descriptive alt text.
+- Verify rendered readability at GitHub desktop and mobile widths.
+- Remove or archive the superseded banner only after the new asset is confirmed in the rendered README.
 
 ## Phase 3: Project media
 
-**Status:** PLANNED
+**Status:** NEXT
 
 Planned:
 
@@ -89,4 +100,4 @@ Planned:
 
 ## Current risk
 
-The existing banner image may still contain the previous six-certification metric. It must not be reused in the final profile. Phase 2 will replace it before merge.
+The approved dark hero is generated raster artwork. The SVG export is a faithful embedded-image wrapper rather than editable vector paths. A manually reconstructed vector source would be a separate design task.
