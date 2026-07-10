@@ -1,0 +1,96 @@
+name: Profile Quality Gate
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "assets/**"
+      - "data/**"
+      - "docs/**"
+      - "scripts/**"
+      - ".github/workflows/**"
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  profile-foundation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Check code and configuration whitespace
+        run: |
+          git diff --check origin/${{ github.base_ref || 'main' }}...HEAD -- \
+            '*.py' '*.json' '*.yml' '*.yaml' '*.svg'
+
+      - name: Compile profile scripts
+        run: |
+          python3 -m py_compile scripts/update_dynamic_modules.py
+          python3 -m py_compile scripts/validate_profile_release.py
+          python3 -m py_compile scripts/validate_profile_foundation.py
+          python3 -m py_compile scripts/validate_profile_links.py
+
+      - name: Validate controlled dynamic modules
+        run: python3 scripts/update_dynamic_modules.py --check
+
+      - name: Validate all non-hero release conditions
+        run: python3 scripts/validate_profile_foundation.py
+
+  release-readiness:
+    needs: profile-foundation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Enforce complete release contract
+        run: python3 scripts/validate_profile_release.py
+
+  online-link-gate:
+    needs: release-readiness
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate definitive external link failures
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 scripts/validate_profile_links.py | tee profile-link-report.txt
+
+      - name: Upload link validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: profile-link-report
+          path: profile-link-report.txt
+          if-no-files-found: error
+          retention-days: 7

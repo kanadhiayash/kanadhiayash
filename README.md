@@ -1,3 +1,11 @@
+<p align="center">
+  <img
+    src="./assets/hero/yash-kanadhia-living-product-console-dark.png"
+    alt="Yash Kanadhia, Product Designer in Toronto, Ontario, Canada. Dark Living Product Console featuring Zeref Memory Engine as a shipped independent project and PerFin OS as a MADS team project."
+    width="100%"
+  />
+</p>
+
 <h1 align="center">Yash Kanadhia</h1>
 
 <p align="center">
@@ -156,7 +164,7 @@ I use AI as an implementation partner, not as a substitute for product or engine
 ## Selected build signals
 
 <!-- DYNAMIC:SIGNALS:START -->
-- **Zeref Memory Engine:** [v1.0.0 release](https://github.com/kanadhiayash/zeref-memory-engine/releases/tag/v1.0.0)
+- **Zeref Memory Engine:** [v1.0.0 release record](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/RELEASE_LOG.md)
 - **PerFin OS:** [PR #69: extract session and authentication ownership](https://github.com/SarmadTariq/PerfinOS/pull/69)
 <!-- DYNAMIC:SIGNALS:END -->
 

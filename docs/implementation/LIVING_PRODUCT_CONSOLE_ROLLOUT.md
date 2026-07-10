@@ -2,9 +2,9 @@
 
 **Status:** ACTIVE  
 **Decision source:** `docs/decisions/GITHUB_PROFILE_PUBLIC_POSITIONING.md`  
-**Current branch:** `feat/profile__controlled-dynamic-modules`
+**Current branch:** `feat/profile__quality-gates-release`
 
-This file tracks the controlled rollout of the GitHub profile redesign. Each phase should remain reviewable and should preserve the locked public positioning decisions.
+This file tracks the controlled rollout of the GitHub profile redesign. Each phase remains reviewable and preserves the locked public positioning decisions.
 
 ## Phase 1: Information architecture and copy
 
@@ -28,12 +28,12 @@ Delivered:
 
 ## Phase 2: Hero visual system
 
-**Status:** DIRECTION AND EXPORT COMPLETE, REPOSITORY PLACEMENT PENDING
+**Status:** COMPLETE, MANUAL RENDER REVIEW OPEN
 
 Locked decisions:
 
 - Use the approved dark Living Product Console hero as the only active banner direction.
-- Do not produce or publish a light-mode hero for the current release.
+- Do not publish a light-mode hero for the current release.
 - Use Product Designer as the sole title.
 - Show Toronto, Ontario, Canada.
 - Show the approved tagline.
@@ -43,23 +43,26 @@ Locked decisions:
 - PerFin OS must carry the MADS team project cue and must not imply solo ownership.
 - Keep one static hero as the approved baseline before any later motion experiment.
 
-Exported asset stem:
+Approved asset stem:
 
 `yash-kanadhia-living-product-console-dark`
 
-Prepared formats:
+Delivered repository files:
 
-- PNG, high-resolution raster master.
-- JPG, high-quality compressed export.
-- SVG, raster-faithful placement wrapper. It is not a fully editable vector reconstruction.
+- `assets/hero/yash-kanadhia-living-product-console-dark.png`
+- `assets/hero/yash-kanadhia-living-product-console-dark.jpg`
+- `assets/hero/yash-kanadhia-living-product-console-dark.svg`
 
-Pending repository action:
+Verified:
 
-- Save the approved files under `assets/hero/`.
-- Reference the PNG from `README.md`.
-- Add descriptive alt text.
-- Verify rendered readability at GitHub desktop and mobile widths.
-- Remove or archive the superseded banner only after the new asset is confirmed in the rendered README.
+- The README references the approved PNG.
+- Hero alt text identifies the role, flagship systems, and MADS team attribution.
+- File signatures, PNG dimensions, and the approved wide aspect ratio pass.
+- Superseded banner assets were removed from the Phase 5 branch.
+
+Open manual check:
+
+- Review desktop light appearance, desktop dark appearance, and narrow mobile rendering.
 
 ## Phase 3: Project media
 
@@ -89,13 +92,13 @@ The enhancement backlog does not block the static Phase 3 release. It remains re
 
 ## Phase 4: Controlled dynamic modules
 
-**Status:** COMPLETE ON REVIEW BRANCH
+**Status:** COMPLETE
 
 Delivered:
 
 - Added bounded latest-writing and selected-build-signal regions to `README.md`.
 - Added explicit start and end markers for both generated regions.
-- Added `data/profile_sources.json` as the small reviewed source allowlist.
+- Added `data/profile_sources.json` as the reviewed source allowlist.
 - Added `scripts/update_dynamic_modules.py` using only the Python standard library.
 - Limited writing output to three public Substack entries.
 - Limited build output to two signals from Zeref Memory Engine and PerFin OS.
@@ -107,30 +110,52 @@ Delivered:
 - Added `docs/automation/PROFILE_DYNAMIC_MODULES.md` as the operating and review guide.
 - Excluded vanity counters, streak cards, random quotes, Spotify widgets, and raw commit feeds.
 
-Verification required before merge:
+Post-merge operational check still required:
 
-- Run `python3 scripts/update_dynamic_modules.py --check`.
-- Run the updater once with public network access and review the README diff.
-- Confirm a source failure leaves the previous content unchanged.
-- Confirm the workflow can create a review pull request with repository permissions.
-- Confirm generated output changes only the two marker regions.
+- Run Profile Refresh manually.
+- Review the resulting automation pull request if content changes.
+- Confirm generated changes stay inside the two marker regions.
+- Confirm a source failure preserves the previous reviewed content.
 
 ## Phase 5: Quality gates and release
 
-**Status:** NEXT
+**Status:** AUTOMATED GATES COMPLETE, MANUAL APPROVAL OPEN
 
-Planned:
+Delivered:
 
-- Validate internal and external links.
-- Validate local asset paths.
-- Scan for placeholders, private paths, secrets, and unsupported claims.
-- Check alt text and static fallbacks.
-- Review the final PR diff.
-- Merge only after the visible banner, README copy, metrics, credentials, and project attribution agree.
+- Added `scripts/validate_profile_release.py` as the deterministic release validator.
+- Added `scripts/validate_profile_foundation.py` to verify non-hero release conditions independently.
+- Added `scripts/validate_profile_links.py` with GET confirmation for unreliable HEAD responses.
+- Added `.github/workflows/profile-quality.yml` as the pull-request, main-branch, and manual quality gate.
+- Added `docs/qa/PROFILE_RELEASE_CHECKLIST.md` as the final automated and manual review record.
+- Added checks for locked copy, project attribution, selected credentials, approved tools, metrics, and dynamic markers.
+- Added checks for local assets, internal anchors, HTTPS links, alt text, placeholders, private paths, and common secret patterns.
+- Added hero file, dimension, aspect-ratio, README-reference, and alt-text requirements.
+- Added a downloadable `profile-link-report` workflow artifact.
+- Replaced the unpublished Zeref GitHub Release URL with the verified repository release record.
+
+Verified automated results:
+
+- Profile foundation: PASS.
+- Release readiness: PASS.
+- Online link gate: PASS.
+- LinkedIn and Substack access restrictions are warnings, not confirmed broken links.
+
+Remaining release blockers:
+
+- GitHub light appearance render review.
+- GitHub dark appearance render review.
+- Narrow mobile render review.
+- Manual Profile Refresh run and review after merge.
+- Final public-claim and ownership review.
+- Explicit merge approval.
+
+Release decision:
+
+Do not call the profile released until the manual checklist is complete and merge is explicitly approved.
 
 ## Current risks
 
 - The approved dark hero is generated raster artwork. The SVG export is a faithful embedded-image wrapper rather than editable vector paths.
-- The connector-visible repository does not yet contain the approved hero PNG, JPG, or SVG under `assets/hero/`.
 - Verified product screenshots and recordings remain an enhancement backlog and must not be represented as already published.
-- The Substack feed candidates require a live workflow run to confirm which endpoint currently returns the public feed.
+- Substack feed availability still requires a live manual Profile Refresh run.
