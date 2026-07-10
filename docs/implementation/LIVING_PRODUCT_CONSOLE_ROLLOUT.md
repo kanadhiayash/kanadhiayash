@@ -1,8 +1,8 @@
 # Living Product Console Rollout
 
-**Status:** ACTIVE  
+**Status:** ACTIVE, MOTION REVIEW OPEN  
 **Decision source:** `docs/decisions/GITHUB_PROFILE_PUBLIC_POSITIONING.md`  
-**Current branch:** `feat/profile__quality-gates-release`
+**Current branch:** `feat/profile__living-motion-layer`
 
 This file tracks the controlled rollout of the GitHub profile redesign. Each phase remains reviewable and preserves the locked public positioning decisions.
 
@@ -26,13 +26,13 @@ Delivered:
 - The approved tool row is Figma, React, Swift, Firebase, Claude, and Codex.
 - Development and AI-assisted execution remain supporting proof.
 
-## Phase 2: Hero visual system
+## Phase 2: Hero visual and motion system
 
-**Status:** COMPLETE, MANUAL RENDER REVIEW OPEN
+**Status:** STATIC AND MOTION ASSETS COMPLETE, GITHUB RENDER REVIEW OPEN
 
 Locked decisions:
 
-- Use the approved dark Living Product Console hero as the only active banner direction.
+- Use the approved dark Living Product Console as the only active hero direction.
 - Do not publish a light-mode hero for the current release.
 - Use Product Designer as the sole title.
 - Show Toronto, Ontario, Canada.
@@ -41,28 +41,44 @@ Locked decisions:
 - Use only Figma, React, Swift, Firebase, Claude, and Codex in the tool row.
 - Keep Zeref Memory Engine and PerFin OS as the dominant visual cards.
 - PerFin OS must carry the MADS team project cue and must not imply solo ownership.
-- Keep one static hero as the approved baseline before any later motion experiment.
+- Use one animated hero above the fold and no competing large animation.
+- Keep the approved PNG directly accessible as the static alternative.
 
-Approved asset stem:
+Approved asset family:
 
 `yash-kanadhia-living-product-console-dark`
 
 Delivered repository files:
 
-- `assets/hero/yash-kanadhia-living-product-console-dark.png`
-- `assets/hero/yash-kanadhia-living-product-console-dark.jpg`
-- `assets/hero/yash-kanadhia-living-product-console-dark.svg`
+- `assets/hero/yash-kanadhia-living-product-console-dark-motion.svg`, active animated hero.
+- `assets/hero/yash-kanadhia-living-product-console-dark.png`, static alternative.
+- `assets/hero/yash-kanadhia-living-product-console-dark.jpg`, compressed preview.
+- `assets/hero/yash-kanadhia-living-product-console-dark.svg`, static placement wrapper.
+
+Motion delivered:
+
+- Slow card-border breathing.
+- Zeref project-state pulse.
+- PerFin orbital project indicator.
+- Restrained scanning light across the console.
+- Sequential live-signal dots.
+- Moving signal along the lower console rail.
+- No rapid flashing, hard cuts, or unique motion-only information.
 
 Verified:
 
-- The README references the approved PNG.
-- Hero alt text identifies the role, flagship systems, and MADS team attribution.
-- File signatures, PNG dimensions, and the approved wide aspect ratio pass.
-- Superseded banner assets were removed from the Phase 5 branch.
+- The README references the animated SVG as the active hero.
+- The README provides the PNG through an expandable static alternative.
+- Both hero images include descriptive alt text.
+- Static file signatures, PNG dimensions, and the approved wide aspect ratio remain governed by the existing release validator.
+- Superseded banner assets remain removed.
 
 Open manual check:
 
-- Review desktop light appearance, desktop dark appearance, and narrow mobile rendering.
+- Review the animated SVG on the rendered GitHub profile in desktop light appearance.
+- Review the animated SVG on the rendered GitHub profile in desktop dark appearance.
+- Review the animated SVG and static alternative at narrow mobile width.
+- Confirm GitHub or its image proxy does not suppress the SVG animation.
 
 ## Phase 3: Project media
 
@@ -82,13 +98,13 @@ Delivered:
 
 Open enhancement backlog:
 
-- Add a short Zeref product-system motion loop with a static equivalent.
+- Add a short Zeref product demonstration loop beyond the profile hero, with a still equivalent.
 - Add verified PerFin OS screenshots and a short workflow recording.
 - Add verified For Rent renter and landlord captures.
 - Replace StreamNexus repository placeholders with verified runtime captures.
 - Add approved Arthenticate and DriveDeal prototype media.
 
-The enhancement backlog does not block the static Phase 3 release. It remains required before claiming a media-complete portfolio.
+The enhancement backlog does not block the Living Product Console hero release. It remains required before claiming a media-complete portfolio.
 
 ## Phase 4: Controlled dynamic modules
 
@@ -119,7 +135,7 @@ Post-merge operational check still required:
 
 ## Phase 5: Quality gates and release
 
-**Status:** AUTOMATED GATES COMPLETE, MANUAL APPROVAL OPEN
+**Status:** AUTOMATED GATES COMPLETE, MANUAL MOTION REVIEW OPEN
 
 Delivered:
 
@@ -130,32 +146,41 @@ Delivered:
 - Added `docs/qa/PROFILE_RELEASE_CHECKLIST.md` as the final automated and manual review record.
 - Added checks for locked copy, project attribution, selected credentials, approved tools, metrics, and dynamic markers.
 - Added checks for local assets, internal anchors, HTTPS links, alt text, placeholders, private paths, and common secret patterns.
-- Added hero file, dimension, aspect-ratio, README-reference, and alt-text requirements.
+- Added static hero file, dimension, aspect-ratio, README-reference, and alt-text requirements.
 - Added a downloadable `profile-link-report` workflow artifact.
 - Replaced the unpublished Zeref GitHub Release URL with the verified repository release record.
 
-Verified automated results:
+Verified automated results before the motion branch:
 
 - Profile foundation: PASS.
 - Release readiness: PASS.
 - Online link gate: PASS.
 - LinkedIn and Substack access restrictions are warnings, not confirmed broken links.
 
-Remaining release blockers:
+Motion-branch requirements:
 
-- GitHub light appearance render review.
-- GitHub dark appearance render review.
-- Narrow mobile render review.
-- Manual Profile Refresh run and review after merge.
+- Existing automated gates must remain green.
+- Animated SVG must resolve as a local README image with non-empty alt text.
+- Static PNG must remain referenced exactly once as the accessible alternative.
+- No locked title, metric, tool, credential, attribution, or dynamic-marker value may drift.
+
+Remaining release checks:
+
+- GitHub light appearance motion render review.
+- GitHub dark appearance motion render review.
+- Narrow mobile motion render review.
+- Manual Profile Refresh run and review.
 - Final public-claim and ownership review.
-- Explicit merge approval.
+- Explicit merge approval for the motion pull request.
 
 Release decision:
 
-Do not call the profile released until the manual checklist is complete and merge is explicitly approved.
+Do not call the motion layer released until its pull request passes the automated gates and the rendered GitHub profile is manually reviewed.
 
 ## Current risks
 
-- The approved dark hero is generated raster artwork. The SVG export is a faithful embedded-image wrapper rather than editable vector paths.
-- Verified product screenshots and recordings remain an enhancement backlog and must not be represented as already published.
+- GitHub or its image proxy may suppress some SVG animation features. The static PNG remains available if that occurs.
+- The approved static hero is generated raster artwork. Its static SVG export is an embedded-image wrapper rather than editable vector paths.
+- The animated hero is a separate reconstructed vector presentation and may differ slightly in typography from the static raster artwork.
+- Verified project screenshots and recordings remain an enhancement backlog and must not be represented as already published.
 - Substack feed availability still requires a live manual Profile Refresh run.
