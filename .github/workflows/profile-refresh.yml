@@ -1,0 +1,86 @@
+name: Profile Refresh
+
+on:
+  schedule:
+    - cron: "17 12 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: profile-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate bounded regions
+        run: python3 scripts/update_dynamic_modules.py --check
+
+      - name: Refresh public modules
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/update_dynamic_modules.py --write
+
+      - name: Revalidate generated structure
+        run: python3 scripts/update_dynamic_modules.py --check
+
+      - name: Open or update review pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REFRESH_BRANCH: automation/profile-refresh
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet -- README.md; then
+            echo "No profile refresh changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin "${REFRESH_BRANCH}" || true
+          git switch -C "${REFRESH_BRANCH}"
+          git add README.md
+          git commit -m "chore(profile): refresh public modules"
+          git push --force-with-lease origin "HEAD:${REFRESH_BRANCH}"
+
+          existing_pr="$(gh pr list --head "${REFRESH_BRANCH}" --base main --state open --json number --jq '.[0].number // empty')"
+          if [[ -z "${existing_pr}" ]]; then
+            gh pr create \
+              --base main \
+              --head "${REFRESH_BRANCH}" \
+              --title "chore(profile): refresh public modules" \
+              --body-file - <<'EOF'
+          ## Objective
+
+          Refresh only the bounded latest-writing and selected-build-signal regions in the GitHub profile README.
+
+          ## Guardrails
+
+          - Generated changes stay inside explicit README markers.
+          - A source failure preserves the last reviewed content.
+          - No direct commit is made to `main`.
+          - No vanity counters, raw commit feed, or unsupported claims are introduced.
+
+          ## Review
+
+          Confirm titles, links, dates, project attribution, and public relevance before merge.
+          EOF
+          else
+            echo "Updated existing refresh PR #${existing_pr}."
+          fi
