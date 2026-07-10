@@ -57,8 +57,15 @@ I lead with product design. Development and AI-assisted execution support the wo
 ### Flagship systems
 
 <p align="center">
-  <img src="./assets/projects/flagship-systems.svg" alt="Dark project board presenting Zeref Memory Engine as an independent project and PerFin OS as a MADS final team project by Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq." width="100%" />
+  <img src="./assets/projects/flagship-systems-motion.svg" alt="Animated dark project board presenting Zeref Memory Engine as an independent project and PerFin OS as a MADS final team project by Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq." width="100%" />
 </p>
+
+<details>
+  <summary>View static flagship systems board</summary>
+  <p align="center">
+    <img src="./assets/projects/flagship-systems.svg" alt="Static dark project board presenting Zeref Memory Engine as an independent project and PerFin OS as a MADS final team project by Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq." width="100%" />
+  </p>
+</details>
 
 #### [Zeref Memory Engine](https://github.com/kanadhiayash/zeref-memory-engine)
 
@@ -105,8 +112,15 @@ PerFin OS is collaborative work. This profile does not imply solo ownership.
 ### Built product proof
 
 <p align="center">
-  <img src="./assets/projects/built-product-proof.svg" alt="Dark project board presenting For Rent, a SwiftUI rental marketplace, and StreamNexus, a full-stack streaming-rental prototype." width="100%" />
+  <img src="./assets/projects/built-product-proof-motion.svg" alt="Animated dark project board presenting For Rent, a SwiftUI rental marketplace, and StreamNexus, a full-stack streaming-rental prototype." width="100%" />
 </p>
+
+<details>
+  <summary>View static built product board</summary>
+  <p align="center">
+    <img src="./assets/projects/built-product-proof.svg" alt="Static dark project board presenting For Rent, a SwiftUI rental marketplace, and StreamNexus, a full-stack streaming-rental prototype." width="100%" />
+  </p>
+</details>
 
 #### [For Rent](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios)
 
@@ -125,8 +139,15 @@ A full-stack streaming-rental prototype with separate admin and streamer journey
 ### Product design studies
 
 <p align="center">
-  <img src="./assets/projects/product-design-studies.svg" alt="Dark project board presenting Arthenticate and DriveDeal as interactive Figma product-design studies with public case-study packaging in progress." width="100%" />
+  <img src="./assets/projects/product-design-studies-motion.svg" alt="Animated dark project board presenting Arthenticate and DriveDeal as interactive Figma product-design studies with public case-study packaging in progress." width="100%" />
 </p>
+
+<details>
+  <summary>View static product design studies board</summary>
+  <p align="center">
+    <img src="./assets/projects/product-design-studies.svg" alt="Static dark project board presenting Arthenticate and DriveDeal as interactive Figma product-design studies with public case-study packaging in progress." width="100%" />
+  </p>
+</details>
 
 #### Arthenticate
 
