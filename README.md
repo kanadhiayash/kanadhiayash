@@ -1,7 +1,7 @@
 <p align="center">
   <img
     src="./assets/yash-kanadhia-github-banner-8k.png"
-    alt="Yash Kanadhia, Product Designer in Toronto. Two shipped projects, one team project, six selected certifications, and experience with Figma, React, Swift, Firebase, Claude, and Codex."
+    alt="Yash Kanadhia, Product Designer in Toronto. Two shipped projects, one team project, five selected certifications, and experience with Figma, React, Swift, Firebase, Claude, and Codex."
     width="100%"
   />
 </p>
@@ -80,14 +80,13 @@ I use AI as an implementation partner, not as a substitute for product or engine
 
 ## Selected credentials
 
-The banner reflects six selected credentials:
+The banner reflects five selected credentials:
 
 - **AI Fluency: Framework & Foundations**, Anthropic, June 2026
 - **Claude Code in Action**, Anthropic, June 2026
 - **Introduction to Claude Cowork**, Anthropic, June 2026
 - **Claude Code 101**, Anthropic, June 2026
 - **Scrum Fundamentals Certified**, SCRUMstudy, June 2026
-- **Six Sigma Yellow Belt**
 
 Additional completed credentials, including **Claude 101**, are listed on [LinkedIn](https://www.linkedin.com/in/yashkanadhia).
 
