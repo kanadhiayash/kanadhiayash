@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  static-release-gate:
+  profile-foundation:
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
@@ -44,15 +44,31 @@ jobs:
         run: |
           python3 -m py_compile scripts/update_dynamic_modules.py
           python3 -m py_compile scripts/validate_profile_release.py
+          python3 -m py_compile scripts/validate_profile_foundation.py
 
       - name: Validate controlled dynamic modules
         run: python3 scripts/update_dynamic_modules.py --check
 
-      - name: Validate profile release contract
+      - name: Validate all non-hero release conditions
+        run: python3 scripts/validate_profile_foundation.py
+
+  release-readiness:
+    needs: profile-foundation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Enforce complete release contract
         run: python3 scripts/validate_profile_release.py
 
   online-link-gate:
-    needs: static-release-gate
+    needs: release-readiness
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
