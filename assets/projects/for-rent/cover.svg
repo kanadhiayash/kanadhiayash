@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">For Rent project cover</title>
+  <desc id="desc">Dark editorial project cover for For Rent, a SwiftUI rental marketplace implementation project with MVVM and Firebase boundaries.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#131414"/>
+      <stop offset="0.58" stop-color="#202525"/>
+      <stop offset="1" stop-color="#34403a"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#f8f6f1" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <rect x="88" y="78" width="1424" height="744" rx="34" fill="#0c0f0d" fill-opacity="0.38" stroke="#c9d2c2" stroke-opacity="0.2"/>
+  <g transform="translate(1240 130)" fill="none" stroke="#dce4d6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 125 115 30l115 95v145H0Z" stroke-width="5" stroke-opacity="0.78"/>
+    <path d="M82 270v-88h66v88M36 132h158" stroke-width="4" stroke-opacity="0.5"/>
+    <circle cx="115" cy="30" r="10" fill="#9aaa8e" stroke="none"/>
+  </g>
+  <text x="138" y="150" fill="#b9c3ad" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600" letter-spacing="4">BUILT PRODUCT · IMPLEMENTATION PROJECT</text>
+  <text x="138" y="330" fill="#f8f6f1" font-family="Georgia, serif" font-size="126" font-weight="700">For Rent</text>
+  <text x="144" y="410" fill="#d8ddd3" font-family="Inter, system-ui, sans-serif" font-size="34">Rental discovery and management for renters, landlords, and guests.</text>
+  <g font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600">
+    <rect x="138" y="500" width="160" height="62" rx="31" fill="#ebf0e6" fill-opacity="0.12" stroke="#9aaa8e" stroke-opacity="0.48"/>
+    <text x="178" y="540" fill="#f8f6f1">SwiftUI</text>
+    <rect x="322" y="500" width="132" height="62" rx="31" fill="#ebf0e6" fill-opacity="0.12" stroke="#9aaa8e" stroke-opacity="0.48"/>
+    <text x="360" y="540" fill="#f8f6f1">MVVM</text>
+    <rect x="478" y="500" width="170" height="62" rx="31" fill="#ebf0e6" fill-opacity="0.12" stroke="#9aaa8e" stroke-opacity="0.48"/>
+    <text x="521" y="540" fill="#f8f6f1">Firebase</text>
+    <rect x="672" y="500" width="248" height="62" rx="31" fill="#7b1d2c" fill-opacity="0.26" stroke="#b85c6c" stroke-opacity="0.55"/>
+    <text x="710" y="540" fill="#fff4f5">Demo verified</text>
+  </g>
+  <path d="M138 648H1462" stroke="#f8f6f1" stroke-opacity="0.14"/>
+  <text x="138" y="710" fill="#b9c3ad" font-family="Inter, system-ui, sans-serif" font-size="22" letter-spacing="2">STATUS</text>
+  <text x="138" y="758" fill="#f8f6f1" font-family="Inter, system-ui, sans-serif" font-size="27">Deterministic demo mode · Firebase clean mode · public repository evidence</text>
+  <text x="1360" y="758" text-anchor="end" fill="#b9c3ad" font-family="JetBrains Mono, monospace" font-size="20">CASE FILE 02</text>
+</svg>

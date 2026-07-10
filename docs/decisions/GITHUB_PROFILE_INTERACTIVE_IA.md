@@ -1,21 +1,24 @@
 # GitHub Profile Interactive Information Architecture
 
-**Status:** LOCKED  
+**Status:** LOCKED WITH STAGED BUILT-PRODUCT IMPLEMENTATION  
 **Effective date:** 2026-07-10  
-**Applies to:** the next major README information-architecture rewrite after verified project media is collected  
+**Last revised:** 2026-07-10  
+**Applies to:** the GitHub profile README and its progressive migration into a GitHub-native portfolio index  
 **Positioning source:** `docs/decisions/GITHUB_PROFILE_PUBLIC_POSITIONING.md`
 
-This decision replaces exploratory plans for the future interactive profile structure. Later changes require an explicit replacement decision.
+This decision replaces the earlier rule that final project media must be complete before any README information-architecture work begins.
+
+The long-term information architecture remains stable. The active implementation now proceeds in reviewable stages so verified content, navigation, project covers, case-file drawers, evidence routes, and system diagrams can ship before final runtime captures.
 
 ## Objective
 
 Turn `github.com/kanadhiayash` into a GitHub-native interactive portfolio index that helps a visitor choose a route, inspect a project, and open verified evidence without treating the README as a JavaScript website.
 
-The profile must operate as:
+The profile operates as:
 
 - an interactive portfolio index;
 - a recruiter-readable project switchboard;
-- a route into case studies, repositories, prototypes, and live demonstrations;
+- a route into repositories, prototypes, case studies, and demonstrations;
 - a concise proof layer rather than a complete portfolio website.
 
 ## Locked interaction model
@@ -28,14 +31,15 @@ Use GitHub-supported interaction patterns only:
 - `<details>` project drawers;
 - static covers;
 - restrained motion;
+- Mermaid diagrams;
 - reviewed dynamic modules;
-- outbound links to full case studies, prototypes, repositories, and demos.
+- outbound evidence links.
 
 Do not simulate unsupported application controls or imply that the README is a full interactive web application.
 
-## Locked README information architecture
+## Long-term README information architecture
 
-Use this order:
+The eventual complete profile retains this order:
 
 1. Motion hero
 2. Command palette
@@ -50,139 +54,128 @@ Use this order:
 
 No profile changelog, memorabilia section, version-history timeline, or decorative activity archive may be added.
 
-## Section requirements
+## Active staged implementation
 
-### 1. Motion hero
+The current public-review branch uses this order:
 
-Keep one restrained animated hero above the fold with a directly accessible static alternative.
+1. Motion hero
+2. Command palette
+3. Featured work switchboard
+4. Built product case files
+5. Evidence and practice
+6. Live build console
+7. Selected credentials
+8. Connect
 
-The hero communicates only:
+The active project set is:
 
-- Yash Kanadhia;
-- Product Designer;
-- Toronto, Ontario, Canada;
-- the approved tagline;
-- one primary route into selected work;
-- one secondary professional contact route.
+1. PerFin OS
+2. For Rent
+3. StreamNexus
 
-Do not place another large autoplaying animation above the fold.
+The following modules are parked for a later review cycle:
 
-### 2. Command palette
+- Product design: Arthenticate and DriveDeal
+- AI systems: Zeref Memory Engine
 
-Provide four anchor routes:
+Parking a module means no new case file, media collection, or section expansion is performed in the current stage. It does not remove the module from the long-term architecture.
 
-- Product Design
+The existing Living Product Console hero remains unchanged during this stage, including its existing project references. Rebuilding the hero is outside the active scope.
+
+## Command palette
+
+Provide four real anchor routes:
+
+- Featured Work
 - Built Products
-- AI Systems
-- Evidence and Practice
+- Evidence
+- Build Signals
 
 The command palette is navigation, not decoration.
 
-### 3. Featured work switchboard
+## Featured work switchboard
 
-Lead with four projects:
+Each active project uses:
 
-1. Arthenticate
-2. Zeref Memory Engine
-3. PerFin OS
-4. For Rent
-
-Use StreamNexus and DriveDeal as supporting work below the featured set.
-
-Each featured card includes:
-
-- static cover;
+- a finished metadata-based editorial cover visible by default;
 - project name;
-- role;
+- ownership or collaboration status;
 - platform;
-- status;
-- one-sentence product outcome;
-- case-study, repository, prototype, or demo links when verified.
+- verified status;
+- a one-sentence product outcome;
+- an anchor route into its case file.
 
-### 4. Product design
+Metadata covers must use verified public facts only. They must not imitate screenshots, runtime dashboards, user metrics, deployment status, or product usage.
 
-Include:
+## Active project requirements
 
-- Arthenticate;
-- DriveDeal.
+### PerFin OS
 
-Keep both labeled according to verified public status. Do not imply deployment where only Figma or case-study evidence exists.
+PerFin OS remains identified as a MADS final team project by:
 
-### 5. Built products
+- Yash Kanadhia
+- Alexis Gorospe
+- Sarmad Tariq
 
-Include:
+The profile must not imply solo ownership.
 
-- PerFin OS;
-- For Rent;
-- StreamNexus.
+The case file may show reviewed contribution evidence, guest and authenticated workflow boundaries, system architecture, known limitations, and verified repository or pull-request destinations.
 
-PerFin OS must remain identified as a MADS final team project by Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq.
+### For Rent
 
-### 6. AI systems
+The case file may show:
 
-Lead with Zeref Memory Engine as an independent project.
+- renter, landlord, and guest journeys;
+- deterministic demo mode;
+- Firebase clean mode;
+- feature-oriented MVVM;
+- accessibility and quality evidence;
+- explicit non-claims around App Store release and production deployment.
 
-Use this section to show product framing, local-first context infrastructure, guarded memory, evaluation, and verified release evidence.
+### StreamNexus
 
-### 7. Evidence and practice
+The case file may show:
 
-Compress architecture, accessibility, testing, delivery, and operating-manual evidence into a concise route-based section.
-
-Do not restore a long generic skills table when project-specific proof is available.
-
-### 8. Live build console
-
-Use bounded, reviewed signals only:
-
-- latest relevant writing;
-- selected release or contribution signals;
-- current public build focus when evidence-backed.
-
-Do not add raw commit feeds, vanity counters, streak cards, random quotes, music widgets, or unrelated activity.
-
-### 9. Selected credentials
-
-Keep the approved five selected credentials. Do not expand this into a complete certificate inventory.
-
-### 10. Connect
-
-Keep concise links to LinkedIn, Substack, and the future portfolio site when available.
+- administrator and streamer workflows;
+- MVC and service boundaries;
+- authentication and role authorization;
+- MongoDB persistence;
+- tests, security middleware, and CI;
+- explicit simulated-checkout and non-production limitations.
 
 ## Locked project interaction pattern
 
-Every project uses the same progressive-disclosure pattern:
+Every active project uses the same progressive-disclosure pattern:
 
-1. Static cover visible by default.
+1. Static editorial cover visible by default.
 2. Compact project metadata and one-sentence outcome.
 3. A user-triggered `<details>` case-file drawer.
-4. One walkthrough GIF or motion asset inside the drawer.
-5. Two or three verified static snapshots after the walkthrough.
-6. Role, ownership, product decisions, evidence, limitations, and destination links.
+4. One clearly labeled media-capture state inside the drawer until verified runtime media exists.
+5. Written sections for problem, role and ownership, contribution, key workflow, system, evidence, and limitations.
+6. Verified repository, documentation, pull-request, prototype, or demo destinations.
+7. A route back to Featured Work.
 
-Do not autoplay every project walkthrough at once.
+No project fact may exist only inside an image, animation, or diagram.
 
-## Project case-file contents
+## Media staging contract
 
-Each drawer contains:
-
-- problem;
-- role and ownership;
-- product decision or contribution;
-- key workflow;
-- design or technical system;
-- verified evidence;
-- known limitations;
-- repository, prototype, case-study, or live-demo links.
-
-No project fact may exist only inside an image or animation.
-
-## Asset contract
-
-Use this structure for each project:
+Until final runtime media is approved, each active project uses:
 
 ```text
 assets/projects/<project-slug>/
-├── cover.png
+├── cover.svg
+└── media-pending.svg
+```
+
+The cover is a finished editorial asset based on verified metadata.
+
+The media-capture state must say that reviewed walkthrough and static captures are pending. It must not resemble a product screenshot or fabricate interface evidence.
+
+When final media is approved, the project migrates to:
+
+```text
+assets/projects/<project-slug>/
+├── cover.svg
 ├── walkthrough.gif
 ├── poster.png
 ├── snapshot-01.png
@@ -191,52 +184,38 @@ assets/projects/<project-slug>/
 └── architecture.png
 ```
 
-Only `cover.png`, `walkthrough.gif`, `poster.png`, and the snapshots required for the case are mandatory. `architecture.png` is optional.
+Only useful snapshots are required. `architecture.png` remains optional when a readable Mermaid diagram already communicates the system.
 
-### Media rules
+## System diagrams
 
-- Static cover visible by default.
-- Walkthrough recommended length: 8 to 15 seconds.
-- One coherent workflow per walkthrough.
-- No rapid cuts, flashing, or purposeless cursor movement.
-- Every motion asset requires a still equivalent.
-- Images must remain readable at narrow GitHub widths.
-- Team ownership and product limitations must remain visible in text.
+Mermaid diagrams may be used for verified architecture and workflow relationships.
 
-## Current execution phase
+Requirements:
 
-The current phase is media collection, not README reconstruction.
+- Diagram facts must also be explained in text.
+- Labels must remain concise and readable.
+- Diagrams must not imply deployment, scale, or integrations that are not verified.
+- A failed diagram render must not prevent understanding of the case file.
 
-Collect the minimum viable media kit first for:
+## Evidence and practice
 
-1. Arthenticate
-2. Zeref Memory Engine
-3. PerFin OS
-4. For Rent
+Compress product design, accessibility, architecture, testing, delivery, and AI-assisted execution into a concise route-based section.
 
-Do not begin the major IA rewrite until those four projects have:
+Do not restore a long generic skills inventory when project-specific evidence is available.
 
-- an approved cover;
-- a verified walkthrough;
-- at least two useful snapshots;
-- confirmed ownership wording;
-- at least one valid evidence destination.
+## Live build console
 
-StreamNexus and DriveDeal then inherit the same component pattern without changing the locked IA.
+Use bounded, reviewed signals only:
 
-## Migration from the current README
+- latest relevant writing;
+- selected pull requests, documentation, release, or verification signals;
+- current public build focus when evidence-backed.
 
-During the future rewrite:
+Do not add raw commit feeds, vanity counters, streak cards, random quotes, music widgets, or unrelated activity.
 
-- keep the Living Product Console hero;
-- keep its static alternative;
-- replace generic category boards with verified project covers and walkthroughs;
-- remove repeated project explanations;
-- compress Evidence of Practice and How I Work into project-specific or route-based proof;
-- keep controlled dynamic modules bounded;
-- preserve current quality, security, link, attribution, and accessibility gates.
+## Selected credentials
 
-The existing category motion boards may remain temporarily until verified project media replaces them. They are not the target final interaction model.
+Keep the approved five selected credentials. Do not expand this into a complete certificate inventory.
 
 ## Explicit exclusions
 
@@ -252,23 +231,36 @@ Do not add:
 - multiple typing animations;
 - raw commit feeds;
 - decorative activity archives;
-- unsupported claims of deployment, impact, or ownership.
+- fake product screenshots;
+- unsupported claims of deployment, impact, scale, or ownership.
 
-## Acceptance criteria
+## Acceptance criteria for the staged release
 
-The future interactive README is ready only when:
+The staged interactive README is ready only when:
 
-- the four featured projects are identifiable without reading long prose;
-- each project has a static cover and user-triggered walkthrough;
-- team ownership is explicit;
-- every motion asset has a still equivalent;
-- every project has at least one verified evidence destination;
+- PerFin OS, For Rent, and StreamNexus are identifiable without long prose;
+- each active project has a visible metadata cover;
+- each active project has one user-triggered case-file drawer;
+- PerFin OS team ownership is explicit before contribution details;
+- each active project has at least one verified evidence destination;
+- each active project has a known-limitations section;
+- media-capture states are clearly labeled and cannot be mistaken for product evidence;
+- Mermaid diagrams remain supported by written explanations;
 - the page works in GitHub light, dark, desktop, and mobile views;
-- the README remains understandable when images do not load;
+- the README remains understandable when images or diagrams do not load;
 - dynamic modules remain secondary to selected work;
 - the external GitHub profile bio matches the locked Product Designer positioning;
 - no profile changelog or memorabilia layer appears.
 
+## Future expansion
+
+When the parked modules resume:
+
+- Product Design returns before Built Products.
+- AI Systems returns after Built Products.
+- Arthenticate, DriveDeal, and Zeref use the same cover, metadata, drawer, evidence, limitation, and media contract.
+- The staged built-product case files do not require structural redesign.
+
 ## Change control
 
-Any change to section order, featured-project priority, ownership language, project interaction pattern, or the exclusion of profile changelog and memorabilia requires a new explicit decision record.
+Any change to long-term section order, active project priority, ownership language, project interaction pattern, parked-module status, or the exclusion of profile changelog and memorabilia requires a new explicit decision record or revision approved through review.
