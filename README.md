@@ -1,11 +1,3 @@
-<p align="center">
-  <img
-    src="./assets/yash-kanadhia-github-banner-8k.png"
-    alt="Yash Kanadhia, Product Designer in Toronto. Two shipped projects, one team project, six selected certifications, and experience with Figma, React, Swift, Firebase, Claude, and Codex."
-    width="100%"
-  />
-</p>
-
 <h1 align="center">Yash Kanadhia</h1>
 
 <p align="center">
@@ -14,52 +6,117 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/yashkanadhia">LinkedIn</a>
-  ·
-  <a href="https://substack.com/@yashkanadhia">Substack</a>
-  ·
-  <a href="https://github.com/kanadhiayash">GitHub</a>
+  <strong>I design and build systems that connect people to outcomes.</strong>
 </p>
 
-I design and build systems that connect people to outcomes.
+<p align="center">
+  <a href="#selected-work">Explore selected work ↓</a>
+  ·
+  <a href="https://www.linkedin.com/in/yashkanadhia">Connect on LinkedIn ↗</a>
+  ·
+  <a href="https://substack.com/@yashkanadhia">Read on Substack ↗</a>
+</p>
 
-My work spans product strategy, interaction design, accessibility, interface systems, technical implementation, testing, and documentation. I use development and AI-assisted workflows to turn product decisions into working, inspectable experiences.
+<p align="center">
+  2 shipped projects · 1 MADS team project · 5 selected certifications
+</p>
+
+<p align="center">
+  Figma · React · Swift · Firebase · Claude · Codex
+</p>
+
+I lead with product design. Development and AI-assisted execution support the work by turning product decisions into working, inspectable experiences with clear evidence and ownership boundaries.
 
 ---
 
 ## Selected work
 
-| Project | What it demonstrates | Stack | Ownership |
-|---|---|---|---|
-| [Zeref Memory Engine](https://github.com/kanadhiayash/zeref-memory-engine) | Local-first memory, deterministic routing, guarded writes, cross-harness handoffs, privacy controls, and benchmark-gated releases | Python, CLI tooling, structured memory, GitHub Actions | Independent project |
-| [For Rent](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios) | Native rental journeys, role-based workflows, feature-oriented MVVM, accessibility, deterministic demo data, and automated quality gates | SwiftUI, Swift, Firebase, MVVM | Independent implementation |
-| [StreamNexus](https://github.com/kanadhiayash/streamnexus) | Full-stack product flows, role authorization, session authentication, MongoDB persistence, security middleware, and integration testing | Node.js, Express, MongoDB, EJS | Independent implementation |
-| [PerFin OS](https://github.com/SarmadTariq/PerfinOS/tree/dev) | Expense tracking, budgeting, receipt organization, location-aware spending, and aggregate-only planning workflows | React Native, Expo, TypeScript, Firebase, Cloudflare Workers | MADS final team project with Alexis Gorospe and Sarmad Tariq |
+### Flagship systems
 
-PerFin OS is collaborative work. The other repositories state their current deployment, release, and production limitations directly.
+#### [Zeref Memory Engine](https://github.com/kanadhiayash/zeref-memory-engine)
+
+**Independent project**
+
+A local-first memory and context engine for AI-assisted project work. Zeref keeps decisions, constraints, risks, evidence, and handoffs inside the project instead of forcing every new AI session to start without context.
+
+**What it demonstrates**
+
+- Product framing for a recurring AI-workflow problem
+- Local-first and privacy-first architecture
+- Structured memory, guarded writes, and cross-harness handoffs
+- Deterministic evaluation, release checks, and public-claim controls
+- Documentation that separates facts, assumptions, unknowns, and risks
+
+**Evidence**
+
+[Repository](https://github.com/kanadhiayash/zeref-memory-engine) · [Canonical specification](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/AGENTS.md) · [Benchmark report](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md) · [Release gates](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/RELEASE_GATES.md)
 
 ---
 
-## Evidence
+#### [PerFin OS](https://github.com/SarmadTariq/PerfinOS/tree/dev)
 
-- [Zeref benchmark report](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md)
-- [For Rent architecture](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/architecture.md)
-- [For Rent testing and verification](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md)
-- [StreamNexus architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md)
-- [PerFin OS development branch](https://github.com/SarmadTariq/PerfinOS/tree/dev)
+**MADS final team project**  
+**Team:** Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq
+
+A React Native personal-finance product covering expenses, budgets, receipt organization, location-aware spending, reports, and planning workflows across guest and authenticated experiences.
+
+**Selected contributions**
+
+- Separated session and authentication ownership from finance-state management in [PF-165](https://github.com/SarmadTariq/PerfinOS/pull/69)
+- Standardized shared theme-token use across light and dark interfaces in [PF-164](https://github.com/SarmadTariq/PerfinOS/pull/68)
+- Split Firebase client, authentication, paths, and legacy storage into clearer service boundaries in [PF-161](https://github.com/SarmadTariq/PerfinOS/pull/55)
+- Improved insights, analytics, reports, privacy disclosures, and supporting interface behaviour through reviewed feature and fix branches
+
+**Ownership note**
+
+PerFin OS is collaborative work. This profile does not imply solo ownership.
+
+[Development branch](https://github.com/SarmadTariq/PerfinOS/tree/dev) · [Project README](https://github.com/SarmadTariq/PerfinOS/blob/dev/README.md)
 
 ---
 
-## Product and technical scope
+### Built product proof
 
-| Area | Working scope |
+#### [For Rent](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios)
+
+A SwiftUI long-term rental marketplace for Canadian renters, landlords, and guests. The repository demonstrates role-based journeys, feature-oriented MVVM, deterministic demo data, Firebase boundaries, accessibility support, explicit interface states, and automated quality gates.
+
+[Repository](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios) · [Architecture](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/architecture.md) · [Testing and verification](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md)
+
+#### [StreamNexus](https://github.com/kanadhiayash/streamnexus)
+
+A full-stack streaming-rental prototype with separate admin and streamer journeys, role authorization, session authentication, MongoDB persistence, security middleware, integration tests, and CI. Checkout and rental completion remain simulated product flows.
+
+[Repository](https://github.com/kanadhiayash/streamnexus) · [Architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md) · [User flows](https://github.com/kanadhiayash/streamnexus/blob/main/docs/user-flows.md)
+
+---
+
+### Product design studies
+
+#### Arthenticate
+
+An interactive Figma product-design study focused on trust-critical product flows, information architecture, interface states, accessibility, and high-fidelity prototyping.
+
+**Public case-study packaging is in progress.**
+
+#### DriveDeal
+
+An interactive Figma product-design study for an automotive marketplace, covering product flows, marketplace information architecture, interface design, and high-fidelity prototyping.
+
+**Public case-study packaging is in progress.**
+
+---
+
+## Evidence of practice
+
+| Area | Working evidence |
 |---|---|
 | Product design | Product framing, information architecture, user flows, interaction design, UX writing, interface states |
-| Inclusive design | Accessibility requirements, responsive behaviour, error recovery, manual and automated verification |
-| Mobile | SwiftUI, React Native, Expo |
-| Web | React, Node.js, Express, MongoDB, Firebase |
-| AI-assisted work | Claude, Codex, structured context, evaluation, guarded workflows |
-| Delivery | GitHub Actions, pull requests, dependency review, release checks, documentation, security review |
+| Inclusive design | Accessibility requirements, responsive behaviour, error recovery, manual checks, and automated verification |
+| Mobile products | SwiftUI, React Native, Expo, Firebase |
+| Web products | React, Node.js, Express, MongoDB, Firebase |
+| AI-assisted execution | Claude, Codex, structured context, evaluation, and guarded workflows |
+| Delivery | Reviewable branches, pull requests, CI, dependency review, release checks, documentation, and security review |
 
 ---
 
@@ -67,20 +124,18 @@ PerFin OS is collaborative work. The other repositories state their current depl
 
 ```text
 Understand the product problem
-→ inspect the current evidence and constraints
+→ inspect the evidence and constraints
 → define the smallest complete change
 → design and implement through a reviewable branch
 → test and verify
 → document decisions, limitations, and remaining risks
 ```
 
-I use AI as an implementation partner, not as a substitute for product or engineering judgment. Public claims remain tied to evidence, and team projects state ownership boundaries clearly.
+I use AI as an implementation partner, not as a substitute for product or engineering judgment. Public claims stay tied to evidence, and collaborative projects state ownership boundaries clearly.
 
 ---
 
 ## Selected credentials
-
-The banner reflects six selected credentials:
 
 - **AI Fluency: Framework & Foundations**, Anthropic, June 2026
 - **Claude Code in Action**, Anthropic, June 2026
@@ -94,8 +149,8 @@ Additional completed credentials, including **Claude 101**, are listed on [Linke
 
 ## Current focus
 
-- Strengthening product case studies with clear decisions, constraints, and evidence
-- Packaging screenshots, demonstrations, architecture, and accessibility proof
+- Packaging product case studies with clear decisions, constraints, and evidence
+- Adding verified screenshots and demonstrations to public project repositories
 - Hardening Zeref through deterministic evaluation and release governance
 - Improving contribution evidence for collaborative product work
 
@@ -103,8 +158,6 @@ Additional completed credentials, including **Claude 101**, are listed on [Linke
 
 ## Connect
 
-- [LinkedIn](https://www.linkedin.com/in/yashkanadhia)
-- [Substack](https://substack.com/@yashkanadhia)
-- [GitHub](https://github.com/kanadhiayash)
+[Connect on LinkedIn](https://www.linkedin.com/in/yashkanadhia) · [Read on Substack](https://substack.com/@yashkanadhia)
 
 Open to Product Designer, AI Product Designer, Design Technologist, and product-engineering-adjacent opportunities in Canada.
