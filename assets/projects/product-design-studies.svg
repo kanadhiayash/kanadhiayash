@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Product design studies by Yash Kanadhia</title>
+  <desc id="desc">A dark editorial board presenting Arthenticate and DriveDeal as interactive Figma product-design studies with public case-study packaging in progress.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090B0D"/>
+      <stop offset="1" stop-color="#151318"/>
+    </linearGradient>
+    <linearGradient id="cardA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171414"/>
+      <stop offset="1" stop-color="#23181B"/>
+    </linearGradient>
+    <linearGradient id="cardB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#131617"/>
+      <stop offset="1" stop-color="#192220"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity="0.42"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#FFFFFF" stroke-opacity="0.025"/>
+    </pattern>
+    <style>
+      .eyebrow{font:600 22px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase}
+      .title{font:700 52px Georgia,serif;fill:#F5F2EA}
+      .cardTitle{font:700 40px Georgia,serif;fill:#F5F2EA}
+      .body{font:400 23px Arial,sans-serif;fill:#C9C8C2}
+      .small{font:500 19px Arial,sans-serif;fill:#A6AAA3}
+      .pill{font:600 18px Arial,sans-serif}
+    </style>
+  </defs>
+  <rect width="1600" height="700" rx="34" fill="url(#bg)"/>
+  <rect width="1600" height="700" rx="34" fill="url(#grid)"/>
+  <rect x="18" y="18" width="1564" height="664" rx="28" fill="none" stroke="#73756F" stroke-opacity="0.42"/>
+
+  <text x="86" y="88" class="eyebrow" fill="#D05D66">Living Product Console</text>
+  <text x="86" y="148" class="title">Product design studies</text>
+  <text x="86" y="188" class="small">Interactive Figma studies. Public case-study packaging remains in progress.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="86" y="230" width="680" height="380" rx="28" fill="url(#cardA)" stroke="#D05D66" stroke-opacity="0.7"/>
+    <rect x="834" y="230" width="680" height="380" rx="28" fill="url(#cardB)" stroke="#7FA28D" stroke-opacity="0.7"/>
+  </g>
+
+  <g>
+    <circle cx="144" cy="294" r="24" fill="#D05D66" fill-opacity="0.14" stroke="#D05D66"/>
+    <path d="M144 279l14 8v14l-14 8-14-8v-14zM137 294h14M144 287v14" fill="none" stroke="#F08A91" stroke-width="2"/>
+    <rect x="544" y="265" width="170" height="42" rx="21" fill="#D05D66" fill-opacity="0.1" stroke="#D05D66"/>
+    <text x="629" y="293" class="pill" fill="#F08A91" text-anchor="middle">Figma study</text>
+    <text x="126" y="358" class="cardTitle">Arthenticate</text>
+    <rect x="126" y="383" width="68" height="5" rx="2.5" fill="#D05D66"/>
+    <text x="126" y="436" class="body">Trust-critical product flows and interface states.</text>
+    <text x="126" y="485" class="small">• Information architecture and interaction design</text>
+    <text x="126" y="517" class="small">• Accessibility and trust-sensitive decisions</text>
+    <text x="126" y="549" class="small">• High-fidelity prototype and design-system work</text>
+    <text x="126" y="581" class="small">• Public case-study packaging in progress</text>
+  </g>
+
+  <g>
+    <circle cx="892" cy="294" r="24" fill="#7FA28D" fill-opacity="0.14" stroke="#7FA28D"/>
+    <path d="M878 300h28l-3-12h-22zM883 300v7M901 300v7M883 290h18" fill="none" stroke="#ABD0B9" stroke-width="2" stroke-linecap="round"/>
+    <rect x="1299" y="265" width="170" height="42" rx="21" fill="#7FA28D" fill-opacity="0.1" stroke="#7FA28D"/>
+    <text x="1384" y="293" class="pill" fill="#ABD0B9" text-anchor="middle">Figma study</text>
+    <text x="874" y="358" class="cardTitle">DriveDeal</text>
+    <rect x="874" y="383" width="68" height="5" rx="2.5" fill="#7FA28D"/>
+    <text x="874" y="436" class="body">Automotive marketplace product-design study.</text>
+    <text x="874" y="485" class="small">• Marketplace journeys and information architecture</text>
+    <text x="874" y="517" class="small">• Interface hierarchy and high-fidelity prototyping</text>
+    <text x="874" y="549" class="small">• Product-flow and visual-system exploration</text>
+    <text x="874" y="581" class="small">• Public case-study packaging in progress</text>
+  </g>
+
+  <line x1="86" y1="646" x2="1514" y2="646" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <text x="86" y="674" class="small">These are design studies, not claims of deployed production applications.</text>
+  <text x="1514" y="674" class="small" text-anchor="end">Prototype links and recordings will be added after public review.</text>
+</svg>
