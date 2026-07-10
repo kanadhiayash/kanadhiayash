@@ -2,6 +2,7 @@
 
 **Status:** LOCKED  
 **Effective date:** 2026-07-10  
+**Last revised:** 2026-07-10  
 **Applies to:** GitHub profile README, profile banner, hero copy, project attribution, credential selection, and future Living Product Console work.
 
 This file is the canonical decision record for the public GitHub profile. Later changes require an explicit replacement decision.
@@ -45,9 +46,9 @@ Use exactly:
 
 - 2 shipped projects
 - 1 team project
-- 6 selected certifications
+- 5 selected certifications
 
-The banner metric refers to six selected credentials, not the complete credential count.
+The banner metric refers to five selected credentials, not the complete credential count.
 
 ## Team-project attribution
 
@@ -68,7 +69,8 @@ Do not imply solo ownership.
 3. Introduction to Claude Cowork
 4. Claude Code 101
 5. Scrum Fundamentals Certified
-6. Six Sigma Yellow Belt
+
+Do not show **Six Sigma Yellow Belt** in the GitHub banner, profile heading, or selected-credentials section.
 
 ## Additional credential
 
@@ -94,5 +96,7 @@ Do not include ChatGPT in the banner tool row.
 - Do not use **Product Strategy** as a hero category.
 - Development and AI-assisted execution support the product-design narrative.
 - Keep PerFin OS attribution collaborative and explicit.
+- Show five selected certifications on GitHub.
+- Exclude Six Sigma Yellow Belt from GitHub profile presentation.
 - Do not turn selected credential counts into a claim about the complete credential inventory.
 - Preserve exact project, role, location, metric, credential, and tool wording from this decision record unless a later explicit decision replaces it.
