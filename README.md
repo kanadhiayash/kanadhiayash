@@ -1,9 +1,13 @@
 <p align="center">
   <img
-    src="./assets/hero/yash-kanadhia-living-product-console-dark.png"
-    alt="Yash Kanadhia, Product Designer in Toronto, Ontario, Canada. Dark Living Product Console featuring Zeref Memory Engine as a shipped independent project and PerFin OS as a MADS team project."
+    src="./assets/hero/yash-kanadhia-living-product-console-dark-motion.svg"
+    alt="Animated Living Product Console for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada, featuring Zeref Memory Engine as a shipped independent project and PerFin OS as a MADS team project."
     width="100%"
   />
+</p>
+
+<p align="center">
+  <sub>Motion is decorative. <a href="./assets/hero/yash-kanadhia-living-product-console-dark.png">View the static hero</a>.</sub>
 </p>
 
 <h1 align="center">Yash Kanadhia</h1>
