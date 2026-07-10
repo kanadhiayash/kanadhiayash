@@ -23,7 +23,7 @@
 
 I design and build systems that connect people to outcomes.
 
-My work spans product strategy, interaction design, accessibility, interface systems, technical implementation, testing, and documentation. I use development and AI-assisted workflows to turn product decisions into working, inspectable experiences.
+My work spans interaction design, accessibility, interface systems, technical implementation, testing, and documentation. I use development and AI-assisted execution as supporting proof to turn product decisions into working, inspectable experiences.
 
 ---
 
@@ -87,6 +87,7 @@ The banner reflects six selected credentials:
 - **Introduction to Claude Cowork**, Anthropic, June 2026
 - **Claude Code 101**, Anthropic, June 2026
 - **Scrum Fundamentals Certified**, SCRUMstudy, June 2026
+- **Six Sigma Yellow Belt**
 
 Additional completed credentials, including **Claude 101**, are listed on [LinkedIn](https://www.linkedin.com/in/yashkanadhia).
 
