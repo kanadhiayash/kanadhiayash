@@ -81,4 +81,16 @@ jobs:
           python-version: "3.12"
 
       - name: Validate definitive external link failures
-        run: python3 scripts/validate_profile_links.py
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 scripts/validate_profile_links.py | tee profile-link-report.txt
+
+      - name: Upload link validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: profile-link-report
+          path: profile-link-report.txt
+          if-no-files-found: error
+          retention-days: 7
