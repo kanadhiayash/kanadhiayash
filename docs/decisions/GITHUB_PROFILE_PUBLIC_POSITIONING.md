@@ -89,6 +89,42 @@ Use only:
 
 Do not include ChatGPT in the banner tool row.
 
+## Phase 2 hero visual direction
+
+**Decision status:** LOCKED
+
+Use the approved **dark Living Product Console** hero as the only GitHub profile banner direction for the current release.
+
+The light variation is not part of the active profile asset set.
+
+Required visual characteristics:
+
+- Dark charcoal and near-black canvas.
+- Restrained glass panels and system-line details.
+- Off-white primary text.
+- Military olive signal accents.
+- Deep crimson accents used sparingly.
+- Editorial typography with clear recruiter-readable hierarchy.
+- Zeref Memory Engine and PerFin OS as the dominant project cards.
+- Zeref Memory Engine may carry a shipped or flagship cue.
+- PerFin OS must carry the **MADS team project** cue and must not imply solo ownership.
+- One static hero is the approved baseline before any later motion experiment.
+- Do not create or publish a light-mode banner unless a later explicit decision reopens that direction.
+
+Approved asset stem:
+
+`yash-kanadhia-living-product-console-dark`
+
+Preferred repository location:
+
+`assets/hero/`
+
+Approved formats:
+
+- PNG as the primary GitHub README asset.
+- JPG as a compressed distribution or preview asset.
+- SVG may be retained as a placement wrapper when generated from the approved raster artwork. It must not be described as a fully editable vector source unless it is manually reconstructed as vector paths.
+
 ## Public-copy guardrails
 
 - Keep **Product Designer** as the sole profile title.
@@ -99,4 +135,5 @@ Do not include ChatGPT in the banner tool row.
 - Show five selected certifications on GitHub.
 - Exclude Six Sigma Yellow Belt from GitHub profile presentation.
 - Do not turn selected credential counts into a claim about the complete credential inventory.
-- Preserve exact project, role, location, metric, credential, and tool wording from this decision record unless a later explicit decision replaces it.
+- Use the dark Living Product Console hero for the current release.
+- Preserve exact project, role, location, metric, credential, tool, and hero-direction wording from this decision record unless a later explicit decision replaces it.
