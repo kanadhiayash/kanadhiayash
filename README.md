@@ -1,110 +1,131 @@
 <p align="center">
   <img
     src="./assets/github-profile-readme-hero-dark-yash-kanadhia.png"
-    alt="GitHub README banner for Yash Kanadhia with the headline Product systems that ship, project pills for Zeref OS, StreamNexus, FourRent, and PerFin OS, and a dark glassmorphism product-system visual."
+    alt="Yash Kanadhia, AI Product and UX Systems Designer in Toronto, building verified AI, web, and mobile product systems."
     width="100%"
   />
 </p>
 
-# Namaste, I'm Yash Kanadhia 🙏
+<h1 align="center">Yash Kanadhia</h1>
 
-**Product & UX Systems Designer**  
-Toronto, Canada · Product Strategy · UX Systems · AI Workflows · Mobile/Web Product Building
+<p align="center">
+  <strong>AI Product & UX Systems Designer</strong><br />
+  Toronto, Canada · Product strategy · UX systems · AI workflows · Web and mobile products
+</p>
 
-I design, build, document, and maintain product systems across web, mobile, and workflow platforms.
+<p align="center">
+  <a href="https://www.linkedin.com/in/yashkanadhia">LinkedIn</a>
+  ·
+  <a href="https://substack.com/@yashkanadhia">Substack</a>
+  ·
+  <a href="https://github.com/kanadhiayash">GitHub</a>
+</p>
 
-My work sits across product strategy, UX systems, interface design, mobile/web development, and AI-assisted workflows. I turn ambiguous product problems into structured systems, working prototypes, public documentation, and recruiter-readable proof.
+I design and build product systems across AI workflows, web platforms, and native mobile applications.
 
-Before product design, I spent over five years in digital marketing and brand strategy. That background shaped how I think about user behaviour, distribution, constraints, and systems before any screen gets designed.
+My work connects product strategy, UX architecture, interface systems, implementation, testing, documentation, and release discipline. I focus on turning ambiguous product problems into systems that another person can understand, run, inspect, and continue.
+
+---
+
+## Selected systems
+
+| Project                                                                    | Product and technical signal                                                                                                                                                        | Stack                                                  | Evidence                                                                                                                               |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| [Zeref Memory Engine](https://github.com/kanadhiayash/zeref-memory-engine) | Local-first memory for AI-assisted work, guarded writes, deterministic routing, cross-harness handoffs, local audit trails, and benchmark-gated releases                            | Python, CLI tooling, structured memory, GitHub Actions | [Benchmark report](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md)                             |
+| [For Rent](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios)   | Native iOS rental product with renter and landlord journeys, deterministic demo data, Firebase-backed clean mode, feature-oriented MVVM, accessibility, and automated quality gates | SwiftUI, Swift, Firebase, MVVM                         | [Testing and verification](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md) |
+| [StreamNexus](https://github.com/kanadhiayash/streamnexus)                 | Full-stack streaming-rental prototype with role-based workflows, MongoDB persistence, session authentication, security controls, server-rendered product flows, and CI              | Node.js, Express, MongoDB, EJS                         | [Architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md)                                             |
+
+StreamNexus and For Rent are portfolio implementation projects. Their repositories state current deployment, release, and production limitations directly.
+
+---
+
+## Product and UX practice
+
+I work across the path from problem framing to implementation:
+
+* Product framing, constraints, and prioritization
+* Information architecture and user flows
+* Interaction design, interface states, and UX writing
+* Design systems and design-development handoff
+* Accessibility requirements and verification
+* Technical architecture, implementation, testing, and documentation
+* Release readiness, security review, and evidence-based public claims
+
+My broader product portfolio also includes work in digital ownership, automotive marketplaces, and personal finance. Full case studies are being packaged separately from the code repositories.
+
+---
+
+## Engineering proof
+
+I use AI as an implementation partner, not as a substitute for product or engineering judgment.
+
+* Material changes move through scoped branches and pull requests.
+* Behaviour changes require tests, automated checks, or documented manual verification.
+* Architecture-impacting decisions are documented with constraints and tradeoffs.
+* Security, dependency, release, and privacy checks remain visible in repository history.
+* Public claims stay separate from assumptions, unknowns, planned work, and self-assigned targets.
+* Credentials, private context, and environment-specific configuration stay outside public repositories.
+
+Selected evidence:
+
+* [Zeref architecture and shipped surfaces](https://github.com/kanadhiayash/zeref-memory-engine#what-zeref-ships)
+* [Zeref benchmark methodology](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md)
+* [For Rent architecture](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/architecture.md)
+* [For Rent verification matrix](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md)
+* [StreamNexus architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md)
+* [StreamNexus setup and quality gates](https://github.com/kanadhiayash/streamnexus#quality-gates)
+
+---
+
+## Product and technical scope
+
+| Discipline             | Working scope                                                                                                         |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Product and UX         | Product framing, information architecture, user flows, interaction design, UX writing, accessibility, design systems  |
+| AI systems             | Agent workflows, structured memory, deterministic routing, evaluation, prompt and context systems                     |
+| Mobile                 | SwiftUI, React Native, Expo                                                                                           |
+| Web                    | React, Node.js, Express, MongoDB, Firebase                                                                            |
+| Engineering operations | GitHub Actions, branch and pull-request discipline, dependency review, release checks, documentation, security review |
+
+---
+
+## How I work
+
+```text
+Understand the product problem
+→ inspect the current system and evidence
+→ separate facts from assumptions
+→ define the smallest complete change
+→ implement through a reviewable branch
+→ test and verify
+→ document tradeoffs, limitations, and remaining risks
+```
+
+I prefer small, auditable changes over large opaque rewrites. A passing check is useful only when the check still protects the behaviour it was designed to verify.
 
 ---
 
 ## Current focus
 
-Building toward Product Designer, AI Product Designer, UX Systems Designer, and Design Technologist roles through:
-
-- Shipped product proof across mobile, web, full-stack, and workflow projects
-- Public operating manuals for project hygiene, GitHub velocity, software architecture, and design systems
-- Case studies with clear problem framing, design decisions, technical constraints, and evidence
-- AI workflow systems that make work easier to continue, audit, and improve
+* Hardening Zeref Memory Engine through deterministic benchmarks, release checks, and repository governance
+* Packaging verified product, architecture, accessibility, and simulator evidence for For Rent
+* Completing real screenshots, demo assets, and deployment evidence for StreamNexus
+* Converting product-design work into complete case studies with clear decisions, constraints, and honest outcomes
 
 ---
 
-## What I build
+## Selected credential
 
-| Project | Focus | Stack / Medium | Status |
-|---|---|---|---|
-| [Zeref OS](https://github.com/kanadhiayash/zeref-os) | Local-first context and memory engine for AI-assisted work | Markdown, agent workflows, prompt systems | Live |
-| PerFinOS | Personal finance product focused on behavioural insight UX | React Native, Firebase, Gemini AI | Public packaging |
-| StreamNexus | Full-stack streaming platform from schema to interface | Node.js, Firebase, React | GitHub proof |
-| ForRent | iOS rental product for discovery and communication | SwiftUI, Firebase | Public packaging |
+* **Scrum Fundamentals Certified**, SCRUMstudy, June 2026
 
----
-
-## Public practice manuals
-
-These repos document the operating standards I use across product, UX, engineering, AI-assisted development, and portfolio-grade work.
-
-| Manual | What it covers |
-|---|---|
-| [project-practices](https://github.com/kanadhiayash/project-practices) | Folder architecture, naming, documentation, evidence handling, decision records, audits, and release readiness |
-| [github-velocity-practices](https://github.com/kanadhiayash/github-velocity-practices) | Branch discipline, PR review, CI/CD gates, release hygiene, dependency review, and safe AI-assisted changes |
-| [development-architecture-practices](https://github.com/kanadhiayash/development-architecture-practices) | MVVM, MVC, layered systems, clean architecture, feature boundaries, state ownership, testing, and refactor decisions |
-| [design-system-practices](https://github.com/kanadhiayash/design-system-practices) | Design tokens, accessibility gates, component governance, UX standards, and design-development handoff |
-
----
-
-## Operating principles
-
-- Facts, assumptions, unknowns, and risks stay separate.
-- Every public repo should be understandable in 30 seconds.
-- README files are product surfaces, not afterthoughts.
-- AI-assisted work still needs human review, testing, and source discipline.
-- Public releases require privacy, secrets, setup, and claim verification.
-- Good systems reduce continuation cost for the next person, including future me.
-
----
-
-## Stack
-
-| Area | Tools and practices |
-|---|---|
-| Product and UX | Product strategy, user flows, information architecture, design systems, UX writing, accessibility |
-| Design | Figma, interaction design, prototyping, component documentation |
-| Web and mobile | React, React Native, SwiftUI, Firebase, Node.js, MongoDB |
-| AI workflow | GPT, Gemini, Cursor, prompt systems, agent workflows, MCP learning |
-| Delivery | GitHub, branch discipline, README systems, checklists, release notes, documentation |
-
----
-
-## Current learning
-
-Building deeper capability in:
-
-- Python for AI workflow scripting
-- Retrieval-augmented generation and vector database fundamentals
-- LangGraph and agentic workflow architecture
-- AI evaluation frameworks
-- Cloud AI fundamentals
-- Design-system governance for product teams
-
----
-
-## Selected credentials
-
-- **Scrum Fundamentals Certified (SFC)**, issued June 2026
-
-Queued learning is tracked separately and will be added here only after completion.
+Only completed credentials are listed.
 
 ---
 
 ## Connect
 
-- [LinkedIn](https://www.linkedin.com/in/yashkanadhia)
-- [GitHub](https://github.com/kanadhiayash)
+* [LinkedIn](https://www.linkedin.com/in/yashkanadhia)
+* [Substack](https://substack.com/@yashkanadhia)
+* [GitHub](https://github.com/kanadhiayash)
 
-Open to conversations around product design, AI workflows, UX systems, mobile/web products, and public operating manuals.
-
----
-
-_This profile is a public build log. Updated as projects ship and evidence improves._
+Open to Product Designer, AI Product Designer, Design Technologist, and UX/Product Systems opportunities in Canada.
