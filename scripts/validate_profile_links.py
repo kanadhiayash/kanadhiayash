@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import concurrent.futures
 import re
 import sys
 import urllib.error
@@ -13,7 +14,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 USER_AGENT = "kanadhiayash-profile-link-validator/1.0"
-TIMEOUT_SECONDS = 20
+TIMEOUT_SECONDS = 10
+MAX_WORKERS = 8
 
 MD_LINK = re.compile(
     r"(?<!!)\[[^\]]+\]\((?P<href>[^)\s]+)(?:\s+[\"'][^\"']*[\"'])?\)"
@@ -45,13 +47,13 @@ def request_url(url: str, method: str) -> int:
         return int(getattr(response, "status", 200))
 
 
-def confirm_url(url: str) -> tuple[str, str]:
-    """Return status category and detail: ok, warning, or error."""
+def confirm_url(url: str) -> tuple[str, str, str]:
+    """Return URL, status category, and detail."""
 
     try:
         status = request_url(url, "HEAD")
         if status < 400:
-            return "ok", f"HTTP {status}"
+            return url, "ok", f"HTTP {status}"
     except urllib.error.HTTPError as exc:
         head_detail = f"HEAD HTTP {exc.code}"
     except (urllib.error.URLError, TimeoutError, OSError) as exc:
@@ -62,14 +64,14 @@ def confirm_url(url: str) -> tuple[str, str]:
     try:
         status = request_url(url, "GET")
         if status < 400:
-            return "ok", f"GET confirmed HTTP {status} after {head_detail}"
-        return "warning", f"GET returned HTTP {status} after {head_detail}"
+            return url, "ok", f"GET confirmed HTTP {status} after {head_detail}"
+        return url, "warning", f"GET returned HTTP {status} after {head_detail}"
     except urllib.error.HTTPError as exc:
         if exc.code in {404, 410}:
-            return "error", f"GET confirmed HTTP {exc.code} after {head_detail}"
-        return "warning", f"GET could not be confirmed (HTTP {exc.code}) after {head_detail}"
+            return url, "error", f"GET confirmed HTTP {exc.code} after {head_detail}"
+        return url, "warning", f"GET could not be confirmed (HTTP {exc.code}) after {head_detail}"
     except (urllib.error.URLError, TimeoutError, OSError) as exc:
-        return "warning", f"GET inconclusive after {head_detail}: {exc}"
+        return url, "warning", f"GET inconclusive after {head_detail}: {exc}"
 
 
 def main() -> int:
@@ -80,10 +82,15 @@ def main() -> int:
     urls = external_links(README.read_text(encoding="utf-8"))
     errors: list[str] = []
     warnings: list[str] = []
+    outcomes: list[tuple[str, str, str]] = []
 
-    print(f"Checking {len(urls)} external README links.")
-    for url in urls:
-        category, detail = confirm_url(url)
+    print(f"Checking {len(urls)} external README links with {MAX_WORKERS} workers.")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        futures = [executor.submit(confirm_url, url) for url in urls]
+        for future in concurrent.futures.as_completed(futures):
+            outcomes.append(future.result())
+
+    for url, category, detail in sorted(outcomes):
         if category == "ok":
             print(f"OK: {url} ({detail})")
         elif category == "warning":
