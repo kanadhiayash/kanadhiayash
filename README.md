@@ -58,33 +58,40 @@ I lead with product design. Development and AI-assisted execution support the wo
 
 This staged release focuses on three built products. Product-design studies and the Zeref case file are parked until their next review cycle. The existing hero remains unchanged during this phase.
 
-### [PerFin OS](#perfin-os)
-
-<a href="#perfin-os">
-  <img src="./assets/projects/perfin-os/cover.svg" alt="PerFin OS project cover identifying a React Native and Firebase MADS team project by Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq." width="100%" />
-</a>
-
-**MADS final team project** · React Native · Firebase  
-**Team:** Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq  
-A personal-finance system covering expenses, budgets, receipt organization, spending maps, reports, and planning workflows across guest and authenticated experiences.
-
-### [For Rent](#for-rent)
-
-<a href="#for-rent">
-  <img src="./assets/projects/for-rent/cover.svg" alt="For Rent project cover presenting a SwiftUI rental marketplace implementation project with MVVM, Firebase boundaries, and verified demo mode." width="100%" />
-</a>
-
-**Implementation project** · SwiftUI · MVVM · Firebase  
-A Canadian long-term rental marketplace with renter, landlord, and guest journeys, deterministic demo data, and a separate Firebase-backed clean mode.
-
-### [StreamNexus](#streamnexus)
-
-<a href="#streamnexus">
-  <img src="./assets/projects/streamnexus/cover.svg" alt="StreamNexus project cover presenting a Node, Express, and MongoDB streaming-rental prototype with role-based workflows and simulated checkout." width="100%" />
-</a>
-
-**Full-stack prototype** · Node.js · Express · MongoDB  
-A role-based streaming-rental product with separate administrator and streamer journeys, persistent data, security middleware, testing, and simulated checkout.
+<table role="presentation">
+  <tr>
+    <td width="33%" valign="top">
+      <a href="#perfin-os">
+        <img src="./assets/projects/perfin-os/cover.svg" alt="PerFin OS thumbnail identifying a React Native and Firebase MADS team project by Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq." width="100%" />
+      </a>
+      <p align="center">
+        <strong><a href="#perfin-os">PerFin OS</a></strong><br />
+        <sub>MADS team project<br />React Native · Firebase</sub>
+      </p>
+      <p><sub>Expenses, budgets, maps, receipts, reports, and planning across guest and authenticated workspaces.</sub></p>
+    </td>
+    <td width="33%" valign="top">
+      <a href="#for-rent">
+        <img src="./assets/projects/for-rent/cover.svg" alt="For Rent thumbnail presenting a SwiftUI rental marketplace implementation project with MVVM, Firebase boundaries, and verified demo mode." width="100%" />
+      </a>
+      <p align="center">
+        <strong><a href="#for-rent">For Rent</a></strong><br />
+        <sub>Implementation project<br />SwiftUI · Firebase</sub>
+      </p>
+      <p><sub>Rental discovery, saved listings, viewing inquiries, and landlord listing management across role-specific journeys.</sub></p>
+    </td>
+    <td width="33%" valign="top">
+      <a href="#streamnexus">
+        <img src="./assets/projects/streamnexus/cover.svg" alt="StreamNexus thumbnail presenting a Node, Express, and MongoDB streaming-rental prototype with role-based workflows and simulated checkout." width="100%" />
+      </a>
+      <p align="center">
+        <strong><a href="#streamnexus">StreamNexus</a></strong><br />
+        <sub>Full-stack prototype<br />Node · Express · MongoDB</sub>
+      </p>
+      <p><sub>Administrator and streamer journeys across catalog management, discovery, shortlist, rental, and simulated completion.</sub></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -99,6 +106,10 @@ A role-based streaming-rental product with separate administrator and streamer j
 
 <details>
   <summary><strong>Open PerFin OS case file</strong></summary>
+
+  <p align="center">
+    <img src="./assets/projects/perfin-os/cover.svg" alt="Full-width PerFin OS case-file cover identifying the MADS team project, React Native and Firebase platform, and verified development status." width="100%" />
+  </p>
 
   <p align="center">
     <img src="./assets/projects/perfin-os/media-pending.svg" alt="PerFin OS verified walkthrough capture pending. A reviewed local-runtime recording and public-safe static captures will replace this state after team and privacy review." width="100%" />
@@ -176,6 +187,10 @@ flowchart LR
   <summary><strong>Open For Rent case file</strong></summary>
 
   <p align="center">
+    <img src="./assets/projects/for-rent/cover.svg" alt="Full-width For Rent case-file cover presenting the SwiftUI rental marketplace, MVVM architecture, Firebase boundaries, and verified demo mode." width="100%" />
+  </p>
+
+  <p align="center">
     <img src="./assets/projects/for-rent/media-pending.svg" alt="For Rent verified walkthrough capture pending. A reviewed renter or landlord workflow and static product states will replace this panel." width="100%" />
   </p>
 
@@ -248,6 +263,10 @@ flowchart LR
 
 <details>
   <summary><strong>Open StreamNexus case file</strong></summary>
+
+  <p align="center">
+    <img src="./assets/projects/streamnexus/cover.svg" alt="Full-width StreamNexus case-file cover presenting the Node, Express, EJS, and MongoDB prototype with role-based workflows and simulated checkout." width="100%" />
+  </p>
 
   <p align="center">
     <img src="./assets/projects/streamnexus/media-pending.svg" alt="StreamNexus verified walkthrough capture pending. A reviewed browse, search, detail, or rental workflow recording will replace this state." width="100%" />

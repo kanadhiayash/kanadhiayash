@@ -91,23 +91,42 @@ def validate_readme(text: str, errors: list[str]) -> None:
     if text.find(HERO_STATIC_REF) < text.find(HERO_MOTION_REF):
         add_error(errors, "The static hero alternative must follow the motion hero.")
 
-    last_cover_position = -1
+    featured_start = text.find("## Featured work")
+    case_files_start = text.find("## Built product case files")
+    if featured_start == -1 or case_files_start == -1 or featured_start >= case_files_start:
+        add_error(errors, "Featured Work and Built Product Case Files sections are missing or out of order.")
+        featured = ""
+    else:
+        featured = text[featured_start:case_files_start]
+
+    if featured.count('<table role="presentation">') != 1:
+        add_error(errors, "Featured Work must contain one presentation table for compact project cards.")
+    if featured.count('<td width="33%" valign="top">') != 3:
+        add_error(errors, "Featured Work must contain three equal-width compact project cards.")
+
+    last_thumbnail_position = -1
     for name, cover, pending, cover_ref, pending_ref in PROJECTS:
         validate_svg(cover, errors, motion=False)
         validate_svg(pending, errors, motion=False)
 
-        if text.count(cover_ref) != 1:
-            add_error(errors, f"README must reference the {name} cover exactly once.")
+        if text.count(cover_ref) != 2:
+            add_error(errors, f"README must reference the {name} cover twice: thumbnail and case-file cover.")
+        if featured.count(cover_ref) != 1:
+            add_error(errors, f"Featured Work must reference the {name} cover exactly once as a thumbnail.")
         if text.count(pending_ref) != 1:
             add_error(errors, f"README must reference the {name} media state exactly once.")
 
-        cover_position = text.find(cover_ref)
+        thumbnail_position = featured.find(cover_ref)
+        second_cover_position = text.find(cover_ref, text.find(cover_ref) + 1)
         pending_position = text.find(pending_ref)
-        if cover_position <= last_cover_position:
-            add_error(errors, f"Project cover is out of active order: {name}")
-        if pending_position < cover_position:
-            add_error(errors, f"Media state must follow the visible project cover: {name}")
-        last_cover_position = cover_position
+
+        if thumbnail_position <= last_thumbnail_position:
+            add_error(errors, f"Project thumbnail is out of active order: {name}")
+        if second_cover_position == -1 or second_cover_position < case_files_start:
+            add_error(errors, f"Full-width case-file cover is missing for: {name}")
+        if pending_position < second_cover_position:
+            add_error(errors, f"Media state must follow the full-width case-file cover: {name}")
+        last_thumbnail_position = thumbnail_position
 
     if text.count("<details>") != 4:
         add_error(errors, "README must contain one static-hero drawer and three project case-file drawers.")
@@ -136,8 +155,8 @@ def main() -> int:
 
     print("Result: PASS")
     print("  OK: Motion hero and static alternative are present and ordered.")
-    print("  OK: Three active project covers are present and ordered.")
-    print("  OK: Three accessible media-capture states follow their covers.")
+    print("  OK: Three compact Featured Work thumbnails are present and ordered.")
+    print("  OK: Three full-width case-file covers precede accessible media states.")
     print("  OK: README provides one identity drawer and three case-file drawers.")
     return 0
 
