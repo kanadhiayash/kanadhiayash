@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="./assets/github-profile-readme-hero-dark-yash-kanadhia.png"
+    src=".assets/yash-kanadhia-github-banner-8k.png"
     alt="Yash Kanadhia, AI Product and UX Systems Designer in Toronto, building verified AI, web, and mobile product systems."
     width="100%"
   />
