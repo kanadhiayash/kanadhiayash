@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the staged interactive GitHub profile using only the standard library."""
+"""Validate the dual-layer GitHub profile using only the standard library."""
 
 from __future__ import annotations
 
@@ -25,28 +25,25 @@ HERO_JPG = HERO_DIR / f"{HERO_STEM}.jpg"
 HERO_SVG = HERO_DIR / f"{HERO_STEM}.svg"
 HERO_MOTION = HERO_DIR / f"{HERO_STEM}-motion.svg"
 
-PROJECT_ASSETS = (
-    ROOT / "assets/projects/perfin-os/cover.svg",
-    ROOT / "assets/projects/perfin-os/media-pending.svg",
-    ROOT / "assets/projects/for-rent/cover.svg",
-    ROOT / "assets/projects/for-rent/media-pending.svg",
-    ROOT / "assets/projects/streamnexus/cover.svg",
-    ROOT / "assets/projects/streamnexus/media-pending.svg",
+MEDIA_ASSETS = (
+    ROOT / "assets/profile-media/zeref-media-slot.svg",
+    ROOT / "assets/profile-media/perfin-os-media-slot.svg",
+    ROOT / "assets/profile-media/for-rent-media-slot.svg",
+    ROOT / "assets/profile-media/streamnexus-media-slot.svg",
 )
-
-REQUIRED_ASSETS = (HERO_PNG, HERO_JPG, HERO_SVG, HERO_MOTION, *PROJECT_ASSETS)
+REQUIRED_ASSETS = (HERO_PNG, HERO_JPG, HERO_SVG, HERO_MOTION, *MEDIA_ASSETS)
 
 REQUIRED_COPY = (
     "Yash Kanadhia",
     "Product Designer",
     "Toronto, Ontario, Canada",
     "I design and build systems that connect people to outcomes.",
-    "2 shipped projects · 1 MADS team project · 5 selected certifications",
     "Figma · React · Swift · Firebase · Claude · Codex",
+    "60-second profile",
+    "Zeref Memory Engine",
     "PerFin OS",
     "For Rent",
     "StreamNexus",
-    "MADS final team project",
     "Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq",
 )
 
@@ -63,45 +60,48 @@ FORBIDDEN_HERO = (
     "UX Systems",
     "Product Strategy",
 )
-
 FORBIDDEN_PUBLIC = (
     "Six Sigma Yellow Belt",
     "visitor count",
     "profile views",
     "GitHub streak",
 )
-
+FORBIDDEN_LAYOUT = (
+    '<table role="presentation">',
+    "## Featured work",
+    "## Built product case files",
+    "./assets/projects/perfin-os/cover.svg",
+    "./assets/projects/perfin-os/media-pending.svg",
+    "./assets/projects/for-rent/cover.svg",
+    "./assets/projects/for-rent/media-pending.svg",
+    "./assets/projects/streamnexus/cover.svg",
+    "./assets/projects/streamnexus/media-pending.svg",
+    "```mermaid",
+)
 MARKERS = (
     "<!-- DYNAMIC:WRITING:START -->",
     "<!-- DYNAMIC:WRITING:END -->",
     "<!-- DYNAMIC:SIGNALS:START -->",
     "<!-- DYNAMIC:SIGNALS:END -->",
 )
-
 SECTION_ORDER = (
-    "## Featured work",
-    "## Built product case files",
-    "## Evidence and practice",
-    "## Live build console",
+    "## 60-second profile",
+    "## Deep evidence",
+    "## Evidence map",
+    "## How I work",
+    "## Current signals",
     "## Selected credentials",
     "## Connect",
 )
-
-PROJECT_ORDER = (
-    "./assets/projects/perfin-os/cover.svg",
-    "./assets/projects/for-rent/cover.svg",
-    "./assets/projects/streamnexus/cover.svg",
-)
-
-PROJECT_MEDIA = (
-    "./assets/projects/perfin-os/media-pending.svg",
-    "./assets/projects/for-rent/media-pending.svg",
-    "./assets/projects/streamnexus/media-pending.svg",
+MEDIA_REFERENCES = (
+    "./assets/profile-media/zeref-media-slot.svg",
+    "./assets/profile-media/perfin-os-media-slot.svg",
+    "./assets/profile-media/for-rent-media-slot.svg",
+    "./assets/profile-media/streamnexus-media-slot.svg",
 )
 
 TEXT_EXTENSIONS = {".md", ".py", ".json", ".yml", ".yaml", ".svg", ".txt"}
 SKIP_DIRS = {".git", ".venv", "node_modules", "dist", "build", "__pycache__"}
-
 SECRET_PATTERNS = {
     "OpenAI-style key": re.compile(r"\bsk-[A-Za-z0-9_-]{20,}\b"),
     "GitHub personal token": re.compile(r"\bgh[pousr]_[A-Za-z0-9]{30,}\b"),
@@ -109,13 +109,11 @@ SECRET_PATTERNS = {
     "private key block": re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
     "credentialed MongoDB URI": re.compile(r"mongodb(?:\+srv)?://[^\s:@/]+:[^\s@/]+@", re.I),
 }
-
 PRIVATE_PATHS = {
     "macOS user path": re.compile(r"/Users/[^/\s]+/"),
     "Linux home path": re.compile(r"/home/[^/\s]+/"),
     "Windows user path": re.compile(r"[A-Za-z]:\\Users\\[^\\\s]+\\"),
 }
-
 DRAFT_MARKERS = {
     "TODO marker": re.compile(r"\bTODO\b", re.I),
     "TBD marker": re.compile(r"\bTBD\b", re.I),
@@ -123,14 +121,14 @@ DRAFT_MARKERS = {
     "example domain": re.compile(r"https?://(?:www\.)?example\.com", re.I),
     "bracketed link token": re.compile(r"\[(?:LINK|URL)\]", re.I),
 }
-
 HTML_IMG = re.compile(r"<img\b(?P<attrs>[^>]+)>", re.I)
 ATTR = re.compile(r"(?P<name>[A-Za-z_:][-A-Za-z0-9_:.]*)\s*=\s*[\"'](?P<value>.*?)[\"']")
 MD_IMAGE = re.compile(r"!\[(?P<alt>[^\]]*)\]\((?P<src>[^)\s]+)(?:\s+[\"'][^\"']*[\"'])?\)")
 MD_LINK = re.compile(r"(?<!!)\[[^\]]+\]\((?P<href>[^)\s]+)(?:\s+[\"'][^\"']*[\"'])?\)")
 HTML_LINK = re.compile(r"<a\b[^>]*\bhref=[\"'](?P<href>[^\"']+)[\"']", re.I)
 HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.M)
-USER_AGENT = "kanadhiayash-profile-release-validator/2.1"
+WORD = re.compile(r"\b[\w'-]+\b")
+USER_AGENT = "kanadhiayash-profile-release-validator/3.0"
 
 
 @dataclass
@@ -168,10 +166,7 @@ def links(text: str) -> set[str]:
 def images(text: str) -> list[tuple[str, str]]:
     found: list[tuple[str, str]] = []
     for match in HTML_IMG.finditer(text):
-        attrs = {
-            item.group("name").lower(): item.group("value")
-            for item in ATTR.finditer(match.group("attrs"))
-        }
+        attrs = {item.group("name").lower(): item.group("value") for item in ATTR.finditer(match.group("attrs"))}
         found.append((attrs.get("src", ""), attrs.get("alt", "")))
     found.extend((match.group("src"), match.group("alt")) for match in MD_IMAGE.finditer(text))
     return found
@@ -201,6 +196,14 @@ def public_text_files() -> Iterable[Path]:
         yield path
 
 
+def section_text(text: str, start_heading: str, next_heading: str) -> str:
+    start = text.find(start_heading)
+    end = text.find(next_heading)
+    if start == -1 or end == -1 or start >= end:
+        return ""
+    return text[start:end]
+
+
 def validate_copy(text: str, result: Result) -> None:
     for value in REQUIRED_COPY:
         if value not in text:
@@ -210,7 +213,7 @@ def validate_copy(text: str, result: Result) -> None:
         if text.count(credential) != 1:
             result.error(f"Selected certification must appear exactly once: {credential}")
 
-    hero = "\n".join(text.splitlines()[:60])
+    hero = "\n".join(text.splitlines()[:58])
     if "<strong>Product Designer</strong>" not in hero:
         result.error("Product Designer is not the sole explicit hero title.")
     for phrase in FORBIDDEN_HERO:
@@ -226,7 +229,18 @@ def validate_copy(text: str, result: Result) -> None:
         if text.count(marker) != 1:
             result.error(f"Dynamic marker must appear exactly once: {marker}")
 
-    result.ok("Locked public copy, credentials, exclusions, and dynamic markers checked.")
+    scan = section_text(text, "## 60-second profile", "## Deep evidence")
+    if not scan:
+        result.error("The 60-second profile section could not be isolated.")
+    else:
+        scan_words = len(WORD.findall(re.sub(r"<[^>]+>", " ", scan)))
+        if scan_words > 220:
+            result.error(f"The visible 60-second profile exceeds 220 words: {scan_words}")
+        if scan_words < 120:
+            result.warn(f"The visible 60-second profile may be too thin: {scan_words} words")
+        result.ok(f"60-second profile content budget checked: {scan_words} words.")
+
+    result.ok("Locked identity, credentials, exclusions, and dynamic markers checked.")
 
 
 def validate_structure(text: str, result: Result) -> None:
@@ -234,48 +248,44 @@ def validate_structure(text: str, result: Result) -> None:
     for section in SECTION_ORDER:
         current = text.find(section)
         if current == -1:
-            result.error(f"Missing staged README section: {section}")
+            result.error(f"Missing dual-layer README section: {section}")
             continue
         if current <= position:
-            result.error(f"README section is out of staged order: {section}")
+            result.error(f"README section is out of order: {section}")
         position = current
 
-    cover_position = -1
-    for reference in PROJECT_ORDER:
-        current = text.find(reference)
-        if current == -1:
-            result.error(f"Missing active project cover reference: {reference}")
-            continue
-        if current <= cover_position:
-            result.error(f"Active project cover is out of order: {reference}")
-        cover_position = current
-
-    for reference in PROJECT_MEDIA:
-        if text.count(reference) != 1:
-            result.error(f"Active media state must appear exactly once: {reference}")
-
-    if text.count("<details>") != 4 or text.count("</details>") != 4:
-        result.error("README must contain one static-hero drawer and three closed project drawers.")
-    if text.count("<summary><strong>Open ") != 3:
-        result.error("README must provide exactly three project case-file summaries.")
-    if text.count("#### Known limitations") != 3:
-        result.error("Every active project must include a known-limitations section.")
-    if text.count("#### Evidence") != 3:
-        result.error("Every active project must include an evidence section.")
-    if text.count("```mermaid") != 3:
-        result.error("Every active project must include one Mermaid system map.")
-    if text.count("[↑ Return to featured work](#featured-work)") != 3:
-        result.error("Every active project must provide a return route to Featured Work.")
-
     required_routes = (
-        'href="#featured-work"',
-        'href="#built-product-case-files"',
-        'href="#evidence-and-practice"',
-        'href="#live-build-console"',
+        'href="#60-second-profile"',
+        'href="#deep-evidence"',
+        'href="#evidence-map"',
+        'href="#current-signals"',
+        'href="#connect"',
     )
     for route in required_routes:
         if route not in text:
-            result.error(f"Command-palette route is missing: {route}")
+            result.error(f"Top navigation route is missing: {route}")
+
+    for forbidden in FORBIDDEN_LAYOUT:
+        if forbidden in text:
+            result.error(f"Deprecated or cluttered profile pattern is present: {forbidden}")
+
+    if text.count("<details>") != 5 or text.count("</details>") != 5:
+        result.error("README must contain one static-hero drawer and four evidence drawers.")
+    if text.count("<summary><strong>Inspect ") != 4:
+        result.error("README must provide exactly four evidence-drawer summaries.")
+    if text.count("[↑ Return to the 60-second profile](#60-second-profile)") != 4:
+        result.error("Every evidence drawer must provide a return route to the 60-second profile.")
+
+    deep_start = text.find("## Deep evidence")
+    media_position = deep_start
+    for reference in MEDIA_REFERENCES:
+        if text.count(reference) != 1:
+            result.error(f"Reserved media slot must appear exactly once: {reference}")
+            continue
+        current = text.find(reference)
+        if current <= media_position:
+            result.error(f"Reserved media slot is out of order: {reference}")
+        media_position = current
 
     for name in ("Yash Kanadhia", "Alexis Gorospe", "Sarmad Tariq"):
         if name not in text:
@@ -283,18 +293,18 @@ def validate_structure(text: str, result: Result) -> None:
     if "This profile does not imply solo ownership." not in text:
         result.error("PerFin OS solo-ownership guardrail is missing.")
 
-    required_limitations = (
-        "does not claim an App Store release",
-        "does not claim a deployed production backend",
+    required_boundaries = (
+        "does not claim an App Store release or a deployed production backend",
         "portfolio prototype, not a production OTT platform",
         "Checkout and rental completion are simulated",
         "does not connect to bank accounts or process payments",
+        "not a hosted service, model provider, vector database, or substitute for human review",
     )
-    for limitation in required_limitations:
-        if limitation not in text:
-            result.error(f"Required public limitation is missing: {limitation}")
+    for boundary in required_boundaries:
+        if boundary not in text:
+            result.error(f"Required public boundary is missing: {boundary}")
 
-    result.ok("Staged IA, project order, case files, ownership, evidence, and limitations checked.")
+    result.ok("Dual-layer order, navigation, drawers, ownership, evidence, and boundaries checked.")
 
 
 def validate_svg(path: Path, result: Result, *, require_accessible_text: bool) -> None:
@@ -305,6 +315,9 @@ def validate_svg(path: Path, result: Result, *, require_accessible_text: bool) -
         result.error(f"SVG must contain an SVG root and role=img: {path.relative_to(ROOT)}")
     if require_accessible_text and ("<title" not in svg or "<desc" not in svg):
         result.error(f"SVG must contain title and description elements: {path.relative_to(ROOT)}")
+    for token in ("<script", "javascript:", "onload=", "onclick=", "<foreignobject"):
+        if token in svg:
+            result.error(f"Unsafe or unsupported SVG token {token}: {path.relative_to(ROOT)}")
 
 
 def validate_assets(text: str, result: Result) -> None:
@@ -333,7 +346,7 @@ def validate_assets(text: str, result: Result) -> None:
         result.error(f"README must reference the approved hero PNG exactly once: {hero_ref}")
     else:
         alt = hero_entries[0][1].lower()
-        for term in ("yash kanadhia", "product designer", "zeref memory engine", "perfin os", "mads team project"):
+        for term in ("yash kanadhia", "product designer", "zeref memory engine", "selected product work"):
             if term not in alt:
                 result.error(f"Hero alt text must include: {term}")
 
@@ -355,12 +368,9 @@ def validate_assets(text: str, result: Result) -> None:
     if HERO_JPG.is_file() and not HERO_JPG.read_bytes().startswith(b"\xff\xd8"):
         result.error("Hero JPG does not have a valid JPEG signature.")
 
-    # The archival static SVG is an approved raster wrapper. Preserve its existing
-    # root-and-role contract rather than rewriting or mislabeling it as a fully
-    # accessible vector source. Motion and all new project SVGs require title/desc.
     validate_svg(HERO_SVG, result, require_accessible_text=False)
     validate_svg(HERO_MOTION, result, require_accessible_text=True)
-    for svg_path in PROJECT_ASSETS:
+    for svg_path in MEDIA_ASSETS:
         validate_svg(svg_path, result, require_accessible_text=True)
 
     result.ok("Required assets, image alternatives, and SVG contracts checked.")
@@ -369,13 +379,11 @@ def validate_assets(text: str, result: Result) -> None:
 def validate_links(text: str, result: Result) -> set[str]:
     headings = {slugify(match.group(2)) for match in HEADING.finditer(text)}
     external: set[str] = set()
-
     for href in links(text):
         if href.startswith("#"):
             if urllib.parse.unquote(href[1:]).lower() not in headings:
                 result.error(f"README internal anchor does not resolve: {href}")
             continue
-
         parsed = urllib.parse.urlparse(href)
         if parsed.scheme:
             if parsed.scheme != "https":
@@ -383,13 +391,11 @@ def validate_links(text: str, result: Result) -> set[str]:
             else:
                 external.add(href)
             continue
-
         resolved = local_path(href)
         if resolved == Path("/__outside_repository__"):
             result.error(f"README link escapes the repository: {href}")
         elif resolved is not None and not resolved.exists():
             result.error(f"README local link does not exist: {href}")
-
     result.ok(f"Internal anchors and {len(external)} external URLs checked structurally.")
     return external
 
@@ -398,7 +404,6 @@ def validate_hygiene(text: str, result: Result) -> None:
     for label, pattern in DRAFT_MARKERS.items():
         if pattern.search(text):
             result.error(f"README contains {label}.")
-
     for path in public_text_files():
         try:
             content = read_text(path)
@@ -411,7 +416,6 @@ def validate_hygiene(text: str, result: Result) -> None:
         for label, pattern in PRIVATE_PATHS.items():
             if pattern.search(content):
                 result.error(f"Private {label} in {relative}.")
-
     result.ok("Draft-marker, secret-pattern, and private-path scans completed.")
 
 
@@ -429,22 +433,15 @@ def validate_online(urls: Iterable[str], result: Result) -> None:
                 result.warn(f"External link could not be confirmed ({exc.code}): {url}")
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
             result.warn(f"External link check was inconclusive: {url} ({exc})")
-
     result.ok("Online links checked; transient failures were treated as warnings.")
 
 
 def render(result: Result, json_output: bool) -> None:
-    payload = {
-        "release_ready": not result.errors,
-        "errors": result.errors,
-        "warnings": result.warnings,
-        "checks": result.checks,
-    }
+    payload = {"release_ready": not result.errors, "errors": result.errors, "warnings": result.warnings, "checks": result.checks}
     if json_output:
         print(json.dumps(payload, indent=2))
         return
-
-    print("Profile staged-interactive release validation")
+    print("Profile dual-layer release validation")
     print(f"Result: {'PASS' if not result.errors else 'BLOCKED'}")
     for value in result.checks:
         print(f"  OK: {value}")

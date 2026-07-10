@@ -1,7 +1,7 @@
 <p align="center">
   <img
     src="./assets/hero/yash-kanadhia-living-product-console-dark-motion.svg"
-    alt="Animated Living Product Console for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada. The existing hero includes Zeref Memory Engine as an independent project and PerFin OS as a MADS team project; the active case-file release below focuses on built products."
+    alt="Animated Living Product Console for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada, featuring Zeref Memory Engine and selected product work."
     width="100%"
   />
 </p>
@@ -15,7 +15,7 @@
   <p align="center">
     <img
       src="./assets/hero/yash-kanadhia-living-product-console-dark.png"
-      alt="Static Living Product Console for Yash Kanadhia, Product Designer, featuring Zeref Memory Engine and PerFin OS as a MADS team project."
+      alt="Static Living Product Console for Yash Kanadhia, Product Designer, featuring Zeref Memory Engine and selected product work."
       width="100%"
     />
   </p>
@@ -33,326 +33,169 @@
 </p>
 
 <p align="center">
-  <a href="#featured-work">Featured Work</a>
+  <a href="#60-second-profile">60-second profile</a>
   ·
-  <a href="#built-product-case-files">Built Products</a>
+  <a href="#deep-evidence">Deep evidence</a>
   ·
-  <a href="#evidence-and-practice">Evidence</a>
+  <a href="#evidence-map">Evidence map</a>
   ·
-  <a href="#live-build-console">Build Signals</a>
-</p>
-
-<p align="center">
-  2 shipped projects · 1 MADS team project · 5 selected certifications
+  <a href="#current-signals">Current signals</a>
+  ·
+  <a href="#connect">Connect</a>
 </p>
 
 <p align="center">
   Figma · React · Swift · Firebase · Claude · Codex
 </p>
 
-I lead with product design. Development and AI-assisted execution support the work by turning product decisions into inspectable experiences with clear evidence, ownership boundaries, and known limitations.
+---
+
+## 60-second profile
+
+I lead with product design and use implementation, architecture, and AI-assisted delivery to make product decisions inspectable. My work spans mobile and web products, local-first AI systems, accessibility, testing, documentation, and reviewable delivery.
+
+### What I bring
+
+- **Product judgment:** problem framing, workflows, information architecture, interaction states, and clear product boundaries.
+- **Technical range:** SwiftUI, React Native, Node.js, Firebase, MongoDB, and system-level AI workflows.
+- **Delivery discipline:** short branches, pull requests, tests, security checks, evidence trails, and explicit limitations.
+
+### Selected proof
+
+- **[Zeref Memory Engine](https://github.com/kanadhiayash/zeref-memory-engine)** · Local-first context and memory for AI-assisted work. [Architecture](https://github.com/kanadhiayash/zeref-memory-engine#architecture) · [Benchmarks](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md)
+- **[PerFin OS](https://github.com/SarmadTariq/PerfinOS/tree/dev)** · MADS final team project covering personal-finance workflows across guest and authenticated workspaces. [Selected contribution](https://github.com/SarmadTariq/PerfinOS/pull/69)
+- **[For Rent](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios)** · SwiftUI rental marketplace with renter, landlord, guest, demo, and Firebase-backed paths. [Product documentation](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/PRODUCT.md)
+- **[StreamNexus](https://github.com/kanadhiayash/streamnexus)** · Full-stack streaming-rental prototype with administrator and customer workflows. [Architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md)
 
 ---
 
-## Featured work
+## Deep evidence
 
-This staged release focuses on three built products. Product-design studies and the Zeref case file are parked until their next review cycle. The existing hero remains unchanged during this phase.
+The visible profile stays concise. Open a drawer to inspect ownership, decisions, quality evidence, and known boundaries.
 
-<table role="presentation">
-  <tr>
-    <td width="33%" valign="top">
-      <a href="#perfin-os">
-        <img src="./assets/projects/perfin-os/cover.svg" alt="PerFin OS thumbnail identifying a React Native and Firebase MADS team project by Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq." width="100%" />
-      </a>
-      <p align="center">
-        <strong><a href="#perfin-os">PerFin OS</a></strong><br />
-        <sub>MADS team project<br />React Native · Firebase</sub>
-      </p>
-      <p><sub>Expenses, budgets, maps, receipts, reports, and planning across guest and authenticated workspaces.</sub></p>
-    </td>
-    <td width="33%" valign="top">
-      <a href="#for-rent">
-        <img src="./assets/projects/for-rent/cover.svg" alt="For Rent thumbnail presenting a SwiftUI rental marketplace implementation project with MVVM, Firebase boundaries, and verified demo mode." width="100%" />
-      </a>
-      <p align="center">
-        <strong><a href="#for-rent">For Rent</a></strong><br />
-        <sub>Implementation project<br />SwiftUI · Firebase</sub>
-      </p>
-      <p><sub>Rental discovery, saved listings, viewing inquiries, and landlord listing management across role-specific journeys.</sub></p>
-    </td>
-    <td width="33%" valign="top">
-      <a href="#streamnexus">
-        <img src="./assets/projects/streamnexus/cover.svg" alt="StreamNexus thumbnail presenting a Node, Express, and MongoDB streaming-rental prototype with role-based workflows and simulated checkout." width="100%" />
-      </a>
-      <p align="center">
-        <strong><a href="#streamnexus">StreamNexus</a></strong><br />
-        <sub>Full-stack prototype<br />Node · Express · MongoDB</sub>
-      </p>
-      <p><sub>Administrator and streamer journeys across catalog management, discovery, shortlist, rental, and simulated completion.</sub></p>
-    </td>
-  </tr>
-</table>
+### Flagship system
 
----
+#### Zeref Memory Engine
 
-## Built product case files
-
-### PerFin OS
-
-**Role and ownership:** MADS final team project by Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq. This profile does not imply solo ownership.  
-**Platform:** React Native, TypeScript, Firebase, Expo, Cloudflare Worker boundaries  
-**Verified status:** Development branch and reviewed contribution evidence available  
-**Product outcome:** Organizes personal-finance workflows across local guest and authenticated cloud workspaces.
+Local-first memory for AI-assisted work across multiple tools, with guarded writes, explicit evidence states, privacy controls, audit trails, and deterministic release checks.
 
 <details>
-  <summary><strong>Open PerFin OS case file</strong></summary>
+  <summary><strong>Inspect Zeref evidence</strong></summary>
 
   <p align="center">
-    <img src="./assets/projects/perfin-os/cover.svg" alt="Full-width PerFin OS case-file cover identifying the MADS team project, React Native and Firebase platform, and verified development status." width="100%" />
+    <img src="./assets/profile-media/zeref-media-slot.svg" alt="Reserved product-media slot for a future verified Zeref Memory Engine system visual." width="100%" />
   </p>
+
+  **Ownership:** Public independent project under Yash Kanadhia, covering product direction, system architecture, reference implementation, documentation, and evaluation.
+
+  **What it demonstrates**
+
+  - A canonical project-memory contract shared across AI harnesses.
+  - Guarded memory writes with fact, evidence, privacy, and contradiction controls.
+  - Cross-harness handoffs, append-only audit traces, and deterministic local benchmarks.
+  - Clear non-claims: Zeref is not a hosted service, model provider, vector database, or substitute for human review.
+
+  **Evidence:** [Repository](https://github.com/kanadhiayash/zeref-memory-engine) · [Canonical specification](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/AGENTS.md) · [Architecture](https://github.com/kanadhiayash/zeref-memory-engine#architecture) · [Benchmark report](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md) · [Security](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/SECURITY.md)
+
+  [↑ Return to the 60-second profile](#60-second-profile)
+
+</details>
+
+### Selected products
+
+<details>
+  <summary><strong>Inspect PerFin OS contribution evidence</strong></summary>
 
   <p align="center">
-    <img src="./assets/projects/perfin-os/media-pending.svg" alt="PerFin OS verified walkthrough capture pending. A reviewed local-runtime recording and public-safe static captures will replace this state after team and privacy review." width="100%" />
+    <img src="./assets/profile-media/perfin-os-media-slot.svg" alt="Reserved product-media slot for future verified PerFin OS interface captures approved for public use." width="100%" />
   </p>
 
-#### Problem
+  **Role and ownership:** MADS final team project by **Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq**. This profile does not imply solo ownership.
 
-Expense tracking, budgeting, receipt organization, maps, reports, and planning can fragment into separate tools and unclear data boundaries. PerFin OS brings those workflows into one mobile product while distinguishing local guest use from authenticated cloud use.
+  **Selected contribution evidence**
 
-#### Role and ownership
+  - Session and authentication ownership separated from finance-state management in [PF-165](https://github.com/SarmadTariq/PerfinOS/pull/69).
+  - Shared theme-token use standardized across light and dark interfaces in [PF-164](https://github.com/SarmadTariq/PerfinOS/pull/68).
+  - Firebase client, authentication, paths, and legacy storage split into clearer boundaries in [PF-161](https://github.com/SarmadTariq/PerfinOS/pull/55).
 
-PerFin OS is collaborative work by **Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq**.
+  **Known boundary:** The product does not connect to bank accounts or process payments. Public runtime media remains subject to team and privacy review.
 
-Selected contribution evidence includes:
+  **Evidence:** [Development branch](https://github.com/SarmadTariq/PerfinOS/tree/dev) · [Project README](https://github.com/SarmadTariq/PerfinOS/blob/dev/README.md)
 
-- Separating session and authentication ownership from finance-state management in [PF-165](https://github.com/SarmadTariq/PerfinOS/pull/69)
-- Standardizing shared theme-token use across light and dark interfaces in [PF-164](https://github.com/SarmadTariq/PerfinOS/pull/68)
-- Splitting Firebase client, authentication, paths, and legacy storage into clearer service boundaries in [PF-161](https://github.com/SarmadTariq/PerfinOS/pull/55)
-- Improving insights, analytics, reports, privacy disclosures, and supporting interface behaviour through reviewed branches
+  [↑ Return to the 60-second profile](#60-second-profile)
 
-#### Key workflow
+</details>
 
-1. An unauthenticated user enters a local-only guest workspace.
-2. The user records expenses, budgets, goals, maps, analytics, and reports locally.
-3. Account creation or login enables an explicit import into the authenticated workspace.
-4. Firebase Auth and Firestore own cloud identity and synchronized finance data.
-5. Authenticated-only receipt and planning features remain behind service boundaries.
+<details>
+  <summary><strong>Inspect For Rent product evidence</strong></summary>
 
-#### System map
+  <p align="center">
+    <img src="./assets/profile-media/for-rent-media-slot.svg" alt="Reserved product-media slot for future verified For Rent renter and landlord workflow captures." width="100%" />
+  </p>
 
-```mermaid
-flowchart LR
-    A[App launch] --> B{Session state}
-    B -->|Guest| C[Local-only workspace]
-    B -->|Authenticated| D[Firebase Auth]
-    C --> E[Explicit guest-data import]
-    E --> F[Firestore workspace]
-    D --> F
-    F --> G[Reports, maps, receipts, planning]
-```
+  **Role:** Product and SwiftUI implementation.
 
-#### Design and technical system
+  **What it demonstrates**
 
-- Login-first routing with separate guest and authenticated states
-- Centralized validation for money, location, receipts, and transactions
-- Aggregate-only AI payloads when configured, with deterministic fallback
-- Service boundaries for authentication, finance state, storage, maps, and Worker proxies
+  - Renter, landlord, and guest journeys with context-preserving protected actions.
+  - Feature-oriented MVVM with deterministic demo repositories and a separate Firebase clean mode.
+  - Dynamic Type, Reduce Motion, validation, loading, empty, and error-state coverage.
 
-#### Evidence
+  **Known boundary:** The repository does not claim an App Store release or a deployed production backend.
 
-[Development branch](https://github.com/SarmadTariq/PerfinOS/tree/dev) · [Project README](https://github.com/SarmadTariq/PerfinOS/blob/dev/README.md) · [PF-165](https://github.com/SarmadTariq/PerfinOS/pull/69) · [PF-164](https://github.com/SarmadTariq/PerfinOS/pull/68) · [PF-161](https://github.com/SarmadTariq/PerfinOS/pull/55)
+  **Evidence:** [Repository](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios) · [Architecture](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/architecture.md) · [Testing and verification](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md)
 
-#### Known limitations
+  [↑ Return to the 60-second profile](#60-second-profile)
 
-- The product does not connect to bank accounts or process payments.
-- It does not provide legal, tax, banking, or investment advice.
-- Receipt, Places, and AI service integrations require configured backend services.
-- Public runtime media remains pending team, privacy, and capture review.
+</details>
 
-[↑ Return to featured work](#featured-work)
+<details>
+  <summary><strong>Inspect StreamNexus product evidence</strong></summary>
+
+  <p align="center">
+    <img src="./assets/profile-media/streamnexus-media-slot.svg" alt="Reserved product-media slot for future verified StreamNexus browse, detail, and rental workflow captures." width="100%" />
+  </p>
+
+  **Role:** Full-stack product implementation.
+
+  **What it demonstrates**
+
+  - Administrator and customer journeys across catalog, discovery, shortlist, rental, and completion.
+  - Express routes, controllers, services, Mongoose models, and server-rendered EJS interfaces.
+  - Authentication, role authorization, CSRF protection, rate limiting, integration tests, dependency review, and secret scanning.
+
+  **Known boundary:** StreamNexus is a portfolio prototype, not a production OTT platform. Checkout and rental completion are simulated.
+
+  **Evidence:** [Repository](https://github.com/kanadhiayash/streamnexus) · [Architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md) · [User flows](https://github.com/kanadhiayash/streamnexus/blob/main/docs/user-flows.md) · [Security review](https://github.com/kanadhiayash/streamnexus/blob/main/docs/security/security-review.md)
+
+  [↑ Return to the 60-second profile](#60-second-profile)
 
 </details>
 
 ---
 
-### For Rent
+## Evidence map
 
-**Role:** Product and SwiftUI implementation  
-**Ownership:** Public implementation repository under Yash Kanadhia  
-**Platform:** SwiftUI, MVVM, Firebase  
-**Verified status:** Deterministic offline demo mode and documented Firebase clean mode  
-**Product outcome:** Supports rental discovery, saved listings, viewing inquiries, and landlord listing management across role-specific journeys.
-
-<details>
-  <summary><strong>Open For Rent case file</strong></summary>
-
-  <p align="center">
-    <img src="./assets/projects/for-rent/cover.svg" alt="Full-width For Rent case-file cover presenting the SwiftUI rental marketplace, MVVM architecture, Firebase boundaries, and verified demo mode." width="100%" />
-  </p>
-
-  <p align="center">
-    <img src="./assets/projects/for-rent/media-pending.svg" alt="For Rent verified walkthrough capture pending. A reviewed renter or landlord workflow and static product states will replace this panel." width="100%" />
-  </p>
-
-#### Problem
-
-Rental discovery requires different journeys for guests, renters, and landlords. The product needs to preserve listing context, protect sensitive location information, and make listing and inquiry states understandable.
-
-#### Product contribution
-
-- Canada-wide rental discovery with search and maximum-rent filtering
-- Guest browsing with protected actions that preserve listing context
-- Saved listings and viewing inquiries for renters
-- Listing creation, editing, publishing, pausing, and inquiry review for landlords
-- Shared feedback, validation, loading, empty, and error states
-- Dynamic Type, Reduce Motion support, and Apple-native interaction patterns
-
-#### Key workflow
-
-1. A guest browses deterministic Canadian listings.
-2. Protected actions preserve the current listing context.
-3. A renter saves a listing or creates a viewing inquiry.
-4. A landlord manages listing lifecycle and reviews inquiry status.
-5. The app selects demo repositories or Firebase services through the startup environment.
-
-#### System map
-
-```mermaid
-flowchart LR
-    A[AppEnvironment] --> B{Data mode}
-    B -->|Demo fixture present| C[Demo repositories]
-    B -->|Demo fixture absent| D[Firebase services]
-    C --> E[In-memory role journeys]
-    D --> F[Auth, Firestore, Storage, Functions]
-    E --> G[Views and view models]
-    F --> G
-```
-
-#### Design and technical system
-
-- Feature-oriented MVVM
-- Deterministic demo data with in-memory mutations and reset control
-- Separate Firebase-backed clean mode
-- Callable Functions for publishing and inquiry-state changes
-- Security rules that block role escalation and direct inquiry-state updates
-
-#### Evidence
-
-[Repository](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios) · [Architecture](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/architecture.md) · [Product documentation](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/PRODUCT.md) · [Testing and verification](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md)
-
-#### Known limitations
-
-- The repository does not claim an App Store release.
-- It does not claim a deployed production backend.
-- Demo mutations reset on relaunch and are never uploaded to Firebase.
-- Public workflow media remains pending verified capture.
-
-[↑ Return to featured work](#featured-work)
-
-</details>
-
----
-
-### StreamNexus
-
-**Role:** Full-stack product implementation  
-**Ownership:** Public repository under Yash Kanadhia  
-**Platform:** Node.js, Express, EJS, MongoDB  
-**Verified status:** Local and demo-ready documentation with automated checks  
-**Product outcome:** Models administrator and streamer workflows across catalog management, discovery, shortlist, rental, and simulated completion.
-
-<details>
-  <summary><strong>Open StreamNexus case file</strong></summary>
-
-  <p align="center">
-    <img src="./assets/projects/streamnexus/cover.svg" alt="Full-width StreamNexus case-file cover presenting the Node, Express, EJS, and MongoDB prototype with role-based workflows and simulated checkout." width="100%" />
-  </p>
-
-  <p align="center">
-    <img src="./assets/projects/streamnexus/media-pending.svg" alt="StreamNexus verified walkthrough capture pending. A reviewed browse, search, detail, or rental workflow recording will replace this state." width="100%" />
-  </p>
-
-#### Problem
-
-A streaming-rental prototype needs distinct administrator and customer journeys, persistent catalog and rental data, clear role authorization, and inspectable behaviour without implying production streaming or payment infrastructure.
-
-#### Product contribution
-
-- Administrator catalog and rental-capacity workflows
-- Streamer signup, browse, search, filter, detail, shortlist, rental, and completion flows
-- Session authentication and role authorization
-- MongoDB persistence for users, content, rentals, and session data
-- Security middleware, integration tests, dependency audit, secret scanning, and CI
-
-#### Key workflow
-
-1. A streamer signs in or creates an account.
-2. The streamer browses, searches, and filters the catalog.
-3. Detail views support shortlist and rental decisions.
-4. Rental completion remains a simulated portfolio workflow.
-5. Administrators manage catalog content and inspect rental activity.
-
-#### System map
-
-```mermaid
-flowchart LR
-    A[Browser] --> B[Express routes]
-    B --> C[Controllers]
-    C --> D[Services]
-    D --> E[Mongoose models]
-    E --> F[(MongoDB)]
-    C --> G[EJS or JSON response]
-    G --> A
-```
-
-#### Design and technical system
-
-- Compact MVC and service boundaries
-- Server-rendered EJS interface
-- Auth, role, CSRF, rate-limit, and error middleware
-- Supertest integration coverage with in-memory MongoDB
-- Documented simulated checkout and local-only demo credentials
-
-#### Evidence
-
-[Repository](https://github.com/kanadhiayash/streamnexus) · [Architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md) · [User flows](https://github.com/kanadhiayash/streamnexus/blob/main/docs/user-flows.md) · [Security review](https://github.com/kanadhiayash/streamnexus/blob/main/docs/security/security-review.md)
-
-#### Known limitations
-
-- StreamNexus is a portfolio prototype, not a production OTT platform.
-- Checkout and rental completion are simulated.
-- It does not provide real payment processing, media playback, subscriptions, production identity, or compliance certification.
-- Public runtime screenshots and walkthrough media remain pending verified capture.
-
-[↑ Return to featured work](#featured-work)
-
-</details>
-
----
-
-## Evidence and practice
-
-| Area | Working evidence |
+| Capability | Inspectable proof |
 |---|---|
-| Product design | Product framing, role-specific journeys, information architecture, interaction states, UX writing, and explicit limitations |
-| Inclusive design | Dynamic Type, Reduce Motion, validation, error recovery, empty states, responsive reading order, and descriptive alternatives |
-| Mobile products | SwiftUI, React Native, Expo, Firebase |
-| Web products | Node.js, Express, EJS, MongoDB |
-| AI-assisted execution | Claude, Codex, structured context, reviewable changes, evaluation, and guarded workflows |
-| Delivery | Reviewable branches, pull requests, CI, tests, dependency review, documentation, link checks, and secret scanning |
-
-```text
-Understand the product problem
-→ inspect evidence, ownership, and constraints
-→ define the smallest complete change
-→ design and implement through a reviewable branch
-→ test and verify
-→ document decisions, limitations, and remaining risks
-```
+| Product thinking | Role-specific journeys, information architecture, interaction states, product boundaries, and project documentation |
+| System architecture | [Zeref architecture](https://github.com/kanadhiayash/zeref-memory-engine#architecture), [For Rent architecture](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/architecture.md), and [StreamNexus architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md) |
+| Quality and security | [Zeref benchmarks](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md), [For Rent verification](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md), and [StreamNexus security review](https://github.com/kanadhiayash/streamnexus/blob/main/docs/security/security-review.md) |
+| Collaboration | PerFin OS team attribution and reviewed pull-request evidence |
+| Delivery | Reviewable branches, pull requests, CI, documentation, link validation, and explicit release boundaries |
 
 ---
 
-## Live build console
+## How I work
+
+1. **Frame the product problem** and identify users, constraints, ownership, and evidence gaps.
+2. **Design the smallest complete system** with clear workflows, states, boundaries, and decision records.
+3. **Build through reviewable changes** using branches, pull requests, tests, security checks, and documentation.
+4. **State what remains unknown** rather than presenting prototypes, simulations, or placeholders as completed production proof.
+
+---
+
+## Current signals
 
 ### Latest writing
 
@@ -373,18 +216,15 @@ These sections update only through a reviewable automation pull request. Source 
 
 ## Selected credentials
 
-- **AI Fluency: Framework & Foundations**, Anthropic, June 2026
-- **Claude Code in Action**, Anthropic, June 2026
-- **Introduction to Claude Cowork**, Anthropic, June 2026
-- **Claude Code 101**, Anthropic, June 2026
-- **Scrum Fundamentals Certified**, SCRUMstudy, June 2026
+- **Anthropic:** AI Fluency: Framework & Foundations · Claude Code in Action · Introduction to Claude Cowork · Claude Code 101
+- **SCRUMstudy:** Scrum Fundamentals Certified
 
-Additional completed credentials, including **Claude 101**, are listed on [LinkedIn](https://www.linkedin.com/in/yashkanadhia).
+Additional completed credentials are listed on [LinkedIn](https://www.linkedin.com/in/yashkanadhia).
 
 ---
 
 ## Connect
 
-[Connect on LinkedIn](https://www.linkedin.com/in/yashkanadhia) · [Read on Substack](https://substack.com/@yashkanadhia)
+[LinkedIn](https://www.linkedin.com/in/yashkanadhia) · [Substack](https://substack.com/@yashkanadhia) · [GitHub repositories](https://github.com/kanadhiayash?tab=repositories)
 
-Open to Product Designer, AI Product Designer, Design Technologist, and product-engineering-adjacent opportunities in Canada.
+Open to Product Designer, AI Product Designer, Design Technologist, UX Engineer, and product-focused front-end opportunities in Canada.

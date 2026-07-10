@@ -1,266 +1,144 @@
-# GitHub Profile Interactive Information Architecture
+# GitHub Profile Dual-Layer Evidence Architecture
 
-**Status:** LOCKED WITH STAGED BUILT-PRODUCT IMPLEMENTATION  
+**Status:** LOCKED FOR REVIEW  
 **Effective date:** 2026-07-10  
-**Last revised:** 2026-07-10  
-**Applies to:** the GitHub profile README and its progressive migration into a GitHub-native portfolio index  
+**Applies to:** `kanadhiayash/kanadhiayash` profile README  
 **Positioning source:** `docs/decisions/GITHUB_PROFILE_PUBLIC_POSITIONING.md`
 
-This decision replaces the earlier rule that final project media must be complete before any README information-architecture work begins.
+## Decision
 
-The long-term information architecture remains stable. The active implementation now proceeds in reviewable stages so verified content, navigation, project covers, case-file drawers, evidence routes, and system diagrams can ship before final runtime captures.
+The GitHub profile uses a dual-layer evidence model:
 
-## Objective
+1. A visible 60-second professional scan.
+2. A deeper evidence layer opened only when a visitor chooses to inspect it.
 
-Turn `github.com/kanadhiayash` into a GitHub-native interactive portfolio index that helps a visitor choose a route, inspect a project, and open verified evidence without treating the README as a JavaScript website.
+The profile is a portfolio entry point, recruiter proof layer, industry-facing professional profile, and route into repository evidence. It is not a complete case-study website or a substitute for project documentation.
 
-The profile operates as:
+## Primary audiences
 
-- an interactive portfolio index;
-- a recruiter-readable project switchboard;
-- a route into repositories, prototypes, case studies, and demonstrations;
-- a concise proof layer rather than a complete portfolio website.
+- Recruiters and talent partners performing an initial screen.
+- Product and engineering hiring managers validating role fit.
+- Designers, engineers, and industry peers inspecting decisions and operating discipline.
+- Collaborators evaluating ownership, boundaries, and evidence quality.
 
-## Locked interaction model
+## Locked page order
 
-Use GitHub-supported interaction patterns only:
+1. Motion hero and static alternative.
+2. Identity, title, location, tagline, tools, and navigation.
+3. `60-second profile` visible by default.
+4. `Deep evidence` with Zeref first and three selected product drawers.
+5. `Evidence map` connecting capabilities to inspectable proof.
+6. `How I work` operating method.
+7. `Current signals` with controlled dynamic modules.
+8. `Selected credentials`.
+9. `Connect`.
 
-- section anchors;
-- linked images;
-- relative repository links;
-- `<details>` project drawers;
-- static covers;
-- restrained motion;
-- Mermaid diagrams;
-- reviewed dynamic modules;
-- outbound evidence links.
+## 60-second profile contract
 
-Do not simulate unsupported application controls or imply that the README is a full interactive web application.
+The visible scan must:
 
-## Long-term README information architecture
+- remain at or below 220 words;
+- state product, technical, and delivery range without a long biography;
+- show Zeref Memory Engine, PerFin OS, For Rent, and StreamNexus;
+- provide at least one direct evidence route for each selected system or product;
+- avoid image cards, project banners, case-study prose, and diagrams;
+- work when all images fail to load.
 
-The eventual complete profile retains this order:
+The 60-second scan is always present. It is not optional and does not depend on a recruiter choosing a special mode.
 
-1. Motion hero
-2. Command palette
-3. Featured work switchboard
-4. Product design
-5. Built products
-6. AI systems
-7. Evidence and practice
-8. Live build console
-9. Selected credentials
-10. Connect
+## Deep evidence contract
 
-No profile changelog, memorabilia section, version-history timeline, or decorative activity archive may be added.
+Zeref Memory Engine leads as the flagship system.
 
-## Active staged implementation
+The deep layer uses four closed GitHub-native `<details>` drawers:
 
-The current public-review branch uses this order:
+1. Zeref Memory Engine.
+2. PerFin OS.
+3. For Rent.
+4. StreamNexus.
 
-1. Motion hero
-2. Command palette
-3. Featured work switchboard
-4. Built product case files
-5. Evidence and practice
-6. Live build console
-7. Selected credentials
-8. Connect
+Each drawer may contain:
 
-The active project set is:
+- one reserved media slot or approved verified capture;
+- role and ownership;
+- two to four concise proof points;
+- evidence links;
+- one explicit boundary or non-claim;
+- a return route to the 60-second profile.
 
-1. PerFin OS
-2. For Rent
-3. StreamNexus
+Project repositories remain the source for full architecture, workflows, tests, security notes, and implementation documentation.
 
-The following modules are parked for a later review cycle:
+## Ownership and boundary rules
 
-- Product design: Arthenticate and DriveDeal
-- AI systems: Zeref Memory Engine
+### Zeref Memory Engine
 
-Parking a module means no new case file, media collection, or section expansion is performed in the current stage. It does not remove the module from the long-term architecture.
-
-The existing Living Product Console hero remains unchanged during this stage, including its existing project references. Rebuilding the hero is outside the active scope.
-
-## Command palette
-
-Provide four real anchor routes:
-
-- Featured Work
-- Built Products
-- Evidence
-- Build Signals
-
-The command palette is navigation, not decoration.
-
-## Featured work switchboard
-
-Each active project uses:
-
-- a finished metadata-based editorial cover visible by default;
-- project name;
-- ownership or collaboration status;
-- platform;
-- verified status;
-- a one-sentence product outcome;
-- an anchor route into its case file.
-
-Metadata covers must use verified public facts only. They must not imitate screenshots, runtime dashboards, user metrics, deployment status, or product usage.
-
-## Active project requirements
+- Present as a public independent project under Yash Kanadhia.
+- Do not describe it as a hosted service, model provider, vector database, or replacement for human review.
+- Route architecture and benchmark detail to the Zeref repository.
 
 ### PerFin OS
 
-PerFin OS remains identified as a MADS final team project by:
-
-- Yash Kanadhia
-- Alexis Gorospe
-- Sarmad Tariq
-
-The profile must not imply solo ownership.
-
-The case file may show reviewed contribution evidence, guest and authenticated workflow boundaries, system architecture, known limitations, and verified repository or pull-request destinations.
+- Credit Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq before contribution claims.
+- State that the profile does not imply solo ownership.
+- Do not claim bank connectivity, payment processing, or public-safe media approval before verification.
 
 ### For Rent
 
-The case file may show:
-
-- renter, landlord, and guest journeys;
-- deterministic demo mode;
-- Firebase clean mode;
-- feature-oriented MVVM;
-- accessibility and quality evidence;
-- explicit non-claims around App Store release and production deployment.
+- Present product and SwiftUI implementation evidence.
+- Do not claim an App Store release or deployed production backend.
 
 ### StreamNexus
 
-The case file may show:
+- Present full-stack product implementation evidence.
+- State that it is a portfolio prototype, not a production OTT platform.
+- State that checkout and rental completion are simulated.
 
-- administrator and streamer workflows;
-- MVC and service boundaries;
-- authentication and role authorization;
-- MongoDB persistence;
-- tests, security middleware, and CI;
-- explicit simulated-checkout and non-production limitations.
+## Interaction model
 
-## Locked project interaction pattern
+Use only GitHub-supported patterns:
 
-Every active project uses the same progressive-disclosure pattern:
+- anchor navigation;
+- `<details>` and `<summary>` disclosure;
+- standard Markdown links;
+- accessible static or motion images;
+- reviewed dynamic marker regions.
 
-1. Static editorial cover visible by default.
-2. Compact project metadata and one-sentence outcome.
-3. A user-triggered `<details>` case-file drawer.
-4. One clearly labeled media-capture state inside the drawer until verified runtime media exists.
-5. Written sections for problem, role and ownership, contribution, key workflow, system, evidence, and limitations.
-6. Verified repository, documentation, pull-request, prototype, or demo destinations.
-7. A route back to Featured Work.
+Do not imitate unsupported application controls.
 
-No project fact may exist only inside an image, animation, or diagram.
+## Visual hierarchy
 
-## Media staging contract
-
-Until final runtime media is approved, each active project uses:
-
-```text
-assets/projects/<project-slug>/
-├── cover.svg
-└── media-pending.svg
-```
-
-The cover is a finished editorial asset based on verified metadata.
-
-The media-capture state must say that reviewed walkthrough and static captures are pending. It must not resemble a product screenshot or fabricate interface evidence.
-
-When final media is approved, the project migrates to:
-
-```text
-assets/projects/<project-slug>/
-├── cover.svg
-├── walkthrough.gif
-├── poster.png
-├── snapshot-01.png
-├── snapshot-02.png
-├── snapshot-03.png
-└── architecture.png
-```
-
-Only useful snapshots are required. `architecture.png` remains optional when a readable Mermaid diagram already communicates the system.
-
-## System diagrams
-
-Mermaid diagrams may be used for verified architecture and workflow relationships.
-
-Requirements:
-
-- Diagram facts must also be explained in text.
-- Labels must remain concise and readable.
-- Diagrams must not imply deployment, scale, or integrations that are not verified.
-- A failed diagram render must not prevent understanding of the case file.
-
-## Evidence and practice
-
-Compress product design, accessibility, architecture, testing, delivery, and AI-assisted execution into a concise route-based section.
-
-Do not restore a long generic skills inventory when project-specific evidence is available.
-
-## Live build console
-
-Use bounded, reviewed signals only:
-
-- latest relevant writing;
-- selected pull requests, documentation, release, or verification signals;
-- current public build focus when evidence-backed.
-
-Do not add raw commit feeds, vanity counters, streak cards, random quotes, music widgets, or unrelated activity.
-
-## Selected credentials
-
-Keep the approved five selected credentials. Do not expand this into a complete certificate inventory.
+- Keep the existing approved hero.
+- Do not use project thumbnail grids.
+- Do not use text-heavy editorial posters as thumbnails.
+- Do not repeat the same project cover in more than one location.
+- Keep product media inside the related evidence drawer.
+- Use one media slot per selected system or product until verified captures are approved.
+- Keep all important facts outside images.
 
 ## Explicit exclusions
 
 Do not add:
 
-- profile changelog or memorabilia;
-- public version-history timeline;
-- contribution snake or Pacman as a primary visual;
-- profile-view, follower, streak, repository, commit, or credential counters;
-- Spotify or music widgets;
-- random quote widgets;
-- live clocks;
-- multiple typing animations;
+- profile changelogs or memorabilia;
+- project-card presentation tables;
+- duplicate covers or banners;
+- Mermaid diagrams in the profile README;
 - raw commit feeds;
-- decorative activity archives;
-- fake product screenshots;
-- unsupported claims of deployment, impact, scale, or ownership.
+- vanity counters, streak cards, contribution animations, music, quotes, or clocks;
+- fake screenshots or fabricated runtime proof;
+- unsupported claims of deployment, users, impact, scale, or ownership.
 
-## Acceptance criteria for the staged release
+## Acceptance criteria
 
-The staged interactive README is ready only when:
+The dual-layer profile is ready for merge only when:
 
-- PerFin OS, For Rent, and StreamNexus are identifiable without long prose;
-- each active project has a visible metadata cover;
-- each active project has one user-triggered case-file drawer;
-- PerFin OS team ownership is explicit before contribution details;
-- each active project has at least one verified evidence destination;
-- each active project has a known-limitations section;
-- media-capture states are clearly labeled and cannot be mistaken for product evidence;
-- Mermaid diagrams remain supported by written explanations;
-- the page works in GitHub light, dark, desktop, and mobile views;
-- the README remains understandable when images or diagrams do not load;
-- dynamic modules remain secondary to selected work;
-- the external GitHub profile bio matches the locked Product Designer positioning;
-- no profile changelog or memorabilia layer appears.
-
-## Future expansion
-
-When the parked modules resume:
-
-- Product Design returns before Built Products.
-- AI Systems returns after Built Products.
-- Arthenticate, DriveDeal, and Zeref use the same cover, metadata, drawer, evidence, limitation, and media contract.
-- The staged built-product case files do not require structural redesign.
-
-## Change control
-
-Any change to long-term section order, active project priority, ownership language, project interaction pattern, parked-module status, or the exclusion of profile changelog and memorabilia requires a new explicit decision record or revision approved through review.
+- the 60-second profile is visible and within its content budget;
+- Zeref appears before the three selected products in Deep evidence;
+- all four evidence drawers remain closed by default;
+- the page contains no project thumbnail grid or duplicate project covers;
+- all four reserved media slots are accessible and clearly non-final;
+- every selected item has a public evidence route;
+- PerFin team attribution and all product boundaries remain explicit;
+- dynamic modules remain secondary;
+- automated quality and online-link gates pass;
+- GitHub light, dark, desktop, and narrow-width rendering are manually reviewed.
