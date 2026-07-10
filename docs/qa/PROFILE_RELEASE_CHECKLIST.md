@@ -1,12 +1,12 @@
 # GitHub Profile Release Checklist
 
-**Status:** AUTOMATED GATES PASS, MANUAL RENDER AND FINAL APPROVAL OPEN  
+**Status:** MOTION BRANCH AUTOMATED GATES PENDING, MANUAL RENDER AND FINAL APPROVAL OPEN  
 **Release surface:** `kanadhiayash/kanadhiayash` profile README  
 **Quality gate:** `.github/workflows/profile-quality.yml`
 
 ## Release rule
 
-Do not merge or call the Living Product Console released until every remaining manual blocking item is complete.
+Do not merge or call the Living Product Console motion layer released until every automated and remaining manual blocking item is complete.
 
 ## Automated blocking checks
 
@@ -44,31 +44,41 @@ The release validator checks:
 
 ## Required hero bundle
 
-The following files are present under the locked path:
+The following files must remain under the locked path:
 
 ```text
+assets/hero/yash-kanadhia-living-product-console-dark-motion.svg
 assets/hero/yash-kanadhia-living-product-console-dark.png
 assets/hero/yash-kanadhia-living-product-console-dark.jpg
 assets/hero/yash-kanadhia-living-product-console-dark.svg
 ```
 
-The PNG is the primary README asset.
+The animated SVG is the primary README asset. The PNG is the directly accessible static alternative.
 
-Verified requirements:
+Required motion checks:
 
-- PNG dimensions are at least 1600 by 700 pixels.
-- The PNG uses the approved wide aspect ratio.
-- The JPG has a valid JPEG signature.
-- The SVG wrapper contains an SVG root and `role="img"`.
-- `README.md` references the approved PNG once.
-- Hero alt text identifies:
+- The animated SVG contains an SVG root and `role="img"`.
+- The SVG has a title and description.
+- Motion remains slow and ambient.
+- No rapid flashing, hard strobing, or large jumps are present.
+- No claim or project fact exists only in motion.
+- The README references the animated SVG once.
+- The README references the static PNG once inside the accessible alternative.
+- Both hero references contain descriptive alt text identifying:
   - Yash Kanadhia
   - Product Designer
   - Zeref Memory Engine
   - PerFin OS
   - MADS team project
 
-## Current automated status
+Required static checks:
+
+- PNG dimensions are at least 1600 by 700 pixels.
+- The PNG uses the approved wide aspect ratio.
+- The JPG has a valid JPEG signature.
+- The static SVG wrapper contains an SVG root and `role="img"`.
+
+## Previously verified automated status
 
 ### PASS: profile foundation
 
@@ -79,10 +89,9 @@ Verified requirements:
 
 ### PASS: release readiness
 
-- The approved hero bundle is present under `assets/hero/`.
-- The README hero reference and descriptive alt text passed.
-- The approved hero dimensions and aspect ratio passed.
-- The superseded banner files were removed from the Phase 5 branch.
+- The approved static hero bundle is present under `assets/hero/`.
+- The static hero dimensions and aspect ratio passed.
+- The superseded banner files were removed.
 
 ### PASS: online link gate
 
@@ -91,6 +100,17 @@ Verified requirements:
 - LinkedIn and Substack access restrictions remain warnings because those public profile pages do not provide reliable automated HEAD or unauthenticated GET responses.
 - The workflow publishes `profile-link-report` as a review artifact.
 
+## Motion-branch verification
+
+After the motion pull request runs:
+
+- [ ] Profile foundation passes.
+- [ ] Release readiness passes.
+- [ ] Online link gate passes.
+- [ ] Animated SVG resolves through GitHub.
+- [ ] Static PNG alternative resolves through GitHub.
+- [ ] No locked title, metric, tool, credential, attribution, or dynamic-marker value drifts.
+
 ## Remaining manual blocking checks
 
 Review the rendered README in GitHub:
@@ -98,22 +118,24 @@ Review the rendered README in GitHub:
 - [ ] Desktop width in GitHub light appearance.
 - [ ] Desktop width in GitHub dark appearance.
 - [ ] Narrow mobile width.
+- [ ] The SVG animation actually plays through GitHub or its image proxy.
+- [ ] The scan, pulses, orbit, and lower signal remain subtle.
+- [ ] No motion flashes or distracts from the profile content.
 - [ ] Name, title, location, and tagline remain readable.
 - [ ] Hero metrics and tool labels remain legible without zooming.
 - [ ] Zeref and PerFin remain visually dominant.
 - [ ] PerFin is visibly identified as a team project.
+- [ ] The expandable static hero renders correctly.
 - [ ] All three project media boards render without clipping.
 - [ ] Dynamic modules do not overpower selected work.
 - [ ] The page remains understandable when images fail to load because alt text and written project sections remain complete.
 
 ## Dynamic-module operational check
 
-After Phase 5 is merged:
-
 1. Run **Profile Refresh** manually from GitHub Actions.
 2. Confirm it creates or updates `automation/profile-refresh` only when content changes.
 3. Review the generated pull request.
-4. Confirm changes stay inside the two dynamic marker regions.
+4. Confirm changes stay inside the two marker regions.
 5. Confirm a failed Substack source preserves the previous reviewed content.
 6. Merge the automation pull request only after titles, URLs, dates, attribution, and relevance are verified.
 
@@ -134,11 +156,12 @@ git diff --check
 ## Release approval record
 
 ```text
-Automated quality gate: PASS
-Online link gate: PASS
-GitHub light render: BLOCKED
-GitHub dark render: BLOCKED
-Mobile render: BLOCKED
+Automated quality gate: PENDING
+Online link gate: PENDING
+GitHub light motion render: BLOCKED
+GitHub dark motion render: BLOCKED
+Mobile motion render: BLOCKED
+Static alternative render: BLOCKED
 Profile Refresh review PR: BLOCKED
 Final public-claim review: BLOCKED
 Approved by: ____________________
@@ -148,9 +171,9 @@ Release commit: _________________
 
 ## Non-blocking enhancement backlog
 
-These items improve the portfolio but do not block the current static release:
+These items improve the portfolio but do not block the Living Product Console motion release:
 
-- Zeref motion proof with a still equivalent.
+- Zeref product demonstration loop beyond the profile hero, with a still equivalent.
 - Verified PerFin OS screenshots and workflow recording.
 - Verified For Rent renter and landlord captures.
 - Verified StreamNexus runtime captures.
