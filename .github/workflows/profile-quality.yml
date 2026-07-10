@@ -27,6 +27,8 @@ jobs:
     steps:
       - name: Check out source
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -34,7 +36,7 @@ jobs:
           python-version: "3.12"
 
       - name: Check patch whitespace
-        run: git diff --check HEAD^ HEAD || true
+        run: git diff --check origin/${{ github.base_ref || 'main' }}...HEAD
 
       - name: Compile profile scripts
         run: |
