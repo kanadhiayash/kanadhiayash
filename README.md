@@ -87,7 +87,6 @@ The banner reflects six selected credentials:
 - **Introduction to Claude Cowork**, Anthropic, June 2026
 - **Claude Code 101**, Anthropic, June 2026
 - **Scrum Fundamentals Certified**, SCRUMstudy, June 2026
-- **Six Sigma Yellow Belt**, 6sigmastudy, June 2026
 
 Additional completed credentials, including **Claude 101**, are listed on [LinkedIn](https://www.linkedin.com/in/yashkanadhia).
 
