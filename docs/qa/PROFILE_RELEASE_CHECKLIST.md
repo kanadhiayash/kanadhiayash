@@ -1,12 +1,12 @@
 # GitHub Profile Release Checklist
 
-**Status:** MOTION BRANCH AUTOMATED GATES PENDING, MANUAL RENDER AND FINAL APPROVAL OPEN  
+**Status:** MOTION BRANCH AUTOMATED GATES PASS, MANUAL RENDER AND FINAL APPROVAL OPEN  
 **Release surface:** `kanadhiayash/kanadhiayash` profile README  
 **Quality gate:** `.github/workflows/profile-quality.yml`
 
 ## Release rule
 
-Do not merge or call the Living Product Console motion layer released until every automated and remaining manual blocking item is complete.
+Do not merge or call the Living Product Console motion layer released until every remaining manual blocking item is complete.
 
 ## Automated blocking checks
 
@@ -42,74 +42,76 @@ The release validator checks:
 - Public text files contain no detected credentials, private keys, credentialed MongoDB URIs, or private workstation paths.
 - The superseded banner is not referenced by the README.
 
-## Required hero bundle
+## Required motion and static pairs
 
-The following files must remain under the locked path:
+The following files must remain under the locked paths:
 
 ```text
 assets/hero/yash-kanadhia-living-product-console-dark-motion.svg
 assets/hero/yash-kanadhia-living-product-console-dark.png
-assets/hero/yash-kanadhia-living-product-console-dark.jpg
-assets/hero/yash-kanadhia-living-product-console-dark.svg
+assets/projects/flagship-systems-motion.svg
+assets/projects/flagship-systems.svg
+assets/projects/built-product-proof-motion.svg
+assets/projects/built-product-proof.svg
+assets/projects/product-design-studies-motion.svg
+assets/projects/product-design-studies.svg
 ```
 
-The animated SVG is the primary README asset. The PNG is the directly accessible static alternative.
+The animated SVGs are the primary README visuals. Their paired static assets are directly accessible through collapsed alternatives.
 
 Required motion checks:
 
-- The animated SVG contains an SVG root and `role="img"`.
-- The SVG has a title and description.
+- Each animated SVG contains an SVG root and `role="img"`.
+- Each animated SVG has a title and description.
 - Motion remains slow and ambient.
 - No rapid flashing, hard strobing, or large jumps are present.
 - No claim or project fact exists only in motion.
-- The README references the animated SVG once.
-- The README references the static PNG once inside the accessible alternative.
-- Both hero references contain descriptive alt text identifying:
-  - Yash Kanadhia
-  - Product Designer
-  - Zeref Memory Engine
-  - PerFin OS
-  - MADS team project
+- The README references each motion asset exactly once.
+- The README references each static alternative exactly once.
+- Each static alternative follows its motion asset.
+- The README order remains hero, flagship systems, built product proof, product design studies.
+- Alt text preserves role, project, attribution, and limitation context.
 
 Required static checks:
 
-- PNG dimensions are at least 1600 by 700 pixels.
-- The PNG uses the approved wide aspect ratio.
-- The JPG has a valid JPEG signature.
-- The static SVG wrapper contains an SVG root and `role="img"`.
+- Hero PNG dimensions are at least 1600 by 700 pixels.
+- The hero PNG uses the approved wide aspect ratio.
+- The hero JPG has a valid JPEG signature.
+- The static SVG files contain SVG roots and image roles.
 
-## Previously verified automated status
+## Verified automated status
 
 ### PASS: profile foundation
 
 - Code and configuration whitespace passed.
 - All profile scripts compiled.
 - The dynamic updater passed its structural checks.
+- The motion validator passed all four motion surfaces and all four static alternatives.
 - Locked copy, attribution, metrics, credentials, tools, local assets, anchors, alt text, placeholders, private paths, and secret-pattern checks passed.
 
 ### PASS: release readiness
 
-- The approved static hero bundle is present under `assets/hero/`.
-- The static hero dimensions and aspect ratio passed.
-- The superseded banner files were removed.
+- The complete hero bundle remains present under `assets/hero/`.
+- The hero dimensions and aspect ratio passed.
+- The motion and static README references passed.
+- The superseded banner files remain removed.
 
 ### PASS: online link gate
 
 - The definitive external-link scan passed.
-- The unpublished Zeref GitHub Release URL was replaced with the verified `docs/RELEASE_LOG.md` record.
+- The unpublished Zeref GitHub Release URL remains replaced by the verified `docs/RELEASE_LOG.md` record.
 - LinkedIn and Substack access restrictions remain warnings because those public profile pages do not provide reliable automated HEAD or unauthenticated GET responses.
 - The workflow publishes `profile-link-report` as a review artifact.
 
 ## Motion-branch verification
 
-After the motion pull request runs:
-
-- [ ] Profile foundation passes.
-- [ ] Release readiness passes.
-- [ ] Online link gate passes.
-- [ ] Animated SVG resolves through GitHub.
-- [ ] Static PNG alternative resolves through GitHub.
-- [ ] No locked title, metric, tool, credential, attribution, or dynamic-marker value drifts.
+- [x] Profile foundation passes.
+- [x] Motion consistency gate passes.
+- [x] Release readiness passes.
+- [x] Online link gate passes.
+- [x] All four animated SVG files resolve as local repository assets.
+- [x] All four static alternatives resolve as local repository assets.
+- [x] No locked title, metric, tool, credential, attribution, or dynamic-marker value drifted.
 
 ## Remaining manual blocking checks
 
@@ -118,14 +120,14 @@ Review the rendered README in GitHub:
 - [ ] Desktop width in GitHub light appearance.
 - [ ] Desktop width in GitHub dark appearance.
 - [ ] Narrow mobile width.
-- [ ] The SVG animation actually plays through GitHub or its image proxy.
-- [ ] The scan, pulses, orbit, and lower signal remain subtle.
+- [ ] The SVG animations actually play through GitHub or its image proxy.
+- [ ] The scan, pulses, orbit, and lower signals remain subtle.
 - [ ] No motion flashes or distracts from the profile content.
 - [ ] Name, title, location, and tagline remain readable.
 - [ ] Hero metrics and tool labels remain legible without zooming.
 - [ ] Zeref and PerFin remain visually dominant.
 - [ ] PerFin is visibly identified as a team project.
-- [ ] The expandable static hero renders correctly.
+- [ ] All four expandable static alternatives render correctly.
 - [ ] All three project media boards render without clipping.
 - [ ] Dynamic modules do not overpower selected work.
 - [ ] The page remains understandable when images fail to load because alt text and written project sections remain complete.
@@ -146,7 +148,9 @@ python3 -m py_compile scripts/update_dynamic_modules.py
 python3 -m py_compile scripts/validate_profile_release.py
 python3 -m py_compile scripts/validate_profile_foundation.py
 python3 -m py_compile scripts/validate_profile_links.py
+python3 -m py_compile scripts/validate_profile_motion.py
 python3 scripts/update_dynamic_modules.py --check
+python3 scripts/validate_profile_motion.py
 python3 scripts/validate_profile_foundation.py
 python3 scripts/validate_profile_release.py
 python3 scripts/validate_profile_links.py
@@ -156,12 +160,13 @@ git diff --check
 ## Release approval record
 
 ```text
-Automated quality gate: PENDING
-Online link gate: PENDING
+Automated quality gate: PASS
+Motion consistency gate: PASS
+Online link gate: PASS
 GitHub light motion render: BLOCKED
 GitHub dark motion render: BLOCKED
 Mobile motion render: BLOCKED
-Static alternative render: BLOCKED
+Static alternatives render: BLOCKED
 Profile Refresh review PR: BLOCKED
 Final public-claim review: BLOCKED
 Approved by: ____________________
