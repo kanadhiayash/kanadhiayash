@@ -29,13 +29,14 @@ My work connects product strategy, UX architecture, interface systems, implement
 
 ## Selected systems
 
-| Project                                                                    | Product and technical signal                                                                                                                                                        | Stack                                                  | Evidence                                                                                                                               |
-| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [Zeref Memory Engine](https://github.com/kanadhiayash/zeref-memory-engine) | Local-first memory for AI-assisted work, guarded writes, deterministic routing, cross-harness handoffs, local audit trails, and benchmark-gated releases                            | Python, CLI tooling, structured memory, GitHub Actions | [Benchmark report](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md)                             |
-| [For Rent](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios)   | Native iOS rental product with renter and landlord journeys, deterministic demo data, Firebase-backed clean mode, feature-oriented MVVM, accessibility, and automated quality gates | SwiftUI, Swift, Firebase, MVVM                         | [Testing and verification](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md) |
-| [StreamNexus](https://github.com/kanadhiayash/streamnexus)                 | Full-stack streaming-rental prototype with role-based workflows, MongoDB persistence, session authentication, security controls, server-rendered product flows, and CI              | Node.js, Express, MongoDB, EJS                         | [Architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md)                                             |
+| Project                                                                    | Product and technical signal                                                                                                                                                        | Stack                                                                                 | Ownership and evidence                                                                                                                                              |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Zeref Memory Engine](https://github.com/kanadhiayash/zeref-memory-engine) | Local-first memory for AI-assisted work, guarded writes, deterministic routing, cross-harness handoffs, local audit trails, and benchmark-gated releases                            | Python, CLI tooling, structured memory, GitHub Actions                                | Independent project · [Benchmark report](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md)                                    |
+| [PerFin OS](https://github.com/SarmadTariq/PerfinOS/tree/dev)              | MADS final team project for expense tracking, budgeting, receipt organization, location-aware spending, and aggregate-only AI planning                                              | React Native, Expo, TypeScript, Firebase, Cloudflare Workers, Gemini-compatible proxy | Team project with Alexis Gorospe and Sarmad Tariq · [Repository](https://github.com/SarmadTariq/PerfinOS/tree/dev)                                                  |
+| [For Rent](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios)   | Native iOS rental product with renter and landlord journeys, deterministic demo data, Firebase-backed clean mode, feature-oriented MVVM, accessibility, and automated quality gates | SwiftUI, Swift, Firebase, MVVM                                                        | Independent implementation · [Testing and verification](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md) |
+| [StreamNexus](https://github.com/kanadhiayash/streamnexus)                 | Full-stack streaming-rental prototype with role-based workflows, MongoDB persistence, session authentication, security controls, server-rendered product flows, and CI              | Node.js, Express, MongoDB, EJS                                                        | Independent implementation · [Architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md)                                             |
 
-StreamNexus and For Rent are portfolio implementation projects. Their repositories state current deployment, release, and production limitations directly.
+PerFin OS is collaborative work. For Rent and StreamNexus are portfolio implementation projects. Each repository states its current deployment, release, and production limitations directly.
 
 ---
 
@@ -43,7 +44,7 @@ StreamNexus and For Rent are portfolio implementation projects. Their repositori
 
 I work across the path from problem framing to implementation:
 
-* Product framing, constraints, and prioritization
+* Product framing, constraints, prioritization, and scope
 * Information architecture and user flows
 * Interaction design, interface states, and UX writing
 * Design systems and design-development handoff
@@ -65,15 +66,17 @@ I use AI as an implementation partner, not as a substitute for product or engine
 * Security, dependency, release, and privacy checks remain visible in repository history.
 * Public claims stay separate from assumptions, unknowns, planned work, and self-assigned targets.
 * Credentials, private context, and environment-specific configuration stay outside public repositories.
+* Team projects state ownership and collaboration boundaries clearly.
 
 Selected evidence:
 
 * [Zeref architecture and shipped surfaces](https://github.com/kanadhiayash/zeref-memory-engine#what-zeref-ships)
 * [Zeref benchmark methodology](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md)
+* [PerFin OS architecture](https://github.com/SarmadTariq/PerfinOS/tree/dev#architecture)
 * [For Rent architecture](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/architecture.md)
 * [For Rent verification matrix](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md)
 * [StreamNexus architecture](https://github.com/kanadhiayash/streamnexus/blob/main/docs/architecture.md)
-* [StreamNexus setup and quality gates](https://github.com/kanadhiayash/streamnexus#quality-gates)
+* [StreamNexus quality gates](https://github.com/kanadhiayash/streamnexus#quality-gates)
 
 ---
 
@@ -110,6 +113,7 @@ I prefer small, auditable changes over large opaque rewrites. A passing check is
 * Hardening Zeref Memory Engine through deterministic benchmarks, release checks, and repository governance
 * Packaging verified product, architecture, accessibility, and simulator evidence for For Rent
 * Completing real screenshots, demo assets, and deployment evidence for StreamNexus
+* Strengthening PerFin OS contribution evidence and final team-project presentation
 * Converting product-design work into complete case studies with clear decisions, constraints, and honest outcomes
 
 ---
@@ -118,7 +122,7 @@ I prefer small, auditable changes over large opaque rewrites. A passing check is
 
 * **Scrum Fundamentals Certified**, SCRUMstudy, June 2026
 
-Only completed credentials are listed.
+The live credential list is maintained on LinkedIn. This README includes only credentials that have been independently verified in the current project records.
 
 ---
 
@@ -128,4 +132,5 @@ Only completed credentials are listed.
 * [Substack](https://substack.com/@yashkanadhia)
 * [GitHub](https://github.com/kanadhiayash)
 
-Open to Product Designer, AI Product Designer, Design Technologist, and UX/Product Systems opportunities in Canada.
+Open to Product Designer, AI Product Designer, Design Technologist, and UX/Product Systems opportunities in Canada
+::: 
