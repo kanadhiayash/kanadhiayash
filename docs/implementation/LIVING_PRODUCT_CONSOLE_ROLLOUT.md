@@ -28,7 +28,7 @@ Delivered:
 
 ## Phase 2: Hero visual system
 
-**Status:** COMPLETE, ASSET PLACEMENT PENDING
+**Status:** DIRECTION AND EXPORT COMPLETE, REPOSITORY PLACEMENT PENDING
 
 Locked decisions:
 
@@ -63,20 +63,33 @@ Pending repository action:
 
 ## Phase 3: Project media
 
-**Status:** NEXT
+**Status:** STATIC RELEASE COMPLETE, VERIFIED CAPTURE ENHANCEMENTS OPEN
 
-Planned:
+Delivered:
 
-- Add Zeref product-system visual or motion proof.
-- Add PerFin OS verified screenshots and a short workflow recording.
-- Add For Rent verified product media.
-- Replace StreamNexus placeholder media with verified captures.
-- Add Arthenticate and DriveDeal Figma presentation media.
-- Keep all motion slow, optional, and understandable without animation.
+- Added `assets/projects/flagship-systems.svg` for Zeref Memory Engine and PerFin OS.
+- Added `assets/projects/built-product-proof.svg` for For Rent and StreamNexus.
+- Added `assets/projects/product-design-studies.svg` for Arthenticate and DriveDeal.
+- Integrated all three boards into the README with descriptive alt text.
+- Preserved independent and team ownership boundaries.
+- Preserved product limitations and avoided deployment claims.
+- Added `docs/media/PROJECT_MEDIA_MANIFEST.md` as the source and replacement policy.
+- Avoided StreamNexus placeholder screenshots as final public proof.
+- Kept Arthenticate and DriveDeal labeled as interactive Figma studies with public case-study packaging in progress.
+
+Open enhancement backlog:
+
+- Add a short Zeref product-system motion loop with a static equivalent.
+- Add verified PerFin OS screenshots and a short workflow recording.
+- Add verified For Rent renter and landlord captures.
+- Replace StreamNexus repository placeholders with verified runtime captures.
+- Add approved Arthenticate and DriveDeal prototype media.
+
+The enhancement backlog does not block the static Phase 3 release. It remains required before claiming a media-complete portfolio.
 
 ## Phase 4: Controlled dynamic modules
 
-**Status:** PLANNED
+**Status:** NEXT
 
 Planned:
 
@@ -98,6 +111,8 @@ Planned:
 - Review the final PR diff.
 - Merge only after the visible banner, README copy, metrics, credentials, and project attribution agree.
 
-## Current risk
+## Current risks
 
-The approved dark hero is generated raster artwork. The SVG export is a faithful embedded-image wrapper rather than editable vector paths. A manually reconstructed vector source would be a separate design task.
+- The approved dark hero is generated raster artwork. The SVG export is a faithful embedded-image wrapper rather than editable vector paths.
+- The connector-visible PR does not yet contain the approved hero PNG, JPG, or SVG under `assets/hero/`.
+- Verified product screenshots and recordings remain an enhancement backlog and must not be represented as already published.
