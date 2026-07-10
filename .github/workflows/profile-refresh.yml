@@ -1,21 +1,48 @@
 name: Profile Refresh
 
 on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "data/profile_sources.json"
+      - "scripts/update_dynamic_modules.py"
+      - ".github/workflows/profile-refresh.yml"
   schedule:
     - cron: "17 12 * * 1"
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
-  group: profile-refresh
+  group: profile-refresh-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  refresh:
+  validate:
     runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Compile updater
+        run: python3 -m py_compile scripts/update_dynamic_modules.py
+
+      - name: Validate bounded regions and configuration
+        run: python3 scripts/update_dynamic_modules.py --check
+
+  refresh:
+    if: github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Check out default branch
         uses: actions/checkout@v7
@@ -26,9 +53,6 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-
-      - name: Validate bounded regions
-        run: python3 scripts/update_dynamic_modules.py --check
 
       - name: Refresh public modules
         env:
