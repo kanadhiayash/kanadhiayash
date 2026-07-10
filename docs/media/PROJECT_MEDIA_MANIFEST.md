@@ -4,7 +4,7 @@
 **Applies to:** GitHub profile media under `assets/hero/` and `assets/projects/`  
 **Decision sources:** `docs/decisions/GITHUB_PROFILE_PUBLIC_POSITIONING.md` and `docs/decisions/GITHUB_PROFILE_INTERACTIVE_IA.md`
 
-This manifest separates the active identity hero, finished metadata covers, honest media-capture states, retained legacy boards, and future verified product captures.
+This manifest separates the active identity hero, compact metadata thumbnails, full case-file covers, honest media-capture states, retained legacy boards, and future verified product captures.
 
 ## Active identity pair
 
@@ -16,13 +16,13 @@ The hero remains unchanged during the staged built-products release. It must ret
 
 ## Active project covers and media states
 
-| Project | Visible cover | Drawer media state | Public scope |
+| Project | Switchboard thumbnail and drawer cover | Drawer media state | Public scope |
 |---|---|---|---|
 | PerFin OS | `assets/projects/perfin-os/cover.svg` | `assets/projects/perfin-os/media-pending.svg` | MADS team ownership, React Native and Firebase platform, verified development evidence |
 | For Rent | `assets/projects/for-rent/cover.svg` | `assets/projects/for-rent/media-pending.svg` | SwiftUI rental marketplace, deterministic demo mode, Firebase clean mode, explicit release limitations |
 | StreamNexus | `assets/projects/streamnexus/cover.svg` | `assets/projects/streamnexus/media-pending.svg` | Full-stack streaming-rental prototype, role workflows, tests, security, simulated checkout |
 
-Each cover is a finished editorial asset. It uses verified metadata and does not imitate a product screenshot.
+Each cover is a finished 16:9 editorial asset. The same source is rendered as a compact thumbnail in the Featured Work switchboard and as a full-width cover only inside its opened case file. It uses verified metadata and does not imitate a product screenshot.
 
 Each media state reserves space for reviewed runtime media. It must remain clearly labeled and cannot be described as product proof.
 
@@ -44,8 +44,11 @@ Active covers and media states use:
 
 - Keep the motion hero first.
 - Keep the static hero alternative directly accessible after the motion hero.
-- Show each project cover before its matching case-file drawer.
-- Keep media-capture states inside collapsed project drawers.
+- Render the three project covers as equal-width compact cards in one Featured Work row.
+- Keep each thumbnail linked to its matching case-file anchor.
+- Repeat the matching cover at full width only inside the opened project drawer.
+- Place the media-capture state after the full-width case-file cover.
+- Do not render project covers as separate full-width banners in Featured Work.
 - Do not show all media states above the fold.
 - Do not use a decorative asset as the only source of project facts.
 - Preserve the active project order: PerFin OS, For Rent, StreamNexus.
