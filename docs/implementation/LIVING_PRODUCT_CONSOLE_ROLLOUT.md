@@ -28,7 +28,7 @@ Delivered:
 
 ## Phase 2: Hero visual system
 
-**Status:** DIRECTION AND EXPORT COMPLETE, REPOSITORY PLACEMENT BLOCKING RELEASE
+**Status:** COMPLETE, MANUAL RENDER REVIEW OPEN
 
 Locked decisions:
 
@@ -47,18 +47,22 @@ Approved asset stem:
 
 `yash-kanadhia-living-product-console-dark`
 
-Required repository files:
+Delivered repository files:
 
 - `assets/hero/yash-kanadhia-living-product-console-dark.png`
 - `assets/hero/yash-kanadhia-living-product-console-dark.jpg`
 - `assets/hero/yash-kanadhia-living-product-console-dark.svg`
 
-Release requirements:
+Verified:
 
-- Reference the PNG from `README.md`.
-- Add descriptive alt text.
-- Verify rendered readability at GitHub desktop and mobile widths.
-- Remove or archive the superseded banner only after the new asset is confirmed in the rendered README.
+- The README references the approved PNG.
+- Hero alt text identifies the role, flagship systems, and MADS team attribution.
+- File signatures, PNG dimensions, and the approved wide aspect ratio pass.
+- Superseded banner assets were removed from the Phase 5 branch.
+
+Open manual check:
+
+- Review desktop light appearance, desktop dark appearance, and narrow mobile rendering.
 
 ## Phase 3: Project media
 
@@ -115,31 +119,43 @@ Post-merge operational check still required:
 
 ## Phase 5: Quality gates and release
 
-**Status:** IN PROGRESS ON REVIEW BRANCH
+**Status:** AUTOMATED GATES COMPLETE, MANUAL APPROVAL OPEN
 
 Delivered:
 
 - Added `scripts/validate_profile_release.py` as the deterministic release validator.
+- Added `scripts/validate_profile_foundation.py` to verify non-hero release conditions independently.
+- Added `scripts/validate_profile_links.py` with GET confirmation for unreliable HEAD responses.
 - Added `.github/workflows/profile-quality.yml` as the pull-request, main-branch, and manual quality gate.
 - Added `docs/qa/PROFILE_RELEASE_CHECKLIST.md` as the final automated and manual review record.
 - Added checks for locked copy, project attribution, selected credentials, approved tools, metrics, and dynamic markers.
 - Added checks for local assets, internal anchors, HTTPS links, alt text, placeholders, private paths, and common secret patterns.
-- Added online link checking that blocks definitive 404 and 410 responses while treating temporary network failures as warnings.
 - Added hero file, dimension, aspect-ratio, README-reference, and alt-text requirements.
+- Added a downloadable `profile-link-report` workflow artifact.
+- Replaced the unpublished Zeref GitHub Release URL with the verified repository release record.
 
-Release blockers:
+Verified automated results:
 
-- The approved PNG, JPG, and SVG hero files are not present under `assets/hero/` in the connector-visible repository.
-- `README.md` does not reference the approved hero PNG.
-- GitHub light, dark, and mobile render checks remain pending.
-- A manual Profile Refresh run and review remain pending.
+- Profile foundation: PASS.
+- Release readiness: PASS.
+- Online link gate: PASS.
+- LinkedIn and Substack access restrictions are warnings, not confirmed broken links.
+
+Remaining release blockers:
+
+- GitHub light appearance render review.
+- GitHub dark appearance render review.
+- Narrow mobile render review.
+- Manual Profile Refresh run and review after merge.
+- Final public-claim and ownership review.
+- Explicit merge approval.
 
 Release decision:
 
-Do not merge the Phase 5 pull request or call the profile released until the automated gate passes and the manual checklist is complete.
+Do not call the profile released until the manual checklist is complete and merge is explicitly approved.
 
 ## Current risks
 
 - The approved dark hero is generated raster artwork. The SVG export is a faithful embedded-image wrapper rather than editable vector paths.
 - Verified product screenshots and recordings remain an enhancement backlog and must not be represented as already published.
-- Substack feed availability must be confirmed through a live Profile Refresh run.
+- Substack feed availability still requires a live manual Profile Refresh run.
