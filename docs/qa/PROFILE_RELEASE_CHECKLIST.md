@@ -1,16 +1,16 @@
 # GitHub Profile Release Checklist
 
-**Status:** BLOCKED UNTIL HERO ASSET PLACEMENT AND FINAL RENDER REVIEW  
+**Status:** AUTOMATED GATES PASS, MANUAL RENDER AND FINAL APPROVAL OPEN  
 **Release surface:** `kanadhiayash/kanadhiayash` profile README  
 **Quality gate:** `.github/workflows/profile-quality.yml`
 
 ## Release rule
 
-Do not merge or call the Living Product Console released until every blocking item below is complete.
+Do not merge or call the Living Product Console released until every remaining manual blocking item is complete.
 
 ## Automated blocking checks
 
-The release validator must pass all of these checks:
+The release validator checks:
 
 - `README.md` exists and is valid UTF-8 text.
 - Product Designer remains the sole hero title.
@@ -44,7 +44,7 @@ The release validator must pass all of these checks:
 
 ## Required hero bundle
 
-These files are blocking release requirements:
+The following files are present under the locked path:
 
 ```text
 assets/hero/yash-kanadhia-living-product-console-dark.png
@@ -54,14 +54,14 @@ assets/hero/yash-kanadhia-living-product-console-dark.svg
 
 The PNG is the primary README asset.
 
-The validator requires:
+Verified requirements:
 
-- PNG dimensions of at least 1600 by 700 pixels.
-- A wide aspect ratio between 2.2 and 2.5.
-- A valid JPG signature.
-- An SVG root with `role="img"`.
-- One README reference to the approved PNG.
-- Hero alt text that identifies:
+- PNG dimensions are at least 1600 by 700 pixels.
+- The PNG uses the approved wide aspect ratio.
+- The JPG has a valid JPEG signature.
+- The SVG wrapper contains an SVG root and `role="img"`.
+- `README.md` references the approved PNG once.
+- Hero alt text identifies:
   - Yash Kanadhia
   - Product Designer
   - Zeref Memory Engine
@@ -70,39 +70,45 @@ The validator requires:
 
 ## Current automated status
 
-### Passing foundations
+### PASS: profile foundation
 
-- Phase 1 positioning and copy are merged.
-- Phase 3 static project boards are merged and referenced.
-- Phase 4 dynamic markers and updater are merged.
-- The dynamic updater compiles and passes its structural checks.
-- The project boards have descriptive alt text.
-- PerFin OS ownership boundaries remain explicit.
+- Code and configuration whitespace passed.
+- All profile scripts compiled.
+- The dynamic updater passed its structural checks.
+- Locked copy, attribution, metrics, credentials, tools, local assets, anchors, alt text, placeholders, private paths, and secret-pattern checks passed.
 
-### Blocking findings
+### PASS: release readiness
 
-- The approved dark hero files are not present under `assets/hero/` in the connector-visible repository.
-- `README.md` does not reference the approved hero PNG.
-- A manual Profile Refresh workflow run has not yet produced a review pull request.
+- The approved hero bundle is present under `assets/hero/`.
+- The README hero reference and descriptive alt text passed.
+- The approved hero dimensions and aspect ratio passed.
+- The superseded banner files were removed from the Phase 5 branch.
 
-## Manual render checks
+### PASS: online link gate
 
-After the hero files are committed and automated checks pass, review the rendered README in GitHub:
+- The definitive external-link scan passed.
+- The unpublished Zeref GitHub Release URL was replaced with the verified `docs/RELEASE_LOG.md` record.
+- LinkedIn and Substack access restrictions remain warnings because those public profile pages do not provide reliable automated HEAD or unauthenticated GET responses.
+- The workflow publishes `profile-link-report` as a review artifact.
 
-- Desktop width in GitHub light appearance.
-- Desktop width in GitHub dark appearance.
-- Narrow mobile width.
-- Name, title, location, and tagline remain readable.
-- Hero metrics and tool labels remain legible without zooming.
-- Zeref and PerFin remain visually dominant.
-- PerFin is visibly identified as a team project.
-- All three project media boards render without clipping.
-- Dynamic modules do not overpower selected work.
-- The page remains understandable when images fail to load because alt text and written project sections remain complete.
+## Remaining manual blocking checks
 
-## Dynamic-module release check
+Review the rendered README in GitHub:
 
-After Phase 4 is on `main`:
+- [ ] Desktop width in GitHub light appearance.
+- [ ] Desktop width in GitHub dark appearance.
+- [ ] Narrow mobile width.
+- [ ] Name, title, location, and tagline remain readable.
+- [ ] Hero metrics and tool labels remain legible without zooming.
+- [ ] Zeref and PerFin remain visually dominant.
+- [ ] PerFin is visibly identified as a team project.
+- [ ] All three project media boards render without clipping.
+- [ ] Dynamic modules do not overpower selected work.
+- [ ] The page remains understandable when images fail to load because alt text and written project sections remain complete.
+
+## Dynamic-module operational check
+
+After Phase 5 is merged:
 
 1. Run **Profile Refresh** manually from GitHub Actions.
 2. Confirm it creates or updates `automation/profile-refresh` only when content changes.
@@ -116,24 +122,25 @@ After Phase 4 is on `main`:
 ```bash
 python3 -m py_compile scripts/update_dynamic_modules.py
 python3 -m py_compile scripts/validate_profile_release.py
+python3 -m py_compile scripts/validate_profile_foundation.py
+python3 -m py_compile scripts/validate_profile_links.py
 python3 scripts/update_dynamic_modules.py --check
+python3 scripts/validate_profile_foundation.py
 python3 scripts/validate_profile_release.py
-python3 scripts/validate_profile_release.py --online
+python3 scripts/validate_profile_links.py
 git diff --check
 ```
 
 ## Release approval record
 
-Complete this section only after every gate passes:
-
 ```text
-Automated quality gate: PASS / BLOCKED
-Online link gate: PASS / BLOCKED
-GitHub light render: PASS / BLOCKED
-GitHub dark render: PASS / BLOCKED
-Mobile render: PASS / BLOCKED
-Profile Refresh review PR: PASS / BLOCKED
-Final public-claim review: PASS / BLOCKED
+Automated quality gate: PASS
+Online link gate: PASS
+GitHub light render: BLOCKED
+GitHub dark render: BLOCKED
+Mobile render: BLOCKED
+Profile Refresh review PR: BLOCKED
+Final public-claim review: BLOCKED
 Approved by: ____________________
 Approval date: __________________
 Release commit: _________________
