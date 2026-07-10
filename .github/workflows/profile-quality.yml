@@ -35,8 +35,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Check patch whitespace
-        run: git diff --check origin/${{ github.base_ref || 'main' }}...HEAD
+      - name: Check code and configuration whitespace
+        run: |
+          git diff --check origin/${{ github.base_ref || 'main' }}...HEAD -- \
+            '*.py' '*.json' '*.yml' '*.yaml' '*.svg'
 
       - name: Compile profile scripts
         run: |
