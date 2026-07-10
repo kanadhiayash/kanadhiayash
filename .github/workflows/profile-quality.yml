@@ -46,9 +46,13 @@ jobs:
           python3 -m py_compile scripts/validate_profile_release.py
           python3 -m py_compile scripts/validate_profile_foundation.py
           python3 -m py_compile scripts/validate_profile_links.py
+          python3 -m py_compile scripts/validate_profile_motion.py
 
       - name: Validate controlled dynamic modules
         run: python3 scripts/update_dynamic_modules.py --check
+
+      - name: Validate motion system consistency
+        run: python3 scripts/validate_profile_motion.py
 
       - name: Validate all non-hero release conditions
         run: python3 scripts/validate_profile_foundation.py

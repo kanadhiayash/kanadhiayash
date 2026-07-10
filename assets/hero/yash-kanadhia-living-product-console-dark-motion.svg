@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+<title id="title">Yash Kanadhia Living Product Console animated profile hero</title>
+<desc id="desc">Animated dark portfolio console for Yash Kanadhia, Product Designer in Toronto, featuring Zeref Memory Engine and PerFin OS, with two shipped projects, one MADS team project, five selected certifications, and tools Figma, React, Swift, Firebase, Claude, and Codex.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#07090a"/>
+    <stop offset="0.55" stop-color="#0b0e0f"/>
+    <stop offset="1" stop-color="#090a0b"/>
+  </linearGradient>
+  <radialGradient id="oliveGlow">
+    <stop offset="0" stop-color="#cfd365" stop-opacity=".32"/>
+    <stop offset=".45" stop-color="#89914b" stop-opacity=".14"/>
+    <stop offset="1" stop-color="#89914b" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="redGlow">
+    <stop offset="0" stop-color="#ff5147" stop-opacity=".28"/>
+    <stop offset=".5" stop-color="#7b1d2c" stop-opacity=".14"/>
+    <stop offset="1" stop-color="#7b1d2c" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".06"/>
+    <stop offset=".45" stop-color="#ffffff" stop-opacity=".015"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity=".035"/>
+  </linearGradient>
+  <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#ffffff" stop-opacity=".08"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse">
+    <path d="M52 0H0V52" fill="none" stroke="#d9d3c1" stroke-opacity=".055" stroke-width="1"/>
+  </pattern>
+  <filter id="blur24"><feGaussianBlur stdDeviation="24"/></filter>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".55"/>
+  </filter>
+  <clipPath id="frameClip"><rect x="14" y="14" width="1572" height="672" rx="24"/></clipPath>
+  <style>
+    .serif{font-family:Georgia,'Times New Roman',serif}
+    .sans{font-family:Inter,Arial,sans-serif}
+    .muted{fill:#d8d4ca;fill-opacity:.78}
+    .signal1{animation:signal 5s ease-in-out infinite}
+    .signal2{animation:signal 5s ease-in-out .7s infinite}
+    .signal3{animation:signal 5s ease-in-out 1.4s infinite}
+    .signal4{animation:signal 5s ease-in-out 2.1s infinite}
+    .signal5{animation:signal 5s ease-in-out 2.8s infinite}
+    .softPulse{animation:softPulse 6s ease-in-out infinite}
+    .softPulse2{animation:softPulse 6s ease-in-out 1.5s infinite}
+    .cardPulse{animation:cardPulse 8s ease-in-out infinite}
+    .cardPulse2{animation:cardPulse 8s ease-in-out 2s infinite}
+    .sweep{animation:sweep 10s linear infinite}
+    @keyframes signal{0%,65%,100%{opacity:.22}20%{opacity:1}}
+    @keyframes softPulse{0%,100%{opacity:.34;transform:scale(.94)}50%{opacity:.72;transform:scale(1.06)}}
+    @keyframes cardPulse{0%,100%{stroke-opacity:.28}50%{stroke-opacity:.62}}
+    @keyframes sweep{0%{transform:translateX(-420px)}100%{transform:translateX(1760px)}}
+  </style>
+</defs>
+<rect width="1600" height="700" fill="url(#bg)"/>
+<rect x="14" y="14" width="1572" height="672" rx="24" fill="none" stroke="#e6e0d3" stroke-opacity=".28" stroke-width="1.2"/>
+<rect x="15" y="15" width="1570" height="670" rx="23" fill="url(#grid)" opacity=".9"/>
+<g clip-path="url(#frameClip)">
+  <ellipse cx="-35" cy="585" rx="190" ry="240" fill="url(#redGlow)" filter="url(#blur24)"/>
+  <circle cx="1025" cy="295" r="230" fill="url(#oliveGlow)" filter="url(#blur24)" class="softPulse"/>
+  <circle cx="1420" cy="335" r="220" fill="url(#redGlow)" filter="url(#blur24)" class="softPulse2"/>
+  <rect x="-220" y="0" width="260" height="700" fill="url(#scan)" class="sweep" opacity=".65"/>
+</g>
+<g transform="translate(1460 34)">
+  <circle cx="0" cy="0" r="2" fill="#c4c85b" class="signal1"/>
+  <circle cx="13" cy="0" r="2" fill="#c4c85b" class="signal2"/>
+  <circle cx="26" cy="0" r="2" fill="#c4c85b" class="signal3"/>
+  <circle cx="39" cy="0" r="2" fill="#c4c85b" class="signal4"/>
+  <circle cx="52" cy="0" r="2" fill="#c4c85b" class="signal5"/>
+  <path d="M74-10v20M64 0h20" stroke="#c4c85b" stroke-opacity=".45" stroke-width="2"/>
+</g>
+<g transform="translate(78 92)">
+  <text x="0" y="74" class="serif" font-size="66" fill="#f1efe9">Yash Kanadhia</text>
+  <text x="0" y="122" class="sans" font-size="28" fill="#c7c27c">Product Designer</text>
+  <rect x="0" y="144" width="46" height="2" rx="1" fill="#ff5b52"/>
+  <g transform="translate(0 178)">
+    <path d="M12 1c-6 0-10 4.5-10 10 0 7.4 10 18 10 18s10-10.6 10-18c0-5.5-4-10-10-10zm0 14.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4z" fill="#c4c85b"/>
+    <text x="36" y="18" class="sans muted" font-size="19">Toronto, Ontario, Canada</text>
+  </g>
+  <path d="M0 232H476" stroke="#e5dfd1" stroke-opacity=".13" stroke-dasharray="3 5"/>
+  <g transform="translate(0 268)">
+    <text x="0" y="20" class="serif" font-size="46" fill="#c4c85b">“</text>
+    <line x1="54" y1="18" x2="54" y2="104" stroke="#c4c85b" stroke-opacity=".45"/>
+    <text x="78" y="42" class="sans" font-size="27" fill="#eeeae1">I design and build systems that</text>
+    <text x="78" y="82" class="sans" font-size="27" fill="#eeeae1">connect people to outcomes.</text>
+  </g>
+</g>
+<g transform="translate(632 58)" filter="url(#shadow)">
+  <rect width="420" height="454" rx="24" fill="url(#glass)" stroke="#c7c27c" stroke-width="1.4" class="cardPulse"/>
+  <circle cx="92" cy="92" r="64" fill="url(#oliveGlow)" opacity=".85"/>
+  <g transform="translate(40 38)">
+    <rect width="104" height="104" rx="24" fill="#ffffff" fill-opacity=".025" stroke="#c7c27c" stroke-opacity=".28"/>
+    <g transform="translate(52 52)" class="softPulse">
+      <path d="M0-28 34 0 0 28-34 0Z" fill="none" stroke="#c4c85b" stroke-opacity=".4"/>
+      <path d="M0-20 26 0 0 20-26 0Z" fill="none" stroke="#c4c85b" stroke-opacity=".55"/>
+      <path d="M0-12 18 0 0 12-18 0Z" fill="#c4c85b" fill-opacity=".82"/>
+    </g>
+  </g>
+  <g transform="translate(260 52)">
+    <rect width="118" height="38" rx="19" fill="#050706" fill-opacity=".65" stroke="#c7c27c" stroke-opacity=".32"/>
+    <circle cx="24" cy="19" r="5" fill="#c4c85b" class="softPulse"/>
+    <text x="42" y="25" class="sans" font-size="16" fill="#f0eee8">Shipped</text>
+  </g>
+  <text x="40" y="230" class="serif" font-size="38" fill="#f5f1ea">Zeref Memory Engine</text>
+  <rect x="40" y="254" width="42" height="3" rx="1.5" fill="#c4c85b"/>
+  <text x="40" y="298" class="sans muted" font-size="18">Adaptive memory orchestration that</text>
+  <text x="40" y="326" class="sans muted" font-size="18">personalizes recall across contexts</text>
+  <text x="40" y="354" class="sans muted" font-size="18">and surfaces what matters.</text>
+  <rect x="40" y="382" width="154" height="38" rx="19" fill="#050706" fill-opacity=".62" stroke="#c4c85b" stroke-opacity=".4"/>
+  <text x="57" y="407" class="sans" font-size="15" fill="#c4c85b">Shipped Project</text>
+</g>
+<g transform="translate(1075 58)" filter="url(#shadow)">
+  <rect width="470" height="454" rx="24" fill="url(#glass)" stroke="#ff665e" stroke-width="1.4" class="cardPulse2"/>
+  <circle cx="96" cy="92" r="64" fill="url(#redGlow)" opacity=".86"/>
+  <g transform="translate(42 38)">
+    <rect width="106" height="104" rx="24" fill="#ffffff" fill-opacity=".025" stroke="#ff665e" stroke-opacity=".24"/>
+    <g transform="translate(53 52)">
+      <circle r="31" fill="none" stroke="#ff5b52" stroke-opacity=".2"/>
+      <circle r="23" fill="none" stroke="#ff5b52" stroke-opacity=".28"/>
+      <circle r="15" fill="none" stroke="#ff5b52" stroke-opacity=".42"/>
+      <circle r="7" fill="#ff5b52" class="softPulse2"/>
+      <circle r="4" fill="#fff"><animateMotion dur="7s" repeatCount="indefinite" path="M0,-31 A31,31 0 1,1 -0.1,-31"/></circle>
+    </g>
+  </g>
+  <g transform="translate(280 52)">
+    <rect width="146" height="38" rx="19" fill="#050706" fill-opacity=".65" stroke="#ff665e" stroke-opacity=".3"/>
+    <circle cx="23" cy="19" r="5" fill="#ff5b52" class="softPulse2"/>
+    <text x="41" y="25" class="sans" font-size="16" fill="#f0eee8">Team Project</text>
+  </g>
+  <text x="40" y="230" class="serif" font-size="38" fill="#f5f1ea">PerFin OS</text>
+  <rect x="40" y="254" width="42" height="3" rx="1.5" fill="#ff5b52"/>
+  <text x="40" y="298" class="sans muted" font-size="18">A modular operating system for personal</text>
+  <text x="40" y="326" class="sans muted" font-size="18">finance designed to simplify decisions</text>
+  <text x="40" y="354" class="sans muted" font-size="18">and drive clarity.</text>
+  <rect x="40" y="382" width="182" height="38" rx="19" fill="#050706" fill-opacity=".62" stroke="#ff5b52" stroke-opacity=".5"/>
+  <text x="58" y="407" class="sans" font-size="15" fill="#ff665e">MADS team project</text>
+</g>
+<g transform="translate(42 548)">
+  <rect width="1516" height="112" rx="24" fill="#090c0d" fill-opacity=".82" stroke="#e2ddd2" stroke-opacity=".18"/>
+  <g transform="translate(20 18)">
+    <rect width="820" height="76" rx="18" fill="#ffffff" fill-opacity=".02" stroke="#c7c27c" stroke-opacity=".22"/>
+    <g transform="translate(24 16)">
+      <circle cx="22" cy="22" r="22" fill="#c4c85b" fill-opacity=".08" stroke="#c4c85b" stroke-opacity=".42"/>
+      <path d="M13 28 22 14l9 14M22 14v20" fill="none" stroke="#c4c85b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="58" y="28" class="sans" font-size="15" fill="#f0eee8">2 shipped projects</text>
+      <circle cx="252" cy="22" r="4" fill="#c4c85b" class="softPulse"/>
+      <circle cx="310" cy="22" r="22" fill="#c4c85b" fill-opacity=".08" stroke="#c4c85b" stroke-opacity=".42"/>
+      <circle cx="304" cy="20" r="5" fill="none" stroke="#c4c85b" stroke-width="1.7"/>
+      <circle cx="316" cy="20" r="5" fill="none" stroke="#c4c85b" stroke-width="1.7"/>
+      <path d="M295 33c2-7 8-10 15-10s13 3 15 10" fill="none" stroke="#c4c85b" stroke-width="1.7" stroke-linecap="round"/>
+      <text x="346" y="28" class="sans" font-size="15" fill="#f0eee8">1 MADS team project</text>
+      <circle cx="556" cy="22" r="4" fill="#c4c85b" class="softPulse2"/>
+      <circle cx="614" cy="22" r="22" fill="#c4c85b" fill-opacity=".08" stroke="#c4c85b" stroke-opacity=".42"/>
+      <circle cx="614" cy="19" r="8" fill="none" stroke="#c4c85b" stroke-width="1.7"/>
+      <path d="m610 28-4 9 8-4 8 4-4-9" fill="none" stroke="#c4c85b" stroke-width="1.7" stroke-linejoin="round"/>
+      <text x="650" y="28" class="sans" font-size="14" fill="#f0eee8">5 selected certifications</text>
+    </g>
+  </g>
+  <g transform="translate(840 18)">
+    <rect width="656" height="76" rx="18" fill="#ffffff" fill-opacity=".02" stroke="#e2ddd2" stroke-opacity=".18"/>
+    <g transform="translate(14 16)" class="sans" font-size="14" fill="#f0eee8">
+      <g><rect width="88" height="44" rx="16" fill="#ffffff" fill-opacity=".025" stroke="#e2ddd2" stroke-opacity=".28"/><text x="23" y="28">Figma</text></g>
+      <g transform="translate(98)"><rect width="88" height="44" rx="16" fill="#ffffff" fill-opacity=".025" stroke="#e2ddd2" stroke-opacity=".28"/><text x="24" y="28">React</text></g>
+      <g transform="translate(196)"><rect width="88" height="44" rx="16" fill="#ffffff" fill-opacity=".025" stroke="#e2ddd2" stroke-opacity=".28"/><text x="24" y="28">Swift</text></g>
+      <g transform="translate(294)"><rect width="100" height="44" rx="16" fill="#ffffff" fill-opacity=".025" stroke="#e2ddd2" stroke-opacity=".28"/><text x="19" y="28">Firebase</text></g>
+      <g transform="translate(404)"><rect width="88" height="44" rx="16" fill="#ffffff" fill-opacity=".025" stroke="#e2ddd2" stroke-opacity=".28"/><text x="19" y="28">Claude</text></g>
+      <g transform="translate(502)"><rect width="88" height="44" rx="16" fill="#ffffff" fill-opacity=".025" stroke="#e2ddd2" stroke-opacity=".28"/><text x="21" y="28">Codex</text></g>
+    </g>
+  </g>
+  <circle r="4" fill="#c4c85b"><animateMotion dur="9s" repeatCount="indefinite" path="M28 102 H1488"/></circle>
+</g>
+</svg>

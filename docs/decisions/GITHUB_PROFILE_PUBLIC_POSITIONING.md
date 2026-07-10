@@ -3,7 +3,7 @@
 **Status:** LOCKED  
 **Effective date:** 2026-07-10  
 **Last revised:** 2026-07-10  
-**Applies to:** GitHub profile README, profile banner, hero copy, project attribution, credential selection, and future Living Product Console work.
+**Applies to:** GitHub profile README, profile banner, hero copy, motion behaviour, project attribution, credential selection, and future Living Product Console work.
 
 This file is the canonical decision record for the public GitHub profile. Later changes require an explicit replacement decision.
 
@@ -45,7 +45,7 @@ Target roles remain:
 Use exactly:
 
 - 2 shipped projects
-- 1 team project
+- 1 MADS team project
 - 5 selected certifications
 
 The banner metric refers to five selected credentials, not the complete credential count.
@@ -89,15 +89,31 @@ Use only:
 
 Do not include ChatGPT in the banner tool row.
 
-## Phase 2 hero visual direction
+## Phase 2 hero visual and motion direction
 
 **Decision status:** LOCKED
 
-Use the approved **dark Living Product Console** hero as the only GitHub profile banner direction for the current release.
+Use the approved **dark Living Product Console** as the only GitHub profile hero direction for the current release.
 
 The light variation is not part of the active profile asset set.
 
-Required visual characteristics:
+### Active presentation
+
+- The animated SVG is the primary README hero.
+- The approved PNG remains the static and reduced-motion alternative.
+- The JPG remains a compressed distribution or preview asset.
+- The original static SVG wrapper may remain for archival placement use.
+- Do not place another large animation above the fold.
+
+Active animated asset:
+
+`assets/hero/yash-kanadhia-living-product-console-dark-motion.svg`
+
+Static alternative:
+
+`assets/hero/yash-kanadhia-living-product-console-dark.png`
+
+### Required visual characteristics
 
 - Dark charcoal and near-black canvas.
 - Restrained glass panels and system-line details.
@@ -108,10 +124,37 @@ Required visual characteristics:
 - Zeref Memory Engine and PerFin OS as the dominant project cards.
 - Zeref Memory Engine may carry a shipped or flagship cue.
 - PerFin OS must carry the **MADS team project** cue and must not imply solo ownership.
-- One static hero is the approved baseline before any later motion experiment.
 - Do not create or publish a light-mode banner unless a later explicit decision reopens that direction.
 
-Approved asset stem:
+### Required motion characteristics
+
+- Slow ambient motion rather than decorative spectacle.
+- Soft card-border breathing and project-state pulses.
+- A restrained scanning light across the console.
+- Slow orbital motion inside the PerFin project indicator.
+- A moving signal along the lower console rail.
+- No rapid flashes, hard strobing, large jumps, or aggressive looping.
+- Motion must not communicate information unavailable in the static hero or written README.
+- The static alternative must remain directly accessible from the README.
+- The hero must remain understandable when animation is blocked or ignored.
+
+### Profile memorabilia rule
+
+The motion layer is the profile’s primary memorable signature. It should feel like an active product console rather than a generic developer decoration.
+
+Do not add:
+
+- Contribution snakes or Pacman as a primary profile visual.
+- Spotify widgets.
+- Random quote animations.
+- Multiple typing-title animations.
+- Live clocks.
+- Visitor, follower, streak, repository, or credential counters.
+- Decorative motion that competes with selected work.
+
+## Approved asset family
+
+Base stem:
 
 `yash-kanadhia-living-product-console-dark`
 
@@ -119,11 +162,14 @@ Preferred repository location:
 
 `assets/hero/`
 
-Approved formats:
+Approved files:
 
-- PNG as the primary GitHub README asset.
-- JPG as a compressed distribution or preview asset.
-- SVG may be retained as a placement wrapper when generated from the approved raster artwork. It must not be described as a fully editable vector source unless it is manually reconstructed as vector paths.
+- `yash-kanadhia-living-product-console-dark-motion.svg`, active animated README hero.
+- `yash-kanadhia-living-product-console-dark.png`, static alternative.
+- `yash-kanadhia-living-product-console-dark.jpg`, compressed preview.
+- `yash-kanadhia-living-product-console-dark.svg`, static placement wrapper.
+
+The static SVG wrapper contains embedded raster artwork and must not be described as a fully editable vector source. The animated SVG is a separately reconstructed vector presentation.
 
 ## Public-copy guardrails
 
@@ -136,4 +182,4 @@ Approved formats:
 - Exclude Six Sigma Yellow Belt from GitHub profile presentation.
 - Do not turn selected credential counts into a claim about the complete credential inventory.
 - Use the dark Living Product Console hero for the current release.
-- Preserve exact project, role, location, metric, credential, tool, and hero-direction wording from this decision record unless a later explicit decision replaces it.
+- Preserve exact project, role, location, metric, credential, tool, hero-direction, and motion wording from this decision record unless a later explicit decision replaces it.
