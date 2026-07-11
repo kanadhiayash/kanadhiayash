@@ -1,23 +1,27 @@
 <p align="center">
-  <img
-    src="./assets/hero/yash-kanadhia-living-product-console-dark-motion.svg"
-    alt="Animated Living Product Console for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada, featuring Zeref Memory Engine and selected product work."
-    width="100%"
-  />
+  <a href="#60-second-profile">
+    <img
+      src="./assets/hero/yash-kanadhia-living-product-console-dark-motion.svg"
+      alt="Adaptive light and dark minimal samurai systems hero for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada. The banner includes Zeref Memory Engine and PerFin OS code panels, three verified profile metrics, and Yash's nine-tool operating rail."
+      width="100%"
+    />
+  </a>
 </p>
 
 <p align="center">
-  <sub>Slow ambient motion only. The same identity content is available in the static alternative.</sub>
+  <sub>Theme-aware slow ambient motion. Select the hero to open the 60-second profile.</sub>
 </p>
 
 <details>
   <summary>View static hero</summary>
   <p align="center">
-    <img
-      src="./assets/hero/yash-kanadhia-living-product-console-dark.png"
-      alt="Static Living Product Console for Yash Kanadhia, Product Designer, featuring Zeref Memory Engine and selected product work."
-      width="100%"
-    />
+    <a href="#60-second-profile">
+      <img
+        src="./assets/hero/yash-kanadhia-living-product-console-dark.svg"
+        alt="Static minimal samurai systems hero for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada."
+        width="100%"
+      />
+    </a>
   </p>
 </details>
 
@@ -45,11 +49,10 @@
 </p>
 
 <p align="center">
-  Figma · React · Swift · Firebase · Claude · Codex
+  Figma · Linear · Notion · React · SwiftUI · Firebase · Claude · Codex · GitHub
 </p>
 
 ---
-
 ## 60-second profile
 
 I lead with product design and use implementation, architecture, and AI-assisted delivery to make product decisions inspectable. My work spans mobile and web products, local-first AI systems, accessibility, testing, documentation, and reviewable delivery.
