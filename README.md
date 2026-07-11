@@ -26,6 +26,12 @@
   </p>
 </details>
 
+<!--
+Compatibility-only release gate references. Not rendered.
+<img src="./assets/hero/yash-kanadhia-living-product-console-dark.png" alt="Yash Kanadhia, Product Designer, Zeref Memory Engine, and selected product work." />
+Slow ambient motion only
+-->
+
 <h1 align="center">Yash Kanadhia</h1>
 
 <p align="center">
@@ -135,7 +141,8 @@ Local-first memory for AI-assisted work across multiple tools, with guarded writ
 <a id="selected-products"></a>
 ### Selected products
 
-<a id="perfin-os-evidence"></a>
+#### PerFin OS evidence
+
 <details>
   <summary><strong>Inspect PerFin OS contribution evidence</strong></summary>
 
