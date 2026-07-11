@@ -2,14 +2,14 @@
   <a href="#60-second-profile">
     <img
       src="./assets/hero/yash-kanadhia-living-product-console-dark-motion.svg"
-      alt="Adaptive light and dark minimal samurai systems hero for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada. The banner includes Zeref Memory Engine and PerFin OS code panels, three verified profile metrics, and Yash's nine-tool operating rail."
+      alt="Minimal Samurai Light profile hero for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada. The banner includes verified Zeref and PerFin OS code panels, three profile metrics, and Yash's nine-tool operating rail."
       width="100%"
     />
   </a>
 </p>
 
 <p align="center">
-  <sub>Theme-aware slow ambient motion. Select the hero to open the 60-second profile.</sub>
+  <sub>Light-first ambient motion. Select the hero to open the 60-second profile.</sub>
 </p>
 
 <details>
@@ -18,7 +18,7 @@
     <a href="#60-second-profile">
       <img
         src="./assets/hero/yash-kanadhia-living-product-console-dark.svg"
-        alt="Static minimal samurai systems hero for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada."
+        alt="Static Minimal Samurai Light profile hero for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada."
         width="100%"
       />
     </a>
@@ -52,6 +52,26 @@
   Figma · Linear · Notion · React · SwiftUI · Firebase · Claude · Codex · GitHub
 </p>
 
+<table>
+  <tr>
+    <td width="33%" align="center">
+      <a href="#selected-products">
+        <img src="./assets/navigation/metric-ready-to-ship.svg" alt="Open selected product proof for 2 Ready to Ship Projects." width="100%" />
+      </a>
+    </td>
+    <td width="33%" align="center">
+      <a href="#perfin-os-evidence">
+        <img src="./assets/navigation/metric-team-project.svg" alt="Open PerFin OS collaboration evidence for 1 Team Project." width="100%" />
+      </a>
+    </td>
+    <td width="33%" align="center">
+      <a href="#selected-credentials">
+        <img src="./assets/navigation/metric-certificates.svg" alt="Open the selected credentials section for 5 Certificates." width="100%" />
+      </a>
+    </td>
+  </tr>
+</table>
+
 ---
 ## 60-second profile
 
@@ -80,6 +100,10 @@ The visible profile stays concise. Open a drawer to inspect ownership, decisions
 
 #### Zeref Memory Engine
 
+<a href="https://github.com/kanadhiayash/zeref-memory-engine">
+  <img src="./assets/evidence/zeref-alientech-portal.svg" alt="Open the Zeref OS repository and inspect its local-first memory, continuity, evidence, and guardrail architecture." width="100%" />
+</a>
+
 Local-first memory for AI-assisted work across multiple tools, with guarded writes, explicit evidence states, privacy controls, audit trails, and deterministic release checks.
 
 <details>
@@ -104,8 +128,10 @@ Local-first memory for AI-assisted work across multiple tools, with guarded writ
 
 </details>
 
+<a id="selected-products"></a>
 ### Selected products
 
+<a id="perfin-os-evidence"></a>
 <details>
   <summary><strong>Inspect PerFin OS contribution evidence</strong></summary>
 
