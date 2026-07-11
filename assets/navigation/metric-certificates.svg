@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="180" viewBox="0 0 480 180" role="img" aria-labelledby="title desc">
+<title id="title">Five certificates</title>
+<desc id="desc">Clickable minimal samurai metric portal showing 5 Certificates.</desc>
+<style>
+  .label{font:600 18px Inter,Arial,sans-serif;fill:#24211E}.number{font:700 48px Georgia,serif;fill:#9E302B}.hint{font:400 13px Inter,Arial,sans-serif;fill:#6A625B;letter-spacing:.08em}.ring{stroke-dasharray:190;stroke-dashoffset:190;animation:ring 10s ease-in-out infinite}.check{stroke-dasharray:42;stroke-dashoffset:42;animation:check 10s ease-in-out infinite}@keyframes ring{0%,12%{stroke-dashoffset:190}34%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:190}}@keyframes check{0%,30%{stroke-dashoffset:42}48%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:42}}@media(prefers-reduced-motion:reduce){.ring,.check{animation:none;stroke-dashoffset:0}}
+</style>
+<rect width="480" height="180" rx="18" fill="#F8F6F1"/>
+<rect x="1" y="1" width="478" height="178" rx="17" fill="none" stroke="#D8D0C6"/>
+<circle class="ring" cx="104" cy="76" r="37" fill="none" stroke="#9E302B" stroke-width="3"/>
+<path d="m81 108-8 35 31-15 31 15-8-35" fill="none" stroke="#4A5240" stroke-width="2"/>
+<path class="check" d="m87 76 12 12 24-29" fill="none" stroke="#9E302B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="182" y="78" class="number">5</text>
+<text x="238" y="78" class="label">Certificates</text>
+<text x="182" y="130" class="hint">INSPECT CREDENTIALS →</text>
+</svg>

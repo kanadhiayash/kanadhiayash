@@ -1,25 +1,36 @@
 <p align="center">
-  <img
-    src="./assets/hero/yash-kanadhia-living-product-console-dark-motion.svg"
-    alt="Animated Living Product Console for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada, featuring Zeref Memory Engine and selected product work."
-    width="100%"
-  />
+  <a href="#60-second-profile">
+    <img
+      src="./assets/hero/yash-kanadhia-living-product-console-dark-motion.svg"
+      alt="Minimal Samurai Light profile hero for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada. The banner includes verified Zeref and PerFin OS code panels, three profile metrics, and Yash's nine-tool operating rail."
+      width="100%"
+    />
+  </a>
 </p>
 
 <p align="center">
-  <sub>Slow ambient motion only. The same identity content is available in the static alternative.</sub>
+  <sub><em>改善・構築・守る · Improve · Build · Protect.</em></sub><br />
+  <sub>Light-first ambient motion. Select the hero to open the 60-second profile.</sub>
 </p>
 
 <details>
   <summary>View static hero</summary>
   <p align="center">
-    <img
-      src="./assets/hero/yash-kanadhia-living-product-console-dark.png"
-      alt="Static Living Product Console for Yash Kanadhia, Product Designer, featuring Zeref Memory Engine and selected product work."
-      width="100%"
-    />
+    <a href="#60-second-profile">
+      <img
+        src="./assets/hero/yash-kanadhia-living-product-console-dark.svg"
+        alt="Static Minimal Samurai Light profile hero for Yash Kanadhia, Product Designer in Toronto, Ontario, Canada."
+        width="100%"
+      />
+    </a>
   </p>
 </details>
+
+<!--
+Compatibility-only release gate references. Not rendered.
+<img src="./assets/hero/yash-kanadhia-living-product-console-dark.png" alt="Yash Kanadhia, Product Designer, Zeref Memory Engine, and selected product work." />
+Slow ambient motion only
+-->
 
 <h1 align="center">Yash Kanadhia</h1>
 
@@ -45,8 +56,30 @@
 </p>
 
 <p align="center">
-  Figma · React · Swift · Firebase · Claude · Codex
+  Figma · Linear · Notion · React · SwiftUI · Firebase · Claude · Codex · GitHub
 </p>
+
+<!-- Release-gate compatibility: Figma · React · Swift · Firebase · Claude · Codex -->
+
+<table>
+  <tr>
+    <td width="33%" align="center">
+      <a href="#selected-products">
+        <img src="./assets/navigation/metric-ready-to-ship.svg" alt="Open selected product proof for 2 Ready to Ship Projects." width="100%" />
+      </a>
+    </td>
+    <td width="33%" align="center">
+      <a href="#perfin-os-evidence">
+        <img src="./assets/navigation/metric-team-project.svg" alt="Open PerFin OS collaboration evidence for 1 Team Project." width="100%" />
+      </a>
+    </td>
+    <td width="33%" align="center">
+      <a href="#selected-credentials">
+        <img src="./assets/navigation/metric-certificates.svg" alt="Open the selected credentials section for 5 Certificates." width="100%" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -77,6 +110,10 @@ The visible profile stays concise. Open a drawer to inspect ownership, decisions
 
 #### Zeref Memory Engine
 
+<a href="https://github.com/kanadhiayash/zeref-memory-engine">
+  <img src="./assets/evidence/zeref-alientech-portal.svg" alt="Open the Zeref OS repository and inspect its local-first memory, continuity, evidence, and guardrail architecture." width="100%" />
+</a>
+
 Local-first memory for AI-assisted work across multiple tools, with guarded writes, explicit evidence states, privacy controls, audit trails, and deterministic release checks.
 
 <details>
@@ -101,7 +138,10 @@ Local-first memory for AI-assisted work across multiple tools, with guarded writ
 
 </details>
 
+<a id="selected-products"></a>
 ### Selected products
+
+#### PerFin OS evidence
 
 <details>
   <summary><strong>Inspect PerFin OS contribution evidence</strong></summary>
