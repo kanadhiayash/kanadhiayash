@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="420" viewBox="0 0 1500 420" role="img" aria-labelledby="title desc">
+<title id="title">Zeref OS evidence portal</title>
+<desc id="desc">Clickable Alien-tech evidence portal for Zeref OS showing memory, continuity, evidence, and guardrails.</desc>
+<defs>
+  <radialGradient id="orb"><stop offset="0" stop-color="#406B4A"/><stop offset=".55" stop-color="#173D2C"/><stop offset="1" stop-color="#071B15"/></radialGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<style>
+  .sans{font-family:Inter,Arial,sans-serif}.mono{font-family:'SFMono-Regular',Consolas,monospace}.trace{stroke-dasharray:18 16;animation:flow 14s linear infinite}.pulse{animation:pulse 9s ease-in-out infinite}.node{animation:node 12s ease-in-out infinite}@keyframes flow{to{stroke-dashoffset:-340}}@keyframes pulse{0%,100%{opacity:.25}50%{opacity:.65}}@keyframes node{0%,100%{r:6}50%{r:10}}@media(prefers-reduced-motion:reduce){.trace,.pulse,.node{animation:none}}
+</style>
+<rect width="1500" height="420" rx="24" fill="#F7F5EF"/>
+<rect x="1" y="1" width="1498" height="418" rx="23" fill="none" stroke="#9CB5A2"/>
+<path d="M25 72h300l35-35h250M1475 72h-220l-35-35h-210M25 348h250l30 30h320M1475 348h-250l-30 30H930" fill="none" stroke="#2E7D4B" stroke-opacity=".42" stroke-width="2"/>
+<g transform="translate(78 72)">
+  <text x="0" y="42" class="sans" font-size="18" letter-spacing="5" fill="#2E7D4B">FLAGSHIP SYSTEM</text>
+  <text x="0" y="112" class="sans" font-size="54" font-weight="700" fill="#102A1F">ZEREF OS</text>
+  <text x="0" y="158" class="sans" font-size="25" fill="#355C48">Local-first continuity and evidence for AI-assisted work.</text>
+  <g transform="translate(0 212)" class="mono" font-size="19">
+    <text x="0" y="0" fill="#1E6E43">memory</text><text x="120" y="0" fill="#4C6357">guarded writes</text>
+    <text x="0" y="38" fill="#1E6E43">continuity</text><text x="120" y="38" fill="#4C6357">cross-harness handoffs</text>
+    <text x="0" y="76" fill="#1E6E43">evidence</text><text x="120" y="76" fill="#4C6357">audit trails + benchmarks</text>
+    <text x="0" y="114" fill="#1E6E43">guardrails</text><text x="120" y="114" fill="#4C6357">privacy + contradiction controls</text>
+  </g>
+</g>
+<g transform="translate(820 45)">
+  <circle cx="290" cy="165" r="92" fill="url(#orb)"/>
+  <circle cx="290" cy="165" r="122" fill="none" stroke="#2E7D4B" stroke-width="2" stroke-opacity=".58"/>
+  <circle cx="290" cy="165" r="154" fill="none" stroke="#2E7D4B" stroke-width="2" stroke-opacity=".28" class="pulse"/>
+  <circle cx="290" cy="165" r="188" fill="none" stroke="#2E7D4B" stroke-width="1.5" stroke-opacity=".18"/>
+  <path class="trace" d="M30 55C145 55 145 165 198 165M382 165c78 0 92-112 198-112M382 165c88 0 97 126 220 126M30 290c114 0 112-125 168-125" fill="none" stroke="#2E7D4B" stroke-width="3"/>
+  <circle class="node" cx="30" cy="55" r="6" fill="#2E7D4B"/><circle class="node" cx="580" cy="53" r="6" fill="#2E7D4B"/><circle class="node" cx="602" cy="291" r="6" fill="#2E7D4B"/><circle class="node" cx="30" cy="290" r="6" fill="#2E7D4B"/>
+  <text x="290" y="345" text-anchor="middle" class="mono" font-size="18" fill="#1E6E43">OPEN ARCHITECTURE + BENCHMARKS →</text>
+</g>
+</svg>
