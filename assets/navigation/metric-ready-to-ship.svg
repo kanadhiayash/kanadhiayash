@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="180" viewBox="0 0 480 180" role="img" aria-labelledby="title desc">
+<title id="title">Two ready to ship projects</title>
+<desc id="desc">Clickable minimal samurai metric portal showing 2 Ready to Ship Projects.</desc>
+<style>
+  .label{font:600 18px Inter,Arial,sans-serif;fill:#24211E}.number{font:700 48px Georgia,serif;fill:#9E302B}.hint{font:400 13px Inter,Arial,sans-serif;fill:#6A625B;letter-spacing:.08em}.draw{stroke-dasharray:220;stroke-dashoffset:220;animation:draw 10s ease-in-out infinite}.pulse{animation:pulse 10s ease-in-out infinite}@keyframes draw{0%,12%{stroke-dashoffset:220}32%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:220}}@keyframes pulse{0%,35%,100%{opacity:.55}50%{opacity:1}}@media(prefers-reduced-motion:reduce){.draw,.pulse{animation:none;stroke-dashoffset:0}}
+</style>
+<rect width="480" height="180" rx="18" fill="#F8F6F1"/>
+<rect x="1" y="1" width="478" height="178" rx="17" fill="none" stroke="#D8D0C6"/>
+<path class="draw" d="M62 52 105 28l43 24v50l-43 25-43-25Z" fill="none" stroke="#9E302B" stroke-width="3"/>
+<path d="m62 52 43 25 43-25M105 77v50" fill="none" stroke="#4A5240" stroke-width="2" opacity=".65"/>
+<text x="182" y="78" class="number">2</text>
+<text x="238" y="65" class="label">Ready to Ship</text>
+<text x="238" y="91" class="label">Projects</text>
+<text x="182" y="130" class="hint pulse">INSPECT PRODUCT PROOF →</text>
+</svg>
