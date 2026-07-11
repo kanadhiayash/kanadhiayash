@@ -1,67 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
-<title id="title">Yash Kanadhia minimal samurai systems profile hero with adaptive light and dark modes</title>
-<desc id="desc">Yash Kanadhia, Product Designer in Toronto, Ontario, Canada. I design and build systems that connect people to outcomes. Metrics: 2 Ready to Ship Projects, 1 Team Project, 5 Certificates. Zeref Memory Engine and PerFin OS code panels. Tools: Figma, Linear, Notion, React, SwiftUI, Firebase, Claude, Codex, and GitHub.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Yash Kanadhia Minimal Samurai Light profile hero</title>
+<desc id="desc">Yash Kanadhia, Product Designer in Toronto, Ontario, Canada. I design and build systems that connect people to outcomes. Metrics: 2 Ready to Ship Projects, 1 Team Project, 5 Certificates. Zeref and PerFin OS evidence panels. Tools: Figma, Linear, Notion, React, SwiftUI, Firebase, Claude, Codex, and GitHub.</desc>
 <defs>
-  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="var(--line)" stroke-opacity=".11" /></pattern>
-  <radialGradient id="wash"><stop offset="0" stop-color="#B13A32" stop-opacity=".18"/><stop offset="1" stop-color="#B13A32" stop-opacity="0"/></radialGradient>
+  <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FBF8F2"/><stop offset="1" stop-color="#F4EFE7"/></linearGradient>
+  <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#B7B3AD" stop-opacity=".55"/><stop offset="1" stop-color="#D8D4CD" stop-opacity=".08"/></linearGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
   <style>
-    :root{--bg:#090909;--panel:#111111;--text:#F0E7DA;--muted:#C5B8AA;--line:#5E5147;--soft:#201B18;--codebg:#0D0D0D;--logo:#EADFD1}
-    @media (prefers-color-scheme: light){:root{--bg:#F7F3EC;--panel:#FFFDFC;--text:#252321;--muted:#665F58;--line:#CFC5B9;--soft:#EEE7DE;--codebg:#FBF8F3;--logo:#2F2C29}}
-    .serif{font-family:Georgia,'Times New Roman',serif}
-    .sans{font-family:Inter,Arial,sans-serif}
-    .mono{font-family:'SFMono-Regular',Consolas,'Liberation Mono',monospace}
-    .petal1{animation:drift1 18s linear infinite}
-    .petal2{animation:drift2 22s linear 3s infinite}
-    .petal3{animation:drift3 26s linear 8s infinite}
-    .glow{animation:pulse 10s ease-in-out infinite}
-    @keyframes drift1{0%{transform:translate(-60px,-40px) rotate(0)}100%{transform:translate(1710px,520px) rotate(420deg)}}
-    @keyframes drift2{0%{transform:translate(1300px,-70px) rotate(0)}100%{transform:translate(-200px,600px) rotate(-360deg)}}
-    @keyframes drift3{0%{transform:translate(450px,-80px) rotate(0)}100%{transform:translate(1150px,760px) rotate(300deg)}}
-    @keyframes pulse{0%,100%{opacity:.12}50%{opacity:.25}}
-    @media (prefers-reduced-motion: reduce){.petal1,.petal2,.petal3,.glow{animation:none!important}}
+    :root{--bg:#F8F6F1;--panel:#FCFAF6;--text:#1C1B18;--muted:#59534D;--line:#D4CBC0;--accent:#A6322D;--olive:#4A5240}
+    @media (prefers-color-scheme: light){:root{--bg:#F8F6F1;--panel:#FCFAF6;--text:#1C1B18;--muted:#59534D;--line:#D4CBC0;--accent:#A6322D;--olive:#4A5240}}
+    .sans{font-family:Inter,Arial,sans-serif}.serif{font-family:Georgia,'Times New Roman',serif}.mono{font-family:'SFMono-Regular',Consolas,'Liberation Mono',monospace}
+    .petal-a{animation:petalA 22s linear infinite}.petal-b{animation:petalB 27s linear 5s infinite}.petal-c{animation:petalC 31s linear 11s infinite}.cursor{animation:blink 2.4s step-end infinite}.mist{animation:mist 18s ease-in-out infinite}
+    @keyframes petalA{0%{transform:translate(-80px,-30px) rotate(0)}100%{transform:translate(1700px,470px) rotate(500deg)}}
+    @keyframes petalB{0%{transform:translate(1420px,-70px) rotate(0)}100%{transform:translate(-220px,640px) rotate(-420deg)}}
+    @keyframes petalC{0%{transform:translate(540px,-80px) rotate(0)}100%{transform:translate(1170px,930px) rotate(380deg)}}
+    @keyframes blink{0%,48%{opacity:1}49%,100%{opacity:.15}}@keyframes mist{0%,100%{opacity:.42;transform:translateX(0)}50%{opacity:.58;transform:translateX(22px)}}
+    @media (prefers-reduced-motion: reduce){.petal-a,.petal-b,.petal-c,.cursor,.mist{animation:none!important}}
   </style>
 </defs>
-<rect width="1600" height="700" fill="var(--bg)"/>
-<rect x="14" y="14" width="1572" height="672" rx="20" fill="none" stroke="var(--line)" stroke-opacity=".45"/>
-<rect x="14" y="14" width="1572" height="672" rx="20" fill="url(#grid)" opacity=".7"/>
-<circle cx="1185" cy="240" r="220" fill="url(#wash)" class="glow"/>
-<path d="M-70 180C60 25 250 15 385 110c-140-35-275 35-338 155 55 100 170 165 292 150-135 75-310 25-397-115-55-90-53-186-12-120Z" fill="none" stroke="var(--line)" stroke-opacity=".36" stroke-width="18" stroke-linecap="round"/>
-<path d="M1515 20v185M1455 20v185M1395 20v185M1335 20v185M1305 80h250M1305 140h250" stroke="var(--line)" stroke-opacity=".18"/>
-<g transform="translate(110 92)">
-  <text x="0" y="74" class="serif" font-size="70" fill="var(--text)">Yash Kanadhia</text>
-  <text x="2" y="118" class="sans" font-size="24" letter-spacing="8" fill="#B13A32">PRODUCT DESIGNER</text>
-  <g transform="translate(0 152)"><path d="M10 1c-5 0-9 4-9 9 0 7 9 16 9 16s9-9 9-16c0-5-4-9-9-9Zm0 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" fill="#B13A32"/><text x="30" y="18" class="serif" font-size="22" fill="var(--text)">Toronto, Ontario, Canada</text></g>
-  <rect x="0" y="210" width="58" height="2" fill="#B13A32"/>
-  <text x="0" y="264" class="serif" font-size="29" fill="var(--text)">I design and build systems that</text>
-  <text x="0" y="306" class="serif" font-size="29" fill="var(--text)">connect people to outcomes.</text>
+<rect width="1600" height="900" fill="url(#paper)"/>
+<rect x="1" y="1" width="1598" height="898" fill="none" stroke="#CEC5BA"/>
+<g class="mist" opacity=".46">
+  <path d="M0 674C118 566 205 568 285 650c55-90 119-121 190-68 73-134 170-142 257 15 66-71 126-64 194 17 67-40 124-31 189 39H0Z" fill="url(#mist)"/>
+  <path d="M0 742C153 640 274 646 389 720c88-109 182-111 271-13 92-72 185-61 273 23 78-49 158-35 247 26H0Z" fill="#C9C5BE" opacity=".25"/>
 </g>
-<g transform="translate(880 72)">
-  <rect width="600" height="190" rx="18" fill="var(--codebg)" stroke="var(--line)" stroke-opacity=".58"/><rect x="18" y="20" width="3" height="150" rx="1.5" fill="#B13A32"/>
-  <text x="45" y="48" class="mono" font-size="20" fill="#B13A32">const Zeref = {</text><text x="70" y="82" class="mono" font-size="17" fill="var(--muted)">localFirst: true,</text><text x="70" y="112" class="mono" font-size="17" fill="var(--muted)">guardedWrites: true,</text><text x="70" y="142" class="mono" font-size="17" fill="var(--muted)">handoffs: "cross-harness"</text><text x="45" y="168" class="mono" font-size="20" fill="#B13A32">}</text>
-  <path d="M522 58h42l-21 18Z" fill="none" stroke="var(--line)" stroke-opacity=".34" stroke-width="3"/><path d="M529 77h28v40h-28Z" fill="none" stroke="var(--line)" stroke-opacity=".28" stroke-width="3"/>
+<path d="M0 805c102-31 222-17 330-56 111-40 188-125 287-110 82 13 136 94 238 88 88-5 176-69 260-48 86 22 152 111 269 79 78-21 137-88 216-91v138H0Z" fill="#E4E0D9" opacity=".7"/>
+<path d="M1210 900c130-35 245-115 390-244v244Z" fill="#111" opacity=".84"/>
+<path d="M1255 900c89-43 181-112 345-214" fill="none" stroke="#F8F6F1" stroke-width="19" stroke-linecap="round" opacity=".8"/>
+<path d="M1330 900c69-35 154-96 270-171" fill="none" stroke="#F8F6F1" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+<g transform="translate(76 120)">
+  <text x="0" y="80" class="sans" font-size="72" font-weight="650" fill="var(--text)">Yash Kanadhia</text>
+  <text x="4" y="145" class="sans" font-size="24" letter-spacing="8" fill="var(--accent)">PRODUCT DESIGNER</text>
+  <g transform="translate(2 190)"><path d="M13 0C6 0 1 5 1 12c0 9 12 22 12 22s12-13 12-22C25 5 20 0 13 0Zm0 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z" fill="var(--accent)"/><text x="38" y="25" class="sans" font-size="25" fill="var(--text)">Toronto, Ontario, Canada</text></g>
+  <rect x="2" y="264" width="72" height="3" fill="var(--accent)"/>
+  <text x="2" y="326" class="sans" font-size="29" fill="var(--text)">I design and build systems that</text>
+  <text x="2" y="369" class="sans" font-size="29" fill="var(--text)">connect people to outcomes.</text>
 </g>
-<g transform="translate(880 282)">
-  <rect width="600" height="190" rx="18" fill="var(--codebg)" stroke="var(--line)" stroke-opacity=".58"/><rect x="18" y="20" width="3" height="150" rx="1.5" fill="#B13A32"/>
-  <text x="45" y="48" class="mono" font-size="20" fill="#B13A32">const PerFin = {</text><text x="70" y="82" class="mono" font-size="17" fill="var(--muted)">ownership: "team",</text><text x="70" y="112" class="mono" font-size="17" fill="var(--muted)">workspaces: "guest + authenticated",</text><text x="70" y="142" class="mono" font-size="17" fill="var(--muted)">platform: "React Native + Firebase"</text><text x="45" y="168" class="mono" font-size="20" fill="#B13A32">}</text><circle cx="544" cy="94" r="34" fill="none" stroke="var(--line)" stroke-opacity=".3" stroke-width="5"/>
+<g transform="translate(648 185)">
+  <rect width="370" height="270" rx="16" fill="var(--panel)" stroke="var(--line)"/>
+  <text x="28" y="43" class="mono" font-size="18" fill="var(--text)">// ZEREF</text><circle cx="330" cy="36" r="10" fill="none" stroke="var(--olive)"/><path d="M330 18v36M312 36h36" stroke="var(--olive)"/>
+  <line x1="24" y1="62" x2="346" y2="62" stroke="var(--line)"/>
+  <rect x="25" y="86" width="3" height="142" rx="1.5" fill="var(--accent)"/>
+  <text x="50" y="103" class="mono" font-size="17" fill="var(--text)">zeref = {</text>
+  <text x="68" y="137" class="mono" font-size="16" fill="var(--text)">purpose: <tspan fill="var(--accent)">"AI memory layer"</tspan>,</text>
+  <text x="68" y="170" class="mono" font-size="16" fill="var(--text)">privacy: <tspan fill="var(--accent)">"local-first"</tspan>,</text>
+  <text x="68" y="203" class="mono" font-size="16" fill="var(--text)">control: <tspan fill="var(--accent)">"user-owned"</tspan>,</text>
+  <text x="68" y="236" class="mono" font-size="16" fill="var(--text)">evidence: <tspan fill="var(--accent)">"verifiable"</tspan></text>
+  <text x="50" y="258" class="mono" font-size="17" fill="var(--text)">}<tspan class="cursor" fill="var(--accent)">_</tspan></text>
 </g>
-<g transform="translate(70 500)">
-  <rect width="1460" height="86" rx="16" fill="var(--panel)" stroke="var(--line)" stroke-opacity=".5"/>
-  <g transform="translate(75 22)"><circle cx="18" cy="20" r="18" fill="none" stroke="#B13A32" stroke-width="1.5"/><path d="M11 15h14v12H11zM15 11h6" fill="none" stroke="#B13A32" stroke-width="1.7"/><text x="52" y="27" class="serif" font-size="21" fill="var(--text)"><tspan fill="#B13A32">2</tspan> Ready to Ship Projects</text></g>
-  <line x1="500" y1="18" x2="500" y2="68" stroke="var(--line)" stroke-opacity=".48"/>
-  <g transform="translate(565 22)"><circle cx="18" cy="20" r="18" fill="none" stroke="#B13A32" stroke-width="1.5"/><circle cx="12" cy="16" r="4" fill="none" stroke="#B13A32"/><circle cx="24" cy="16" r="4" fill="none" stroke="#B13A32"/><path d="M7 29c1-6 5-9 11-9s10 3 11 9" fill="none" stroke="#B13A32"/><text x="52" y="27" class="serif" font-size="21" fill="var(--text)"><tspan fill="#B13A32">1</tspan> Team Project</text></g>
-  <line x1="960" y1="18" x2="960" y2="68" stroke="var(--line)" stroke-opacity=".48"/>
-  <g transform="translate(1040 22)"><circle cx="18" cy="20" r="18" fill="none" stroke="#B13A32" stroke-width="1.5"/><rect x="11" y="10" width="14" height="18" rx="2" fill="none" stroke="#B13A32"/><path d="m15 23 3 3 5-7" fill="none" stroke="#B13A32"/><text x="52" y="27" class="serif" font-size="21" fill="var(--text)"><tspan fill="#B13A32">5</tspan> Certificates</text></g>
+<g transform="translate(1040 185)">
+  <rect width="370" height="270" rx="16" fill="var(--panel)" stroke="var(--line)"/>
+  <text x="28" y="43" class="mono" font-size="18" fill="var(--text)">// PERFIN OS</text><circle cx="330" cy="36" r="12" fill="none" stroke="var(--olive)"/><circle cx="330" cy="36" r="4" fill="var(--olive)"/>
+  <line x1="24" y1="62" x2="346" y2="62" stroke="var(--line)"/>
+  <rect x="25" y="86" width="3" height="142" rx="1.5" fill="var(--text)"/>
+  <text x="50" y="103" class="mono" font-size="17" fill="var(--text)">perfinOS = {</text>
+  <text x="68" y="137" class="mono" font-size="16" fill="var(--text)">type: <tspan fill="var(--accent)">"personal finance OS"</tspan>,</text>
+  <text x="68" y="170" class="mono" font-size="16" fill="var(--text)">role: <tspan fill="var(--accent)">"co-creator"</tspan>,</text>
+  <text x="68" y="203" class="mono" font-size="16" fill="var(--text)">focus: <tspan fill="var(--accent)">"clarity, control"</tspan>,</text>
+  <text x="68" y="236" class="mono" font-size="16" fill="var(--text)">status: <tspan fill="var(--accent)">"ship-ready"</tspan></text>
+  <text x="50" y="258" class="mono" font-size="17" fill="var(--text)">}</text>
 </g>
-<g><rect x="28" y="602" width="1544" height="72" rx="14" fill="var(--panel)" stroke="var(--line)" stroke-opacity=".42"/>
-<g transform="translate(68 626)"><g stroke="var(--logo)" fill="none" stroke-width="2"><rect x="3" y="1" width="10" height="9" rx="4"/><rect x="3" y="10" width="10" height="9" rx="4"/><rect x="3" y="19" width="10" height="9" rx="4"/><rect x="13" y="1" width="10" height="9" rx="4"/><circle cx="18" cy="14.5" r="5"/></g><text x="38" y="19" class="sans" font-size="14" fill="var(--logo)">Figma</text></g>
-<g transform="translate(230 626)"><g stroke="var(--logo)" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="14" cy="14" r="11"/><path d="M5 20 20 5M4 14h10M14 24V14M8 23l15-15"/></g><text x="38" y="19" class="sans" font-size="14" fill="var(--logo)">Linear</text></g>
-<g transform="translate(392 626)"><g stroke="var(--logo)" fill="none" stroke-width="2"><rect x="2" y="2" width="24" height="24" rx="3"/><path d="M8 21V7l12 14V7"/></g><text x="38" y="19" class="sans" font-size="14" fill="var(--logo)">Notion</text></g>
-<g transform="translate(554 626)"><g stroke="#B13A32" fill="none" stroke-width="1.7"><ellipse cx="14" cy="14" rx="12" ry="5"/><ellipse cx="14" cy="14" rx="12" ry="5" transform="rotate(60 14 14)"/><ellipse cx="14" cy="14" rx="12" ry="5" transform="rotate(120 14 14)"/><circle cx="14" cy="14" r="2.4" fill="#B13A32" stroke="none"/></g><text x="38" y="19" class="sans" font-size="14" fill="var(--logo)">React</text></g>
-<g transform="translate(716 626)"><path d="M3 7c7 8 12 10 18 11-4 0-8-1-12-4 4 5 8 8 13 8 2 0 4-.5 5-1.5-1-8-7-14-15-18 4 4 7 8 9 12-5-5-10-8-18-7.5Z" fill="var(--logo)"/><text x="38" y="19" class="sans" font-size="14" fill="var(--logo)">SwiftUI</text></g>
-<g transform="translate(878 626)"><g fill="none" stroke="#B13A32" stroke-width="2" stroke-linejoin="round"><path d="M5 23 9 5l5 10 4-13 5 21-9 4Z"/><path d="m5 23 9-8 9 8"/></g><text x="38" y="19" class="sans" font-size="14" fill="var(--logo)">Firebase</text></g>
-<g transform="translate(1040 626)"><g stroke="#B13A32" stroke-width="2.2" stroke-linecap="round"><path d="M14 2v24M2 14h24M5.5 5.5l17 17M22.5 5.5l-17 17M9 3.5l10 21M19 3.5l-10 21" fill="none"/></g><text x="38" y="19" class="sans" font-size="14" fill="var(--logo)">Claude</text></g>
-<g transform="translate(1202 626)"><g stroke="var(--logo)" fill="none" stroke-width="2"><path d="M14 2l8 4.5v9L14 20l-8-4.5v-9Z"/><path d="m14 20 8 4.5M14 20l-8 4.5M22 15.5l4 2.5v4.5L22 25M6 15.5 2 18v4.5L6 25"/></g><text x="38" y="19" class="sans" font-size="14" fill="var(--logo)">Codex</text></g>
-<g transform="translate(1364 626)"><path d="M14 2a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.4.7-4.1-1.4-4.1-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.4-5.5-6a4.7 4.7 0 0 1 1.3-3.3c-.1-.3-.6-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.8 11.8 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3.7 1.7.2 3 .1 3.3a4.7 4.7 0 0 1 1.3 3.3c0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A12 12 0 0 0 14 2Z" fill="var(--logo)"/><text x="38" y="19" class="sans" font-size="14" fill="var(--logo)">GitHub</text></g>
+<g transform="translate(648 488)">
+  <rect width="762" height="118" rx="16" fill="var(--panel)" stroke="var(--line)"/>
+  <g transform="translate(38 29)"><circle cx="28" cy="28" r="27" fill="none" stroke="var(--text)" stroke-width="2"/><path d="m19 36 9-24 9 24-9-7Z" fill="none" stroke="var(--accent)" stroke-width="2"/><text x="72" y="42" class="sans" font-size="23" fill="var(--text)"><tspan font-size="42" fill="var(--accent)">2</tspan> Ready to Ship Projects</text></g>
+  <line x1="285" y1="22" x2="285" y2="96" stroke="var(--line)"/>
+  <g transform="translate(320 29)"><circle cx="21" cy="21" r="9" fill="none" stroke="var(--text)"/><circle cx="44" cy="21" r="9" fill="none" stroke="var(--text)"/><path d="M7 55c2-15 11-22 25-22s23 7 25 22" fill="none" stroke="var(--text)"/><text x="76" y="42" class="sans" font-size="23" fill="var(--text)"><tspan font-size="42" fill="var(--accent)">1</tspan> Team Project</text></g>
+  <line x1="540" y1="22" x2="540" y2="96" stroke="var(--line)"/>
+  <g transform="translate(573 29)"><circle cx="28" cy="28" r="24" fill="none" stroke="var(--text)"/><path d="m18 29 8 8 14-18" fill="none" stroke="var(--accent)" stroke-width="3"/><text x="66" y="42" class="sans" font-size="23" fill="var(--text)"><tspan font-size="42" fill="var(--accent)">5</tspan> Certificates</text></g>
 </g>
-<g opacity=".9"><path class="petal1" d="M0 0c8-9 19-6 22 2-5 8-14 12-22 7 4-3 7-6 8-10-3 1-5 1-8 1Z" fill="#D76C73"/><path class="petal2" d="M0 0c7-8 17-5 20 2-4 7-13 11-20 6 4-3 6-5 7-9-2 1-5 1-7 1Z" fill="#C85D66"/><path class="petal3" d="M0 0c9-10 21-6 24 3-5 9-15 13-24 7 5-3 8-6 9-11-3 1-6 1-9 1Z" fill="#E49096"/></g>
+<g transform="translate(1492 78)"><text x="0" y="0" writing-mode="tb" glyph-orientation-vertical="0" class="serif" font-size="28" fill="var(--text)">改善・構築・守る</text><rect x="-3" y="280" width="38" height="38" fill="none" stroke="var(--accent)" stroke-width="2"/><text x="16" y="306" text-anchor="middle" class="sans" font-size="13" font-weight="700" fill="var(--accent)">YK</text></g>
+<g transform="translate(42 786)">
+  <rect width="1516" height="82" rx="16" fill="var(--panel)" stroke="var(--line)"/>
+  <g class="sans" font-size="16" fill="var(--text)">
+    <text x="66" y="50">◉ Figma</text><text x="226" y="50">◉ Linear</text><text x="382" y="50">▣ Notion</text><text x="540" y="50">◎ React</text><text x="696" y="50">◆ SwiftUI</text><text x="858" y="50">△ Firebase</text><text x="1020" y="50">✳ Claude</text><text x="1180" y="50">⬡ Codex</text><text x="1340" y="50">● GitHub</text>
+  </g>
+</g>
+<g fill="#E6A6A2" opacity=".72"><ellipse class="petal-a" cx="0" cy="0" rx="10" ry="5" transform="rotate(18)"/><ellipse class="petal-b" cx="0" cy="0" rx="9" ry="5" transform="rotate(-20)"/><ellipse class="petal-c" cx="0" cy="0" rx="11" ry="5" transform="rotate(30)"/></g>
 </svg>
