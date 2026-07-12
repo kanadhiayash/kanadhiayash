@@ -1,13 +1,15 @@
 <!-- =========================================================
      YASH KANADHIA · GITHUB PROFILE
-     VISUAL SYSTEM: MINIMAL ALIENTECH · HERO V2
+     PUBLIC POSITIONING: PRODUCT DESIGNER
+     VISUAL SYSTEM: MINIMAL ALIENTECH · LOCKED
+     LAST ALIGNED: 2026-07-12
      ========================================================= -->
 
 <p align="center">
-  <a href="#overview">
+  <a href="#about">
     <img
       src="./assets/hero/yash-kanadhia-alientech-v2-motion.svg?rev=20260712-2"
-      alt="Yash Kanadhia, Product Designer in Toronto. Minimal AlienTech profile banner featuring Zeref, PerFin OS, reviewed merges, active systems, quality checks, and a Full Stack delivery rail."
+      alt="Yash Kanadhia, Toronto-based Product Designer building AI and mobile products, UX systems, and working prototypes."
       width="100%"
     />
   </a>
@@ -17,7 +19,7 @@
   <summary>View static banner</summary>
 
   <p align="center">
-    <a href="#overview">
+    <a href="#about">
       <img
         src="./assets/hero/yash-kanadhia-alientech-v2-static.svg?rev=20260712-2"
         alt="Static Minimal AlienTech GitHub banner for Yash Kanadhia, Product Designer in Toronto."
@@ -28,36 +30,34 @@
 </details>
 
 <p align="center">
-  <a href="#overview">Overview</a>
+  <a href="#about">About</a>
   ·
   <a href="#selected-work">Selected Work</a>
   ·
-  <a href="#capabilities">Capabilities</a>
+  <a href="#what-i-do">What I Do</a>
   ·
   <a href="#how-i-work">How I Work</a>
   ·
-  <a href="#stack">Stack</a>
+  <a href="#product-and-delivery-stack">Stack</a>
   ·
   <a href="#connect">Connect</a>
 </p>
 
 ---
 
-<a id="overview"></a>
+<a id="about"></a>
 
-## Overview
+## About
 
-I’m a **Product Designer** based in Toronto, working across product strategy, UX systems, mobile and web products, implementation constraints, and AI-assisted delivery.
+I’m a Toronto-based **Product Designer** focused on AI and mobile products.
 
-I’m strongest where an ambiguous workflow needs to become understandable, testable, accessible, and ready for a team to build.
+I turn ambiguous product problems into clear user flows, interaction systems, accessible interfaces, and working prototypes. My work spans product strategy, UX research, information architecture, interaction design, design systems, prototyping, and technical handoff.
+
+I work in Figma and can carry concepts into React Native, SwiftUI, Firebase, React, and Node.js. This implementation fluency helps me design within real constraints, collaborate closely with engineers, and test product decisions beyond static screens.
 
 > **I design and build systems that connect people to outcomes.**
 
-### What I bring
-
-| Product judgment | System thinking | Delivery discipline |
-|---|---|---|
-| Problem framing, user journeys, information architecture, interaction states, and product boundaries. | Permissions, data relationships, failure states, accessibility, architecture, and operational consequences. | Reviewable changes, testing, security checks, documentation, evidence trails, and explicit limitations. |
+Open to **Product Designer** and **AI Product Designer** roles across Canada, with adjacent interest in Design Technologist and UX Engineering opportunities.
 
 ---
 
@@ -65,11 +65,13 @@ I’m strongest where an ambiguous workflow needs to become understandable, test
 
 ## Selected work
 
-### Zeref Memory Engine
+### [Zeref Memory Engine](https://github.com/kanadhiayash/zeref-memory-engine)
 
-**Local-first memory and continuity for AI-assisted work.**
+**Local-first memory, context, conflict, privacy, and evaluation for AI-assisted project work.**
 
-Independent product direction, system architecture, reference implementation, documentation, and evaluation.
+Independent product direction and implementation. Zeref explores how project context can remain inspectable across AI tools without treating an unlimited transcript as trusted memory.
+
+**Product focus:** human-AI interaction, context management, privacy, evidence discipline, conflict handling, cross-tool continuity, and reproducible evaluation.
 
 [Repository](https://github.com/kanadhiayash/zeref-memory-engine)
 ·
@@ -77,23 +79,15 @@ Independent product direction, system architecture, reference implementation, do
 ·
 [Benchmark report](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md)
 
-### PerFin OS
+---
 
-**Personal-finance workflows across guest and authenticated experiences.**
-
-Team project by **Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq**. This profile does not imply solo ownership.
-
-[Development branch](https://github.com/SarmadTariq/PerfinOS/tree/dev)
-·
-[Authentication and session ownership](https://github.com/SarmadTariq/PerfinOS/pull/69)
-·
-[Theme-token standardization](https://github.com/SarmadTariq/PerfinOS/pull/68)
-
-### For Rent
+### [For Rent](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios)
 
 **A SwiftUI rental product supporting renter, landlord, guest, and demo journeys.**
 
-Product design and SwiftUI implementation with role-aware journeys, context-preserving authentication, state coverage, accessibility support, and deterministic demo repositories.
+Product design and SwiftUI implementation across role-aware journeys, protected actions, authentication return paths, accessibility behavior, state coverage, and deterministic demo support.
+
+**Product focus:** mobile product design, role and permission models, information architecture, interaction states, accessibility, and implementation-aware UX.
 
 [Repository](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios)
 ·
@@ -101,11 +95,33 @@ Product design and SwiftUI implementation with role-aware journeys, context-pres
 ·
 [Testing and verification](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md)
 
-### StreamNexus
+---
 
-**A full-stack streaming-rental prototype with administrator and customer workflows.**
+### [PerFin OS](https://github.com/SarmadTariq/PerfinOS/tree/dev)
 
-Full-stack product implementation across catalog management, discovery, rental states, authentication, authorization, integration testing, and security review.
+**A team-built React Native personal-finance product with guest and authenticated experiences.**
+
+Team project by **Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq**. This profile does not imply solo ownership.
+
+My contribution includes authentication and session ownership, finance-state separation, shared visual-token use, Firebase boundary cleanup, and reviewable pull-request delivery.
+
+**Product focus:** personal-finance clarity, guest value, design systems, authentication, team collaboration, and responsible public attribution.
+
+[Development branch](https://github.com/SarmadTariq/PerfinOS/tree/dev)
+·
+[Authentication and session ownership](https://github.com/SarmadTariq/PerfinOS/pull/69)
+·
+[Theme-token standardization](https://github.com/SarmadTariq/PerfinOS/pull/68)
+
+---
+
+### [StreamNexus](https://github.com/kanadhiayash/streamnexus)
+
+**A full-stack streaming-rental product prototype with customer and administrator workflows.**
+
+The product explores the wider system behind discovery and rental, including catalog administration, authentication, authorization, workflow states, testing, and security review.
+
+**Product focus:** end-to-end product flows, administrator UX, system boundaries, failure states, authorization, and implementation evidence.
 
 [Repository](https://github.com/kanadhiayash/streamnexus)
 ·
@@ -115,29 +131,35 @@ Full-stack product implementation across catalog management, discovery, rental s
 
 ---
 
-<a id="capabilities"></a>
+<a id="what-i-do"></a>
 
-## Capabilities
+## What I do
 
-### Product clarity
+### Product design
 
-I translate unclear requirements into defined users, workflows, states, constraints, and product decisions.
+- Product framing and problem definition
+- User flows, journeys, and information architecture
+- Interaction design and prototyping
+- Design systems and content hierarchy
+- Accessibility and state completeness
+- Usability planning and evidence-based iteration
 
-### System thinking
+### AI product design
 
-I connect individual interfaces to the wider product model, including permissions, data relationships, error states, accessibility, and operational consequences.
+- Human-AI interaction models
+- Context, memory, trust, and privacy workflows
+- Human approval and correction paths
+- Failure-state and boundary design
+- AI evaluation and reproducible product evidence
 
-### Design and implementation fluency
+### Design-to-build collaboration
 
-I work across Figma, React, React Native, SwiftUI, Firebase, Node.js, and full-stack product implementation.
+- Working prototypes in React Native, SwiftUI, and React
+- Firebase and application-service boundaries
+- Authentication and authorization flows
+- GitHub-based review, documentation, testing, and release evidence
 
-### Reviewable delivery
-
-I prefer focused changes, explicit ownership, documented tradeoffs, pull-request evidence, testing, security review, and clear release boundaries.
-
-### AI-assisted product work
-
-I use AI for research, exploration, implementation support, review, and documentation. Human judgment remains responsible for product direction, evidence quality, privacy, security, and final decisions.
+Implementation supports the product-design work. It is not presented as a claim of senior software-engineering positioning.
 
 ---
 
@@ -145,33 +167,54 @@ I use AI for research, exploration, implementation support, review, and document
 
 ## How I work
 
-1. **Frame** the users, outcomes, constraints, ownership, and evidence gaps.
-2. **Model** workflows, states, information architecture, permissions, and failure conditions.
-3. **Design** the interaction model, content hierarchy, accessibility behavior, and prototype.
-4. **Build** through focused, reviewable changes.
-5. **Verify** behavior, edge cases, accessibility, security, links, and release claims.
-6. **Communicate** confirmed behavior, assumptions, known limits, and next steps.
+1. **Frame the product**
+   Define the users, outcomes, constraints, ownership, evidence gaps, and decisions that matter.
+
+2. **Model the system**
+   Map workflows, states, permissions, data relationships, failure conditions, and product boundaries.
+
+3. **Design the experience**
+   Create the interaction model, information hierarchy, content, accessibility behavior, and prototype.
+
+4. **Build enough to test the decision**
+   Use working prototypes and focused implementation to expose constraints that static screens can hide.
+
+5. **Verify the result**
+   Review behavior, edge cases, accessibility, security, links, documentation, and release claims.
+
+6. **Communicate the evidence and limits**
+   Separate confirmed behavior from assumptions, simulations, placeholders, and planned work.
 
 ---
 
-<a id="stack"></a>
+## Evidence principles
+
+- **Evidence before claims.** Metrics and outcomes stay out unless the calculation and source can be reproduced.
+- **Ownership stays explicit.** Independent work, team projects, and personal contributions are clearly separated.
+- **Prototypes stay prototypes.** Demonstrations are not described as production systems.
+- **Accessibility is product quality.** Accessibility belongs in content, states, interaction, motion, validation, and testing.
+- **Security starts before release.** Secrets, permissions, authentication, dependencies, and input boundaries are considered early.
+- **AI assistance requires human judgment.** AI can support research, exploration, implementation, review, testing, and documentation. I remain responsible for product direction, code acceptance, privacy, security, evidence quality, and final decisions.
+
+---
+
+<a id="product-and-delivery-stack"></a>
 
 ## Product and delivery stack
 
-**Figma · Linear · Notion · React · Full Stack · Firebase · Claude · Codex · GitHub**
+**Design and product**  
+Figma · Prototyping · Information Architecture · Interaction Design · Design Systems · Accessibility
 
-Tools are selected according to the needs of the product, the team, and the evidence required at each stage. Tool choice is not a substitute for product judgment.
+**Mobile and web implementation**  
+React Native · SwiftUI · React · Node.js · Firebase · REST APIs
 
----
+**Workflow and delivery**  
+Linear · Notion · Git · GitHub · Testing · CI/CD · Documentation
 
-## Operating principles
+**AI-assisted work**  
+Claude · Codex · evaluation workflows · context management · human-in-the-loop review
 
-- **Evidence before claims.** Product status, metrics, outcomes, and capabilities should be inspectable.
-- **Ownership stays explicit.** Independent work and team contributions are not presented as the same kind of ownership.
-- **Prototypes stay prototypes.** Demonstrations and simulations are not described as production systems.
-- **Accessibility is product quality.** Accessibility belongs in content, interaction states, motion, validation, and testing.
-- **Security starts before release.** Secrets, permissions, authentication, dependencies, and input boundaries are considered early.
-- **AI output requires judgment.** AI can accelerate work, but it cannot own truth, privacy, accountability, or final review.
+Tools are selected according to the needs of the product, the team, and the evidence required. Tool choice is not a substitute for product judgment.
 
 ---
 
@@ -194,13 +237,11 @@ Additional completed credentials are listed on [LinkedIn](https://www.linkedin.c
 
 <a id="connect"></a>
 
-## Let’s work on a difficult product problem
+## Connect
 
 I’m interested in products where clear workflows, strong interaction design, technical understanding, and responsible AI-assisted delivery need to meet.
 
-Open to conversations around **Product Design**, **AI Product Design**, **Design Technology**, **UX Engineering**, and **product-focused full-stack work**.
-
-Based in Toronto and open to opportunities across Canada.
+Based in Toronto and open to **Product Designer** and **AI Product Designer** opportunities across Canada.
 
 <p align="center">
   <a href="https://www.linkedin.com/in/yashkanadhia"><strong>LinkedIn</strong></a>
