@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+<title id="title">Product working model motion</title>
+<desc id="desc">Six-stage working model: Frame, Model, Design, Build, Verify, and Communicate with a feedback filament.</desc>
+<defs>
+  <linearGradient id="mineralWash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F5F8F4"/><stop offset=".62" stop-color="#E9F0EA"/><stop offset="1" stop-color="#DCE8DE"/></linearGradient>
+  <linearGradient id="bioPanel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06110B"/><stop offset=".58" stop-color="#0A1A11"/><stop offset="1" stop-color="#102419"/></linearGradient>
+  <radialGradient id="irisGlow" cx="50%" cy="50%" r="56%"><stop stop-color="#102419"/><stop offset=".68" stop-color="#06110B"/><stop offset="1" stop-color="#53E786" stop-opacity=".16"/></radialGradient>
+
+  <style>
+  :root{--mineral-bg:#F5F8F4;--mineral-surface:#E9F0EA;--mineral-line:#B9CCBE;--bio-void:#06110B;--bio-panel:#0A1A11;--bio-panel-2:#102419;--ink-primary:#13241A;--ink-secondary:#496255;--ink-on-dark:#EAF7EE;--signal-deep:#13743F;--signal:#53E786;--signal-soft:#95F5B4}
+  .sans{font-family:Inter,Arial,system-ui,sans-serif}.mono{font-family:SFMono-Regular,Consolas,"Liberation Mono",monospace}.title{letter-spacing:.02em}.small{letter-spacing:.12em}.micro{letter-spacing:.16em}
+  .panel{fill:#0A1A11;stroke:#B9CCBE;stroke-width:1.4}.shell{fill:#F5F8F4;stroke:#13743F;stroke-width:1.5}.label{fill:#13241A}.muted{fill:#496255}.darkText{fill:#EAF7EE}.signal{stroke:#53E786;fill:none;stroke-linecap:round;stroke-linejoin:round}.softSignal{stroke:#95F5B4;fill:none;stroke-linecap:round;stroke-linejoin:round}.line{stroke:#B9CCBE;fill:none;stroke-linecap:round}.node{fill:#95F5B4;stroke:#13743F;stroke-width:1.2}
+
+  .breathe{animation:breathe 8s cubic-bezier(.42,0,.2,1) infinite}.seed{animation:seed 10s cubic-bezier(.42,0,.2,1) infinite}.signalPath{stroke-dasharray:12 26;animation:dash 8s linear infinite}.signalPathSlow{stroke-dasharray:8 34;animation:dash 13s linear infinite}.irisA{transform-origin:center;animation:spinA 14s linear infinite}.irisB{transform-origin:center;animation:spinB 18s linear infinite}.wake{animation:wake 14s cubic-bezier(.42,0,.2,1) infinite}.stagePulse{animation:stagePulse 12s cubic-bezier(.42,0,.2,1) infinite}.toolPulse{animation:toolPulse 10s cubic-bezier(.42,0,.2,1) infinite}.trace{stroke-dasharray:0 700;animation:trace 14s cubic-bezier(.42,0,.2,1) infinite}
+  @keyframes breathe{0%,100%{opacity:.82}50%{opacity:1}}@keyframes seed{0%,100%{opacity:.35;transform:translateX(0)}45%{opacity:1;transform:translateX(14px)}70%{opacity:.65;transform:translateX(0)}}@keyframes dash{to{stroke-dashoffset:-152}}@keyframes spinA{to{transform:rotate(360deg)}}@keyframes spinB{to{transform:rotate(-360deg)}}@keyframes wake{0%,8%,100%{opacity:.48;transform:scale(1)}14%,20%{opacity:1;transform:scale(1.025)}}@keyframes stagePulse{0%,100%{opacity:.62}12%,20%{opacity:1}36%,44%{opacity:1}60%,68%{opacity:1}}@keyframes toolPulse{0%,100%{opacity:.62}16%,22%{opacity:1}38%,44%{opacity:1}62%,70%{opacity:1}82%,90%{opacity:1}}@keyframes trace{0%,11%{stroke-dasharray:0 700}78%,100%{stroke-dasharray:700 0}}
+  @media (prefers-reduced-motion: reduce){.breathe,.seed,.signalPath,.signalPathSlow,.irisA,.irisB,.wake,.stagePulse,.toolPulse,.trace{animation:none!important;transform:none!important;opacity:1!important}}
+</style>
+</defs>
+
+<rect width="1600" height="520" fill="url(#mineralWash)"/>
+<path class="shell" d="M34 34H1566V486H34Z"/>
+<text class="sans title label" x="70" y="90" font-size="40" font-weight="650">Product working model</text>
+<path class="signal signalPath" d="M150 230H1450" stroke-width="3"/>
+<path class="softSignal signalPathSlow" d="M1450 304C1160 430 480 430 150 304" stroke-width="2" opacity=".72"/>
+<g class="stagePulse" style="animation-delay:0s" transform="translate(150 230)"><circle cx="0" cy="0" r="58" fill="#F9FCF8" stroke="#B9CCBE"/><circle cx="0" cy="0" r="10" class="node"/><text class="sans label" y="94" text-anchor="middle" font-size="21" font-weight="650">FRAME</text></g><g class="stagePulse" style="animation-delay:0.75s" transform="translate(410 230)"><circle cx="0" cy="0" r="58" fill="#F9FCF8" stroke="#B9CCBE"/><circle cx="0" cy="0" r="10" class="node"/><text class="sans label" y="94" text-anchor="middle" font-size="21" font-weight="650">MODEL</text></g><g class="stagePulse" style="animation-delay:1.5s" transform="translate(670 230)"><circle cx="0" cy="0" r="58" fill="#F9FCF8" stroke="#B9CCBE"/><circle cx="0" cy="0" r="10" class="node"/><text class="sans label" y="94" text-anchor="middle" font-size="21" font-weight="650">DESIGN</text></g><g class="stagePulse" style="animation-delay:2.25s" transform="translate(930 230)"><circle cx="0" cy="0" r="58" fill="#F9FCF8" stroke="#B9CCBE"/><circle cx="0" cy="0" r="10" class="node"/><text class="sans label" y="94" text-anchor="middle" font-size="21" font-weight="650">BUILD</text></g><g class="stagePulse" style="animation-delay:3s" transform="translate(1190 230)"><circle cx="0" cy="0" r="58" fill="#F9FCF8" stroke="#B9CCBE"/><circle cx="0" cy="0" r="10" class="node"/><text class="sans label" y="94" text-anchor="middle" font-size="21" font-weight="650">VERIFY</text></g><g class="stagePulse" style="animation-delay:3.75s" transform="translate(1450 230)"><circle cx="0" cy="0" r="58" fill="#F9FCF8" stroke="#B9CCBE"/><circle cx="0" cy="0" r="10" class="node"/><text class="sans label" y="94" text-anchor="middle" font-size="21" font-weight="650">COMMUNICATE</text></g>
+<text class="mono muted" x="1180" y="410" font-size="18">documented output returns learning to Frame</text>
+</svg>

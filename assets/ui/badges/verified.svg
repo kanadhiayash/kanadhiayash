@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="110" viewBox="0 0 420 110" role="img" aria-labelledby="title desc">
+<title id="title">VERIFIED badge</title>
+<desc id="desc">Static evidence badge labeled VERIFIED.</desc>
+<defs>
+  <linearGradient id="mineralWash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F5F8F4"/><stop offset=".62" stop-color="#E9F0EA"/><stop offset="1" stop-color="#DCE8DE"/></linearGradient>
+  <linearGradient id="bioPanel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06110B"/><stop offset=".58" stop-color="#0A1A11"/><stop offset="1" stop-color="#102419"/></linearGradient>
+  <radialGradient id="irisGlow" cx="50%" cy="50%" r="56%"><stop stop-color="#102419"/><stop offset=".68" stop-color="#06110B"/><stop offset="1" stop-color="#53E786" stop-opacity=".16"/></radialGradient>
+
+  <style>
+  :root{--mineral-bg:#F5F8F4;--mineral-surface:#E9F0EA;--mineral-line:#B9CCBE;--bio-void:#06110B;--bio-panel:#0A1A11;--bio-panel-2:#102419;--ink-primary:#13241A;--ink-secondary:#496255;--ink-on-dark:#EAF7EE;--signal-deep:#13743F;--signal:#53E786;--signal-soft:#95F5B4}
+  .sans{font-family:Inter,Arial,system-ui,sans-serif}.mono{font-family:SFMono-Regular,Consolas,"Liberation Mono",monospace}.title{letter-spacing:.02em}.small{letter-spacing:.12em}.micro{letter-spacing:.16em}
+  .panel{fill:#0A1A11;stroke:#B9CCBE;stroke-width:1.4}.shell{fill:#F5F8F4;stroke:#13743F;stroke-width:1.5}.label{fill:#13241A}.muted{fill:#496255}.darkText{fill:#EAF7EE}.signal{stroke:#53E786;fill:none;stroke-linecap:round;stroke-linejoin:round}.softSignal{stroke:#95F5B4;fill:none;stroke-linecap:round;stroke-linejoin:round}.line{stroke:#B9CCBE;fill:none;stroke-linecap:round}.node{fill:#95F5B4;stroke:#13743F;stroke-width:1.2}
+</style>
+</defs>
+<rect width="420" height="110" rx="0" fill="#F5F8F4"/><path class="shell" d="M16 16H404V94H16Z"/><circle class="node" cx="58" cy="55" r="14"/><path class="signal" d="M50 55l6 7 14-18" stroke-width="3"/><text class="sans label" x="92" y="64" font-size="24" font-weight="650">VERIFIED</text>
+</svg>
