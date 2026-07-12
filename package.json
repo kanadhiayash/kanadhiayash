@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "assets:build": "node scripts/profile-assets/build-assets.mjs",
+    "assets:render": "node scripts/profile-assets/render-previews.mjs",
+    "assets:validate": "node scripts/profile-assets/validate-assets.mjs"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "2.6.2",
+    "bootstrap-icons": "1.13.1",
+    "gifenc": "1.0.3",
+    "pngjs": "7.0.0",
+    "simple-icons": "16.26.0"
+  }
+}

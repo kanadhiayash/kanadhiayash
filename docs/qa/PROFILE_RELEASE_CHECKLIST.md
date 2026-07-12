@@ -1,7 +1,7 @@
 # GitHub Profile Release Checklist
 
-**Status:** DUAL-LAYER REDESIGN UNDER REVIEW  
-**Release surface:** `kanadhiayash/kanadhiayash` profile README  
+**Status:** ORGANIC ALIENTECH ASSET SYSTEM UNDER REVIEW
+**Release surface:** `kanadhiayash/kanadhiayash` profile README
 **Quality gate:** `.github/workflows/profile-quality.yml`
 
 ## Release rule
@@ -50,24 +50,34 @@ The README must render in this order:
 ## Required active assets
 
 ```text
-assets/hero/yash-kanadhia-living-product-console-dark-motion.svg
-assets/hero/yash-kanadhia-living-product-console-dark.png
-assets/hero/yash-kanadhia-living-product-console-dark.jpg
-assets/hero/yash-kanadhia-living-product-console-dark.svg
-assets/profile-media/zeref-media-slot.svg
-assets/profile-media/perfin-os-media-slot.svg
-assets/profile-media/for-rent-media-slot.svg
-assets/profile-media/streamnexus-media-slot.svg
+assets/hero/yash-kanadhia-alientech-motion.svg
+assets/hero/yash-kanadhia-alientech-static.svg
+assets/hero/yash-kanadhia-alientech-preview.gif
+assets/tooling/alientech-tool-constellation-motion.svg
+assets/tooling/alientech-tool-constellation-static.svg
+assets/tooling/alientech-tool-constellation-preview.gif
+assets/motion/zeref-system-flow-motion.svg
+assets/motion/zeref-system-flow-static.svg
+assets/motion/zeref-system-flow-preview.gif
+assets/motion/product-working-model-motion.svg
+assets/motion/product-working-model-static.svg
+assets/motion/product-working-model-preview.gif
+assets/tooling/logos/*.svg
+assets/social/github-profile-og.png
 ```
+
+The project-evidence GIFs under `assets/profile-media/*-product-proof.gif` remain parked and out of scope until reviewed runtime media exists.
 
 ## Automated blocking checks
 
 - [ ] Python profile scripts compile.
 - [ ] Controlled dynamic modules validate.
-- [ ] Motion hero and static alternative validate.
+- [ ] Organic AlienTech motion assets and static alternatives validate.
+- [ ] Logo-source records validate.
+- [ ] GIF previews and PNG review captures exist.
 - [ ] 60-second content budget validates.
 - [ ] Dual-layer section order and navigation validate.
-- [ ] Four evidence drawers and media slots validate.
+- [ ] Four evidence drawers preserve parked project-evidence GIF paths without treating them as completed product proof.
 - [ ] Local images, links, and internal anchors resolve.
 - [ ] External links use HTTPS and definitive 404 or 410 responses block release.
 - [ ] Identity, credentials, ownership, and public boundaries validate.
@@ -84,7 +94,7 @@ Review the rendered README in GitHub:
 - [ ] The 60-second profile can be understood without opening a drawer.
 - [ ] Zeref is visibly the flagship system.
 - [ ] All four evidence drawers open and close correctly.
-- [ ] Reserved media slots look intentional and cannot be mistaken for product screenshots.
+- [ ] Parked project-evidence GIF paths are not presented as completed screenshots.
 - [ ] The page remains understandable when images fail to load.
 - [ ] PerFin ownership is visible before contribution details.
 - [ ] Product boundary wording remains clear.

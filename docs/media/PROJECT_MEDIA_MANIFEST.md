@@ -1,33 +1,33 @@
 # GitHub Profile Media Manifest
 
-**Status:** DUAL-LAYER MEDIA SLOTS UNDER REVIEW  
-**Applies to:** profile hero and evidence-drawer media  
-**Decision source:** `docs/decisions/GITHUB_PROFILE_INTERACTIVE_IA.md`
+**Status:** ORGANIC ALIENTECH ASSET SYSTEM UNDER REVIEW
+**Applies to:** profile hero and evidence-drawer media
+**Decision source:** `docs/decisions/GITHUB_PROFILE_ORGANIC_ALIENTECH_ASSET_SYSTEM.md`
 
 ## Active identity pair
 
 | Motion asset | Static alternative | Placement |
 |---|---|---|
-| `assets/hero/yash-kanadhia-living-product-console-dark-motion.svg` | `assets/hero/yash-kanadhia-living-product-console-dark.png` | First visual in the README |
+| `assets/hero/yash-kanadhia-alientech-motion.svg` | `assets/hero/yash-kanadhia-alientech-static.svg` | First visual in the README |
 
 The hero remains the only default-visible large visual.
 
 ## Reserved evidence media
 
-| Evidence drawer | Active slot |
+| Evidence drawer | Parked evidence path |
 |---|---|
-| Zeref Memory Engine | `assets/profile-media/zeref-media-slot.svg` |
-| PerFin OS | `assets/profile-media/perfin-os-media-slot.svg` |
-| For Rent | `assets/profile-media/for-rent-media-slot.svg` |
-| StreamNexus | `assets/profile-media/streamnexus-media-slot.svg` |
+| Zeref Memory Engine | `assets/profile-media/zeref-product-proof.gif` |
+| PerFin OS | `assets/profile-media/perfin-os-product-proof.gif` |
+| For Rent | `assets/profile-media/for-rent-product-proof.gif` |
+| StreamNexus | `assets/profile-media/streamnexus-product-proof.gif` |
 
 Each slot:
 
-- uses a 16:9 frame;
-- contains minimal text;
-- states that verified public-safe media will be added later;
-- appears once, inside its matching evidence drawer;
-- cannot be described as product proof or a runtime screenshot.
+- remains out of scope for this asset pass;
+- must not be fabricated;
+- may be replaced only with reviewed public-safe runtime media.
+
+Static parked project-portal placeholders live under `assets/project-portals/` and may be used outside the README evidence GIF paths.
 
 ## Upload targets
 
