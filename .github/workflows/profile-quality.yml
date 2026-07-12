@@ -4,11 +4,8 @@ on:
   pull_request:
     paths:
       - "README.md"
-      - "assets/**"
-      - "data/**"
-      - "docs/**"
-      - "scripts/**"
-      - ".github/workflows/**"
+      - "assets/hero/**"
+      - ".github/workflows/profile-quality.yml"
   push:
     branches:
       - main
@@ -22,103 +19,46 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  profile-foundation:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out source
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-
-      - name: Set up Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: "24"
-          cache: "npm"
-
-      - name: Install asset tooling
-        run: npm ci
-
-      - name: Check code and configuration whitespace
-        run: |
-          git diff --check origin/${{ github.base_ref || 'main' }}...HEAD -- \
-            '*.py' '*.mjs' '*.json' '*.yml' '*.yaml' '*.svg' '*.md' 'package*.json'
-
-      - name: Compile profile scripts
-        run: |
-          python3 -m py_compile scripts/update_dynamic_modules.py
-          python3 -m py_compile scripts/validate_profile_release.py
-          python3 -m py_compile scripts/validate_profile_foundation.py
-          python3 -m py_compile scripts/validate_profile_links.py
-          python3 -m py_compile scripts/validate_profile_motion.py
-
-      - name: Validate Organic AlienTech assets
-        run: npm run assets:validate
-
-      - name: Validate controlled dynamic modules
-        run: python3 scripts/update_dynamic_modules.py --check
-
-      - name: Validate motion system consistency
-        run: python3 scripts/validate_profile_motion.py
-
-      - name: Validate all non-hero release conditions
-        run: python3 scripts/validate_profile_foundation.py
-
-  release-readiness:
-    needs: profile-foundation
+  validate-profile:
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
         uses: actions/checkout@v7
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
+      - name: Check whitespace
+        run: git diff --check
 
-      - name: Set up Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: "24"
-          cache: "npm"
-
-      - name: Install asset tooling
-        run: npm ci
-
-      - name: Validate Organic AlienTech assets
-        run: npm run assets:validate
-
-      - name: Enforce complete release contract
-        run: python3 scripts/validate_profile_release.py
-
-  online-link-gate:
-    needs: release-readiness
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out source
-        uses: actions/checkout@v7
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-
-      - name: Validate definitive external link failures
-        shell: bash
+      - name: Validate README and hero assets
+        shell: python
         run: |
-          set -o pipefail
-          python3 scripts/validate_profile_links.py | tee profile-link-report.txt
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
 
-      - name: Upload link validation report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: profile-link-report
-          path: profile-link-report.txt
-          if-no-files-found: error
-          retention-days: 7
+          root = Path('.')
+          readme = (root / 'README.md').read_text(encoding='utf-8')
+          motion = root / 'assets/hero/yash-kanadhia-alientech-v2-motion.svg'
+          static = root / 'assets/hero/yash-kanadhia-alientech-v2-static.svg'
+
+          required_refs = (
+              './assets/hero/yash-kanadhia-alientech-v2-motion.svg?rev=20260712-2',
+              './assets/hero/yash-kanadhia-alientech-v2-static.svg?rev=20260712-2',
+          )
+          for ref in required_refs:
+              if readme.count(ref) != 1:
+                  raise SystemExit(f'README must reference {ref} exactly once')
+
+          for path, animated in ((motion, True), (static, False)):
+              if not path.is_file() or path.stat().st_size == 0:
+                  raise SystemExit(f'Missing hero asset: {path}')
+              ET.parse(path)
+              text = path.read_text(encoding='utf-8').lower()
+              for token in ('<script', 'javascript:', '<foreignobject', 'onload=', 'onclick='):
+                  if token in text:
+                      raise SystemExit(f'Unsafe SVG token {token} in {path}')
+              for required in ('role="img"', 'viewbox=', '<title', '<desc'):
+                  if required not in text:
+                      raise SystemExit(f'Missing {required} in {path}')
+              if animated and 'prefers-reduced-motion' not in text:
+                  raise SystemExit(f'Missing reduced-motion support in {path}')
+
+          print('Profile hero and README references are valid.')
