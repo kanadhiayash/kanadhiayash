@@ -1,8 +1,8 @@
 # Profile Modular Asset System
 
-**Status:** Review branch only  
-**Owner:** Yash Kanadhia  
-**Visual hierarchy:** Minimal Samurai Light identity, Minimal Alien-tech evidence, Hacker detail only where useful.
+**Status:** Organic AlienTech review branch
+**Owner:** Yash Kanadhia
+**Visual hierarchy:** Minimal AlienTech identity, organic motion systems, evidence-safe product support.
 
 ## Locked content
 
@@ -40,12 +40,6 @@ The approved tool rail remains:
 - Product evidence remains text-led until verified screenshots or recordings are approved.
 - No project mockups are fabricated.
 
-## Japanese translation
-
-The approved Japanese phrase is displayed below the hero with a small italic translation:
-
-> 改善・構築・守る · Improve · Build · Protect.
-
 ## Asset rules
 
 - SVG is the preferred repository format for static controls and vector modules.
@@ -54,3 +48,4 @@ The approved Japanese phrase is displayed below the hero with a small italic tra
 - Every SVG contains a title, description, and `role="img"`.
 - Critical information is repeated as accessible README text.
 - No automatic merge is permitted. Manual visual review is required.
+- Project-evidence GIFs remain parked until reviewed runtime media exists.

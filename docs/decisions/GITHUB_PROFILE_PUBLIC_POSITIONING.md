@@ -7,6 +7,8 @@
 
 This file is the canonical decision record for the public GitHub profile. Later changes require an explicit replacement decision.
 
+**2026-07-12 supersession note:** the active README asset-family direction is now defined by `docs/decisions/GITHUB_PROFILE_ORGANIC_ALIENTECH_ASSET_SYSTEM.md`, based on the approved Organic AlienTech execution handoff. The public title, tagline, metrics, selected credentials, PerFin attribution, and public-copy guardrails in this file remain active unless that newer decision explicitly replaces them.
+
 The locked future README structure is defined in `docs/decisions/GITHUB_PROFILE_INTERACTIVE_IA.md`. That decision explicitly excludes a profile changelog, memorabilia section, public version-history timeline, and decorative activity archive.
 
 ## Primary public title
