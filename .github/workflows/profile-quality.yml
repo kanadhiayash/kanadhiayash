@@ -36,29 +36,42 @@ jobs:
 
           root = Path('.')
           readme = (root / 'README.md').read_text(encoding='utf-8')
-          motion = root / 'assets/hero/yash-kanadhia-alientech-v2-motion.svg'
-          static = root / 'assets/hero/yash-kanadhia-alientech-v2-static.svg'
+          hero = root / 'assets/hero'
+          motion = hero / 'yash-github-banner-motion.svg'
+          static = hero / 'yash-github-banner-static.png'
 
           required_refs = (
-              './assets/hero/yash-kanadhia-alientech-v2-motion.svg?rev=20260712-2',
-              './assets/hero/yash-kanadhia-alientech-v2-static.svg?rev=20260712-2',
+              './assets/hero/yash-github-banner-motion.svg?rev=20260713-1',
+              './assets/hero/yash-github-banner-static.png?rev=20260713-1',
           )
           for ref in required_refs:
               if readme.count(ref) != 1:
                   raise SystemExit(f'README must reference {ref} exactly once')
 
-          for path, animated in ((motion, True), (static, False)):
-              if not path.is_file() or path.stat().st_size == 0:
-                  raise SystemExit(f'Missing hero asset: {path}')
-              ET.parse(path)
-              text = path.read_text(encoding='utf-8').lower()
-              for token in ('<script', 'javascript:', '<foreignobject', 'onload=', 'onclick='):
-                  if token in text:
-                      raise SystemExit(f'Unsafe SVG token {token} in {path}')
-              for required in ('role="img"', 'viewbox=', '<title', '<desc'):
-                  if required not in text:
-                      raise SystemExit(f'Missing {required} in {path}')
-              if animated and 'prefers-reduced-motion' not in text:
-                  raise SystemExit(f'Missing reduced-motion support in {path}')
+          if not motion.is_file() or motion.stat().st_size == 0:
+              raise SystemExit(f'Missing hero asset: {motion}')
+          if not static.is_file() or static.stat().st_size == 0:
+              raise SystemExit(f'Missing hero asset: {static}')
 
-          print('Profile hero and README references are valid.')
+          ET.parse(motion)
+          text = motion.read_text(encoding='utf-8').lower()
+          for token in ('<script', 'javascript:', '<foreignobject', 'onload=', 'onclick='):
+              if token in text:
+                  raise SystemExit(f'Unsafe SVG token {token} in {motion}')
+          for required in ('role="img"', 'viewbox=', '<title', '<desc', 'prefers-reduced-motion', '@keyframes'):
+              if required not in text:
+                  raise SystemExit(f'Missing {required} in {motion}')
+
+          if static.read_bytes()[:8] != b'\x89PNG\r\n\x1a\n':
+              raise SystemExit(f'Invalid PNG signature: {static}')
+
+          stale = (
+              hero / 'yash-kanadhia-alientech-v2-motion.svg',
+              hero / 'yash-kanadhia-alientech-v2-static.svg',
+              hero / 'yash-github-banner-motion-version.png',
+          )
+          leftovers = [str(path) for path in stale if path.exists()]
+          if leftovers:
+              raise SystemExit(f'Stale hero assets remain: {leftovers}')
+
+          print('Current motion SVG, static PNG, and README references are valid.')
