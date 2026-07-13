@@ -1,14 +1,14 @@
 <!-- =========================================================
      YASH KANADHIA · GITHUB PROFILE
      PUBLIC POSITIONING: PRODUCT DESIGNER
-     VISUAL SYSTEM: MINIMAL ALIENTECH · LOCKED
-     LAST ALIGNED: 2026-07-12
+     VISUAL SYSTEM: MINIMAL ALIENTECH LIGHT · LOCKED
+     LAST ALIGNED: 2026-07-13
      ========================================================= -->
 
 <p align="center">
   <a href="#about">
     <img
-      src="./assets/hero/yash-kanadhia-alientech-v2-motion.svg?rev=20260712-2"
+      src="./assets/hero/yash-github-banner-motion.svg?rev=20260713-1"
       alt="Yash Kanadhia, Toronto-based Product Designer building AI and mobile products, UX systems, and working prototypes."
       width="100%"
     />
@@ -21,8 +21,8 @@
   <p align="center">
     <a href="#about">
       <img
-        src="./assets/hero/yash-kanadhia-alientech-v2-static.svg?rev=20260712-2"
-        alt="Static Minimal AlienTech GitHub banner for Yash Kanadhia, Product Designer in Toronto."
+        src="./assets/hero/yash-github-banner-static.png?rev=20260713-1"
+        alt="Static Minimal AlienTech Light GitHub banner for Yash Kanadhia, Product Designer in Toronto."
         width="100%"
       />
     </a>
