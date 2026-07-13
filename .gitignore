@@ -1,0 +1,5 @@
+node_modules/
+__pycache__/
+*.pyc
+.tmp-profile-preview/
+organic-alientech-codex-handoff.zip

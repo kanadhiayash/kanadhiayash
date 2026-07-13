@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+  <title id="title">StreamNexus verified media capture pending</title>
+  <desc id="desc">Accessible pending-state panel reserving space for a reviewed StreamNexus walkthrough and static captures from a verified local or demo runtime.</desc>
+  <rect width="1600" height="700" fill="#171a18"/>
+  <rect x="72" y="72" width="1456" height="556" rx="30" fill="#202521" stroke="#899681" stroke-width="2" stroke-dasharray="12 12"/>
+  <circle cx="800" cy="236" r="72" fill="#4a5240" fill-opacity="0.5"/>
+  <path d="m774 198 78 38-78 38Z" fill="#f8f6f1"/>
+  <text x="800" y="380" text-anchor="middle" fill="#f8f6f1" font-family="Georgia, serif" font-size="58" font-weight="700">Verified walkthrough capture pending</text>
+  <text x="800" y="444" text-anchor="middle" fill="#c8cec3" font-family="Inter, system-ui, sans-serif" font-size="28">Reserved for a reviewed browse, search, detail, or rental workflow recording.</text>
+  <text x="800" y="505" text-anchor="middle" fill="#9fa99a" font-family="Inter, system-ui, sans-serif" font-size="22">StreamNexus · local or demo runtime · simulated checkout remains explicit</text>
+</svg>
