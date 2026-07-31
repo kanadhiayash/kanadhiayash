@@ -1,8 +1,10 @@
 <!-- =========================================================
      YASH KANADHIA · GITHUB PROFILE
      PUBLIC POSITIONING: PRODUCT DESIGNER
-     VISUAL SYSTEM: MINIMAL ALIENTECH LIGHT · LOCKED
-     LAST ALIGNED: 2026-07-13
+     ACTIVE DESIGN SYSTEM: ECLIPSE ATLAS
+     CURRENT HERO ASSET: LEGACY ALIENTECH · REPLACEMENT PENDING
+     CONTENT SOURCE: CAREER ALIGNMENT PACK · 2026-07-12
+     LAST CONTENT ALIGNMENT: 2026-07-31
      ========================================================= -->
 
 <p align="center">
@@ -22,7 +24,7 @@
     <a href="#about">
       <img
         src="./assets/hero/yash-github-banner-static.png?rev=20260713-1"
-        alt="Static Minimal AlienTech Light GitHub banner for Yash Kanadhia, Product Designer in Toronto."
+        alt="Static GitHub profile banner for Yash Kanadhia, Product Designer in Toronto."
         width="100%"
       />
     </a>
@@ -40,6 +42,8 @@
   ·
   <a href="#product-and-delivery-stack">Stack</a>
   ·
+  <a href="#portfolio-system">Portfolio System</a>
+  ·
   <a href="#connect">Connect</a>
 </p>
 
@@ -49,11 +53,11 @@
 
 ## About
 
-I’m a Toronto-based **Product Designer** focused on AI and mobile products.
+Yash Kanadhia is a Toronto-based **Product Designer** who builds AI and mobile products, UX systems, and working prototypes.
 
 I turn ambiguous product problems into clear user flows, interaction systems, accessible interfaces, and working prototypes. My work spans product strategy, UX research, information architecture, interaction design, design systems, prototyping, and technical handoff.
 
-I work in Figma and can carry concepts into React Native, SwiftUI, Firebase, React, and Node.js. This implementation fluency helps me design within real constraints, collaborate closely with engineers, and test product decisions beyond static screens.
+I work in Figma and can carry selected concepts into React Native, SwiftUI, Firebase, React, and Node.js. This implementation fluency helps me design within real constraints, collaborate closely with engineers, and test product decisions beyond static screens.
 
 > **I design and build systems that connect people to outcomes.**
 
@@ -167,22 +171,22 @@ Implementation supports the product-design work. It is not presented as a claim 
 
 ## How I work
 
-1. **Frame the product**
+1. **Frame the product**  
    Define the users, outcomes, constraints, ownership, evidence gaps, and decisions that matter.
 
-2. **Model the system**
+2. **Model the system**  
    Map workflows, states, permissions, data relationships, failure conditions, and product boundaries.
 
-3. **Design the experience**
+3. **Design the experience**  
    Create the interaction model, information hierarchy, content, accessibility behavior, and prototype.
 
-4. **Build enough to test the decision**
+4. **Build enough to test the decision**  
    Use working prototypes and focused implementation to expose constraints that static screens can hide.
 
-5. **Verify the result**
+5. **Verify the result**  
    Review behavior, edge cases, accessibility, security, links, documentation, and release claims.
 
-6. **Communicate the evidence and limits**
+6. **Communicate the evidence and limits**  
    Separate confirmed behavior from assumptions, simulations, placeholders, and planned work.
 
 ---
@@ -218,14 +222,27 @@ Tools are selected according to the needs of the product, the team, and the evid
 
 ---
 
+<a id="portfolio-system"></a>
+
+## Portfolio system
+
+The portfolio uses two coordinated sources of truth:
+
+- Eclipse Atlas controls visual language, interaction, responsive behavior, motion, and accessibility.
+- [Portfolio Content Source of Truth](./docs/content/PORTFOLIO_CONTENT_SOURCE_OF_TRUTH.md) controls role language, project copy, ownership, status, claims, metadata, and content QA.
+
+The current hero remains a legacy asset until the reviewed Eclipse Atlas replacement is implemented. The documentation is canonical during that transition.
+
+---
+
 ## Selected credentials
 
 ### Anthropic
 
 - AI Fluency: Framework & Foundations
 - Claude Code in Action
-- Introduction to Claude Cowork
 - Claude Code 101
+- Introduction to Claude Cowork
 
 ### SCRUMstudy
 
