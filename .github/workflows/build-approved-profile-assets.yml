@@ -1,0 +1,260 @@
+name: Build approved profile assets
+
+on:
+  push:
+    branches:
+      - mavis/github-profile-banner-20260809
+    paths:
+      - .asset-staging/READY
+
+permissions:
+  contents: write
+
+jobs:
+  build-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out staging branch
+        uses: actions/checkout@v4
+        with:
+          ref: mavis/github-profile-banner-20260809
+
+      - name: Reconstruct approved lossless raster staging file
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .asset-staging/static/*.b64 | tr -d '\n' | base64 --decode > /tmp/approved-base.webp
+          test "$(wc -c < /tmp/approved-base.webp)" -eq 1213924
+          echo "5ee85a3604133a04a8b5f7bf5fcc693ff77c7e0f97821663933320d09dc1f7bd  /tmp/approved-base.webp" | sha256sum -c -
+
+      - name: Convert to approved PNG and verify exact pixels
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check pillow==11.3.0
+          mkdir -p assets/hero /tmp/remotion/public /tmp/remotion/src
+          python - <<'PY'
+          from PIL import Image
+          import hashlib
+          src = Image.open('/tmp/approved-base.webp').convert('RGB')
+          assert src.size == (2290, 687), src.size
+          pixel_hash = hashlib.sha256(src.tobytes()).hexdigest()
+          assert pixel_hash == '29f2d9ca28fea1e755943ed14b52cb60f61b429695607823886d9a9ee232f2df', pixel_hash
+          out = 'assets/hero/yash-kanadhia-github-banner-option2-static.png'
+          src.save(out, format='PNG', optimize=True)
+          check = Image.open(out).convert('RGB')
+          assert hashlib.sha256(check.tobytes()).hexdigest() == pixel_hash
+          check.save('/tmp/remotion/public/option2-approved-base.png', format='PNG', optimize=True)
+          print('pixel_sha256=' + pixel_hash)
+          PY
+
+      - name: Create approved Remotion source
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/remotion/package.json <<'EOF'
+          {
+            "name": "yash-github-banner-option2-motion",
+            "private": true,
+            "scripts": {
+              "studio": "remotion studio",
+              "render": "remotion render src/index.ts YashGitHubBannerOption2 out.mp4 --codec=h264 --crf=17"
+            },
+            "dependencies": {
+              "@remotion/cli": "4.0.501",
+              "react": "19.1.1",
+              "react-dom": "19.1.1",
+              "remotion": "4.0.501"
+            },
+            "devDependencies": {
+              "typescript": "5.9.2"
+            }
+          }
+          EOF
+
+          cat > /tmp/remotion/src/index.ts <<'EOF'
+          import {registerRoot} from 'remotion';
+          import {Root} from './Root';
+
+          registerRoot(Root);
+          EOF
+
+          cat > /tmp/remotion/src/Root.tsx <<'EOF'
+          import React from 'react';
+          import {Composition} from 'remotion';
+          import {BannerMotion} from './BannerMotion';
+
+          export const Root: React.FC = () => (
+            <Composition
+              id="YashGitHubBannerOption2"
+              component={BannerMotion}
+              durationInFrames={240}
+              fps={30}
+              width={2290}
+              height={688}
+            />
+          );
+          EOF
+
+          cat > /tmp/remotion/src/BannerMotion.tsx <<'EOF'
+          import React from 'react';
+          import {
+            AbsoluteFill,
+            Easing,
+            Img,
+            interpolate,
+            staticFile,
+            useCurrentFrame,
+            useVideoConfig,
+          } from 'remotion';
+
+          const nodes = [232, 564, 865, 1184, 1481, 1782];
+          const workflowY = 407;
+          const workflowStart = 128;
+          const workflowEnd = 1930;
+          const radar = {x: 1833, y: 135, r: 111};
+          const statusDots = [1131, 1145, 1159];
+
+          const clampStyle = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as const};
+
+          export const BannerMotion: React.FC = () => {
+            const frame = useCurrentFrame();
+            const {durationInFrames, fps} = useVideoConfig();
+
+            const moveStart = Math.round(0.65 * fps);
+            const moveEnd = Math.round(6.55 * fps);
+            const signalX = interpolate(frame, [moveStart, moveEnd], [workflowStart, workflowEnd], {
+              ...clampStyle,
+              easing: Easing.bezier(0.16, 1, 0.3, 1),
+            });
+            const signalOpacity = interpolate(
+              frame,
+              [moveStart, moveStart + 9, moveEnd - 11, moveEnd],
+              [0, 1, 1, 0],
+              clampStyle,
+            );
+
+            const loopProgress = frame / (durationInFrames - 1);
+            const angle = -Math.PI / 2 + Math.PI * 2 * loopProgress;
+            const orbitX = radar.x + Math.cos(angle) * radar.r;
+            const orbitY = radar.y + Math.sin(angle) * radar.r;
+
+            return (
+              <AbsoluteFill style={{backgroundColor: '#f8f4eb', overflow: 'hidden'}}>
+                <Img
+                  src={staticFile('option2-approved-base.png')}
+                  style={{position: 'absolute', left: 0, top: 0, width: 2290, height: 687}}
+                />
+                <div style={{position: 'absolute', left: 0, top: 687, width: 2290, height: 1, overflow: 'hidden'}}>
+                  <Img
+                    src={staticFile('option2-approved-base.png')}
+                    style={{position: 'absolute', left: 0, top: -686, width: 2290, height: 687}}
+                  />
+                </div>
+
+                <svg width="2290" height="688" style={{position: 'absolute', inset: 0}}>
+                  <defs>
+                    <filter id="softGlow" x="-200%" y="-200%" width="400%" height="400%">
+                      <feGaussianBlur stdDeviation="5" />
+                    </filter>
+                  </defs>
+
+                  {frame >= moveStart && frame <= moveEnd ? (
+                    <>
+                      <line
+                        x1={signalX - 55}
+                        y1={workflowY}
+                        x2={signalX}
+                        y2={workflowY}
+                        stroke="#2b68b7"
+                        strokeWidth="2"
+                        opacity={0.25 * signalOpacity}
+                      />
+                      <circle cx={signalX} cy={workflowY} r="12" fill="#2b68b7" opacity={0.08 * signalOpacity} filter="url(#softGlow)" />
+                      <circle cx={signalX} cy={workflowY} r="5" fill="#2b68b7" opacity={0.4 * signalOpacity} />
+                      <circle cx={signalX} cy={workflowY} r="3" fill="#ffffff" stroke="#2b5ea2" strokeWidth="1" opacity={0.95 * signalOpacity} />
+                    </>
+                  ) : null}
+
+                  {nodes.map((cx) => {
+                    const hit = moveStart + Math.round(((cx - workflowStart) / (workflowEnd - workflowStart)) * (moveEnd - moveStart));
+                    const p = interpolate(frame, [hit, hit + 18], [0, 1], clampStyle);
+                    const active = frame >= hit && frame <= hit + 18;
+                    return active ? (
+                      <circle
+                        key={cx}
+                        cx={cx}
+                        cy={workflowY}
+                        r={54 + 10 * p}
+                        fill="none"
+                        stroke="#1f56a2"
+                        strokeWidth="2"
+                        opacity={0.42 * (1 - p)}
+                      />
+                    ) : null;
+                  })}
+
+                  <circle cx={orbitX} cy={orbitY} r="4" fill="#ffffff" stroke="#2259a1" strokeWidth="1" opacity="0.86" />
+                  <circle cx={radar.x} cy={radar.y} r="6" fill="none" stroke="#a85d30" strokeWidth="1" opacity={0.16 + 0.08 * Math.sin(loopProgress * Math.PI * 2)} />
+
+                  {statusDots.map((x, i) => {
+                    const p = 0.5 + 0.5 * Math.sin(loopProgress * Math.PI * 4 + (Math.PI * 2 * i) / 3);
+                    return <circle key={x} cx={x} cy={20} r={2 + 0.8 * p} fill="#1e4e97" opacity={0.11 + 0.19 * p} />;
+                  })}
+                </svg>
+              </AbsoluteFill>
+            );
+          };
+          EOF
+
+          cat > /tmp/remotion/README.md <<'EOF'
+          # Yash GitHub Banner — Option 2 Motion
+
+          Approved Option 2 is used as the exact 2290×687 raster base. The H.264 composition uses a 2290×688 canvas and duplicates the base image's final row for codec compatibility. Motion is additive only.
+
+          Motion systems:
+          1. A single left-to-right workflow signal with one acknowledgement pulse per stage.
+          2. One restrained locator orbit around the top-right radar motif.
+          3. Three tiny ambient status indicators at the top.
+
+          No entrance choreography, bouncing logos, repeated footer animation, or redundant pulsing is used.
+
+          Run locally:
+
+          ```bash
+          npm install
+          npm run studio
+          npm run render
+          ```
+          EOF
+
+      - name: Render approved motion banner
+        shell: bash
+        working-directory: /tmp/remotion
+        run: |
+          set -euo pipefail
+          npm install --no-audit --no-fund
+          npm run render
+          test -s out.mp4
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate -show_entries format=duration -of default=noprint_wrappers=1 out.mp4
+          cp out.mp4 "$GITHUB_WORKSPACE/assets/hero/yash-kanadhia-github-banner-option2-motion.mp4"
+
+      - name: Package Remotion source
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f /tmp/remotion/out.mp4
+          cd /tmp
+          zip -qr "$GITHUB_WORKSPACE/assets/hero/yash-kanadhia-github-banner-option2-remotion-source.zip" remotion
+
+      - name: Commit built approved assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/hero/yash-kanadhia-github-banner-option2-static.png \
+                  assets/hero/yash-kanadhia-github-banner-option2-motion.mp4 \
+                  assets/hero/yash-kanadhia-github-banner-option2-remotion-source.zip
+          git commit -m "build(profile): materialize approved Option 2 assets"
+          git push origin HEAD:mavis/github-profile-banner-20260809
