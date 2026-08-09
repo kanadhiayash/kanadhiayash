@@ -23,9 +23,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .asset-staging/av1/*.b64 | tr -d '\n' | base64 --decode > /tmp/approved-base.mkv
-          test "$(wc -c < /tmp/approved-base.mkv)" -eq 262961
-          echo "3e3643a6a44707d4269e2bd96a0d30ddff72d6862a69dee3401a9fa88c0a6c6a  /tmp/approved-base.mkv" | sha256sum -c -
+          cat .asset-staging/av1c20/*.b64 | tr -d '\n' | base64 --decode > /tmp/approved-base.mkv
+          test "$(wc -c < /tmp/approved-base.mkv)" -eq 177537
+          echo "5e09806661cbfc18c094cfd4bc74c8abbe7e430d2c6491268fc00c76605af312  /tmp/approved-base.mkv" | sha256sum -c -
           ffmpeg -y -hide_banner -loglevel error -i /tmp/approved-base.mkv -frames:v 1 /tmp/approved-base.png
 
       - name: Materialize static PNG and verify delivery pixels
@@ -40,7 +40,7 @@ jobs:
           src = Image.open('/tmp/approved-base.png').convert('RGB')
           assert src.size == (2290, 687), src.size
           pixel_hash = hashlib.sha256(src.tobytes()).hexdigest()
-          assert pixel_hash == 'a5e53bff460418cc357853ed21eca6c028e4a60401612f8ab24403d991269062', pixel_hash
+          assert pixel_hash == '93986ad2007ce3ac810427d497c2ef8245444e8f62bad9b6468ff00ca51c0ecd', pixel_hash
           out = 'assets/hero/yash-kanadhia-github-banner-option2-static.png'
           src.save(out, format='PNG', optimize=True)
           check = Image.open(out).convert('RGB')
