@@ -19,15 +19,16 @@ jobs:
         with:
           ref: mavis/github-profile-banner-20260809
 
-      - name: Reconstruct approved lossless raster staging file
+      - name: Reconstruct verified banner transport
         shell: bash
         run: |
           set -euo pipefail
-          cat .asset-staging/static/*.b64 | tr -d '\n' | base64 --decode > /tmp/approved-base.webp
-          test "$(wc -c < /tmp/approved-base.webp)" -eq 1213924
-          echo "488b049818e28bdb48e5b966cd6931cf8f8705634dc7a113e93e552d0004f01a  /tmp/approved-base.webp" | sha256sum -c -
+          cat .asset-staging/av1/*.b64 | tr -d '\n' | base64 --decode > /tmp/approved-base.mkv
+          test "$(wc -c < /tmp/approved-base.mkv)" -eq 262961
+          echo "3e3643a6a44707d4269e2bd96a0d30ddff72d6862a69dee3401a9fa88c0a6c6a  /tmp/approved-base.mkv" | sha256sum -c -
+          ffmpeg -y -hide_banner -loglevel error -i /tmp/approved-base.mkv -frames:v 1 /tmp/approved-base.png
 
-      - name: Convert to approved PNG and verify exact pixels
+      - name: Materialize static PNG and verify delivery pixels
         shell: bash
         run: |
           set -euo pipefail
@@ -36,16 +37,16 @@ jobs:
           python - <<'PY'
           from PIL import Image
           import hashlib
-          src = Image.open('/tmp/approved-base.webp').convert('RGB')
+          src = Image.open('/tmp/approved-base.png').convert('RGB')
           assert src.size == (2290, 687), src.size
           pixel_hash = hashlib.sha256(src.tobytes()).hexdigest()
-          assert pixel_hash == '29f2d9ca28fea1e755943ed14b52cb60f61b429695607823886d9a9ee232f2df', pixel_hash
+          assert pixel_hash == 'a5e53bff460418cc357853ed21eca6c028e4a60401612f8ab24403d991269062', pixel_hash
           out = 'assets/hero/yash-kanadhia-github-banner-option2-static.png'
           src.save(out, format='PNG', optimize=True)
           check = Image.open(out).convert('RGB')
           assert hashlib.sha256(check.tobytes()).hexdigest() == pixel_hash
           check.save('/tmp/remotion/public/option2-approved-base.png', format='PNG', optimize=True)
-          print('pixel_sha256=' + pixel_hash)
+          print('delivery_pixel_sha256=' + pixel_hash)
           PY
 
       - name: Create approved Remotion source
@@ -210,7 +211,7 @@ jobs:
           cat > /tmp/remotion/README.md <<'EOF'
           # Yash GitHub Banner — Option 2 Motion
 
-          Approved Option 2 is used as the exact 2290×687 raster base. The H.264 composition uses a 2290×688 canvas and duplicates the base image's final row for codec compatibility. Motion is additive only.
+          This source package reproduces the approved Option 2 motion system on the verified GitHub delivery derivative of the 2290×687 master artwork. The H.264 composition uses a 2290×688 canvas and duplicates the base image's final row for codec compatibility. Motion is additive only.
 
           Motion systems:
           1. A single left-to-right workflow signal with one acknowledgement pulse per stage.
