@@ -1,0 +1,39 @@
+name: Diagnose asset transport
+on:
+  push:
+    branches:
+      - mavis/github-profile-banner-20260809
+    paths:
+      - .asset-staging/DIAG
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mavis/github-profile-banner-20260809
+      - name: Inspect static chunks
+        shell: python
+        run: |
+          from pathlib import Path
+          import base64, hashlib, re
+          out=b''
+          for p in sorted(Path('.asset-staging/static').glob('*.b64')):
+              raw=p.read_bytes()
+              clean=re.sub(rb'\s+',b'',raw)
+              print(p, 'raw',len(raw),'clean',len(clean),'mod4',len(clean)%4,'head',clean[:8],'tail',clean[-12:])
+              try:
+                  dec=base64.b64decode(clean, validate=True)
+                  print(' strict decoded',len(dec),hashlib.sha256(dec).hexdigest())
+              except Exception as e:
+                  print(' strict error',repr(e))
+                  try:
+                      dec=base64.b64decode(clean + b'='*((-len(clean))%4), validate=False)
+                      print(' loose decoded',len(dec),hashlib.sha256(dec).hexdigest())
+                  except Exception as e2:
+                      print(' loose error',repr(e2))
+                      raise
+              out+=dec
+          print('combined',len(out),hashlib.sha256(out).hexdigest())
