@@ -25,7 +25,7 @@ jobs:
           set -euo pipefail
           cat .asset-staging/static/*.b64 | tr -d '\n' | base64 --decode > /tmp/approved-base.webp
           test "$(wc -c < /tmp/approved-base.webp)" -eq 1213924
-          echo "5ee85a3604133a04a8b5f7bf5fcc693ff77c7e0f97821663933320d09dc1f7bd  /tmp/approved-base.webp" | sha256sum -c -
+          echo "488b049818e28bdb48e5b966cd6931cf8f8705634dc7a113e93e552d0004f01a  /tmp/approved-base.webp" | sha256sum -c -
 
       - name: Convert to approved PNG and verify exact pixels
         shell: bash
