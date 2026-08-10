@@ -1,77 +1,88 @@
-name: Profile Quality Gate
+name: Profile Asset Materializer
 
 on:
-  pull_request:
-    paths:
-      - "README.md"
-      - "assets/hero/**"
-      - ".github/workflows/profile-quality.yml"
   push:
     branches:
       - main
-  workflow_dispatch:
 
 permissions:
-  contents: read
-
-concurrency:
-  group: profile-quality-${{ github.ref }}
-  cancel-in-progress: true
+  contents: write
 
 jobs:
-  validate-profile:
+  materialize-motion-svg:
+    if: "github.event_name == 'push' && github.event.head_commit.message == 'chore(profile): materialize approved Option 2 motion SVG'"
     runs-on: ubuntu-latest
     steps:
-      - name: Check out source
+      - name: Check out current main
         uses: actions/checkout@v7
 
-      - name: Check whitespace
-        run: git diff --check
+      - name: Install lossless image encoder
+        run: python -m pip install --disable-pip-version-check pillow==11.3.0
 
-      - name: Validate README and hero assets
+      - name: Build pixel-identical motion SVG base
         shell: python
         run: |
           from pathlib import Path
-          import xml.etree.ElementTree as ET
+          from PIL import Image
+          import base64
+          import hashlib
 
           root = Path('.')
-          readme = (root / 'README.md').read_text(encoding='utf-8')
-          hero = root / 'assets/hero'
-          motion = hero / 'yash-github-banner-motion.svg'
-          static = hero / 'yash-github-banner-static.png'
+          png = root / 'assets/YashKanadhia_GitHubBanner_Option2_Approved.png'
+          out = root / 'assets/YashKanadhia_GitHubBanner_Option2_Motion.svg'
+          tmp = Path('/tmp/approved-option2-lossless.webp')
 
-          required_refs = (
-              './assets/hero/yash-github-banner-motion.svg?rev=20260713-1',
-              './assets/hero/yash-github-banner-static.png?rev=20260713-1',
-          )
-          for ref in required_refs:
-              if readme.count(ref) != 1:
-                  raise SystemExit(f'README must reference {ref} exactly once')
+          approved = Image.open(png).convert('RGB')
+          assert approved.size == (2290, 687), approved.size
+          pixel_hash = hashlib.sha256(approved.tobytes()).hexdigest()
+          assert pixel_hash == '29f2d9ca28fea1e755943ed14b52cb60f61b429695607823886d9a9ee232f2df', pixel_hash
 
-          if not motion.is_file() or motion.stat().st_size == 0:
-              raise SystemExit(f'Missing hero asset: {motion}')
-          if not static.is_file() or static.stat().st_size == 0:
-              raise SystemExit(f'Missing hero asset: {static}')
+          approved.save(tmp, 'WEBP', lossless=True, quality=100, method=6)
+          roundtrip = Image.open(tmp).convert('RGB')
+          assert hashlib.sha256(roundtrip.tobytes()).hexdigest() == pixel_hash
+          payload = base64.b64encode(tmp.read_bytes()).decode('ascii')
 
-          ET.parse(motion)
-          text = motion.read_text(encoding='utf-8').lower()
-          for token in ('<script', 'javascript:', '<foreignobject', 'onload=', 'onclick='):
-              if token in text:
-                  raise SystemExit(f'Unsafe SVG token {token} in {motion}')
-          for required in ('role="img"', 'viewbox=', '<title', '<desc', 'prefers-reduced-motion', '@keyframes'):
-              if required not in text:
-                  raise SystemExit(f'Missing {required} in {motion}')
+          svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="2290" height="687" viewBox="0 0 2290 687" role="img" aria-labelledby="banner-title banner-desc">
+            <title id="banner-title">Yash Kanadhia — Product Designer</title>
+            <desc id="banner-desc">Animated GitHub profile banner for Yash Kanadhia, a Toronto-based Product Designer focused on AI-enabled products, complex workflows, implementation systems, design systems, prototyping, and design-to-build collaboration. Motion is decorative and reduced-motion users receive the static approved artwork.</desc>
+            <style>
+              .motion {{ pointer-events:none; }}
+              .signal-runner {{ animation: signal-route 8s cubic-bezier(.16,1,.3,1) infinite; }}
+              .signal-glow {{ animation: signal-opacity 8s ease-in-out infinite; }}
+              .ack {{ fill:none; stroke:#1f56a2; stroke-width:2; opacity:0; animation: acknowledge 8s ease-out infinite; }}
+              .ack-1 {{ animation-delay:1.18s; }} .ack-2 {{ animation-delay:2.02s; }}
+              .ack-3 {{ animation-delay:2.85s; }} .ack-4 {{ animation-delay:3.70s; }}
+              .ack-5 {{ animation-delay:4.55s; }} .ack-6 {{ animation-delay:5.40s; }}
+              .orbit {{ transform-box:view-box; transform-origin:1833px 135px; animation: orbit 8s linear infinite; }}
+              .radar-core {{ animation: radar-breathe 8s ease-in-out infinite; }}
+              .status-1 {{ animation: status 4s ease-in-out infinite; }}
+              .status-2 {{ animation: status 4s ease-in-out 1.33s infinite; }}
+              .status-3 {{ animation: status 4s ease-in-out 2.66s infinite; }}
+              @keyframes signal-route {{ 0%,8% {{ transform:translateX(0); }} 84%,100% {{ transform:translateX(1802px); }} }}
+              @keyframes signal-opacity {{ 0%,8%,92%,100% {{ opacity:0; }} 15%,84% {{ opacity:1; }} }}
+              @keyframes acknowledge {{ 0% {{ r:54px;opacity:0; }} 2% {{ opacity:.42; }} 11% {{ r:64px;opacity:0; }} 100% {{ r:64px;opacity:0; }} }}
+              @keyframes orbit {{ to {{ transform:rotate(360deg); }} }}
+              @keyframes radar-breathe {{ 0%,100% {{ opacity:.14; }} 50% {{ opacity:.28; }} }}
+              @keyframes status {{ 0%,100% {{ opacity:.12;r:2px; }} 50% {{ opacity:.34;r:2.8px; }} }}
+              @media (prefers-reduced-motion: reduce) {{ .motion {{ display:none !important; animation:none !important; }} }}
+            </style>
+            <image href="data:image/webp;base64,{payload}" x="0" y="0" width="2290" height="687"/>
+            <g class="motion" transform="translate(128 407)"><g class="signal-runner signal-glow"><line x1="-55" y1="0" x2="0" y2="0" stroke="#2b68b7" stroke-width="2" opacity=".25"/><circle cx="0" cy="0" r="12" fill="#2b68b7" opacity=".08"/><circle cx="0" cy="0" r="5" fill="#2b68b7" opacity=".40"/><circle cx="0" cy="0" r="3" fill="#ffffff" stroke="#2b5ea2" stroke-width="1" opacity=".95"/></g></g>
+            <g class="motion" aria-hidden="true"><circle class="ack ack-1" cx="232" cy="407" r="54"/><circle class="ack ack-2" cx="564" cy="407" r="54"/><circle class="ack ack-3" cx="865" cy="407" r="54"/><circle class="ack ack-4" cx="1184" cy="407" r="54"/><circle class="ack ack-5" cx="1481" cy="407" r="54"/><circle class="ack ack-6" cx="1782" cy="407" r="54"/></g>
+            <g class="motion" aria-hidden="true"><circle class="orbit" cx="1944" cy="135" r="4" fill="#ffffff" stroke="#2259a1" stroke-width="1" opacity=".86"/><circle class="radar-core" cx="1833" cy="135" r="6" fill="none" stroke="#a85d30" stroke-width="1"/></g>
+            <g class="motion" aria-hidden="true" fill="#1e4e97"><circle class="status-1" cx="1131" cy="20" r="2"/><circle class="status-2" cx="1145" cy="20" r="2"/><circle class="status-3" cx="1159" cy="20" r="2"/></g>
+          </svg>'''
+          out.write_text(svg, encoding='utf-8')
+          print(f'wrote {out} ({out.stat().st_size} bytes); pixel_sha256={pixel_hash}')
 
-          if static.read_bytes()[:8] != b'\x89PNG\r\n\x1a\n':
-              raise SystemExit(f'Invalid PNG signature: {static}')
-
-          stale = (
-              hero / 'yash-kanadhia-alientech-v2-motion.svg',
-              hero / 'yash-kanadhia-alientech-v2-static.svg',
-              hero / 'yash-github-banner-motion-version.png',
-          )
-          leftovers = [str(path) for path in stale if path.exists()]
-          if leftovers:
-              raise SystemExit(f'Stale hero assets remain: {leftovers}')
-
-          print('Current motion SVG, static PNG, and README references are valid.')
+      - name: Commit only the approved motion SVG
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add assets/YashKanadhia_GitHubBanner_Option2_Motion.svg
+          git diff --cached --name-only | grep -Fx 'assets/YashKanadhia_GitHubBanner_Option2_Motion.svg'
+          test "$(git diff --cached --name-only | wc -l)" -eq 1
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "feat(profile): add approved Option 2 motion SVG"
+          git push origin HEAD:main
