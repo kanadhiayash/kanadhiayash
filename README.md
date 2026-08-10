@@ -1,127 +1,159 @@
 <!-- =========================================================
      YASH KANADHIA · GITHUB PROFILE
      PUBLIC POSITIONING: PRODUCT DESIGNER
-     VISUAL SYSTEM: MINIMAL ALIENTECH LIGHT · LOCKED
-     LAST ALIGNED: 2026-07-13
+     VISUAL SYSTEM: OPTION 2 · APPROVED
+     LAST ALIGNED: 2026-08-10
      ========================================================= -->
 
 <p align="center">
-  <a href="#about">
+  <a href="#60-second-profile">
     <img
-      src="./assets/hero/yash-github-banner-motion.svg?rev=20260713-1"
-      alt="Yash Kanadhia, Toronto-based Product Designer building AI and mobile products, UX systems, and working prototypes."
+      src="./assets/YashKanadhia_GitHubBanner_Option2_Motion.svg?rev=20260810-1"
+      alt="Yash Kanadhia, Toronto-based Product Designer focused on AI-enabled products, complex workflows, implementation systems, design systems, prototyping, and design-to-build collaboration."
       width="100%"
     />
   </a>
 </p>
 
+<p align="center">
+  <a href="./assets/YashKanadhia_GitHubBanner_Option2_Motion.mp4"><strong>View motion MP4</strong></a>
+  ·
+  <a href="./assets/YashKanadhia_GitHubBanner_Option2_Approved.svg">Static SVG</a>
+</p>
+
 <details>
-  <summary>View static banner</summary>
+  <summary>Reduced-motion / static banner</summary>
 
   <p align="center">
-    <a href="#about">
-      <img
-        src="./assets/hero/yash-github-banner-static.png?rev=20260713-1"
-        alt="Static Minimal AlienTech Light GitHub banner for Yash Kanadhia, Product Designer in Toronto."
-        width="100%"
-      />
-    </a>
+    <img
+      src="./assets/YashKanadhia_GitHubBanner_Option2_Approved.png?rev=20260810-1"
+      alt="Static GitHub banner for Yash Kanadhia, Product Designer in Toronto."
+      width="100%"
+    />
   </p>
 </details>
 
 <p align="center">
-  <a href="#about">About</a>
+  <a href="#60-second-profile">Profile</a>
   ·
-  <a href="#selected-work">Selected Work</a>
+  <a href="#selected-product-work">Work</a>
   ·
-  <a href="#what-i-do">What I Do</a>
+  <a href="#capabilities">Capabilities</a>
   ·
-  <a href="#how-i-work">How I Work</a>
+  <a href="#operating-workflow">Workflow</a>
   ·
-  <a href="#product-and-delivery-stack">Stack</a>
+  <a href="#evidence-and-ownership">Evidence</a>
+  ·
+  <a href="#selected-credentials">Credentials</a>
   ·
   <a href="#connect">Connect</a>
 </p>
 
 ---
 
-<a id="about"></a>
+<a id="60-second-profile"></a>
 
-## About
+## 60-second profile
 
-I’m a Toronto-based **Product Designer** focused on AI and mobile products.
+<!-- 60-SECOND-PROFILE:START -->
+I’m a Toronto-based **Product Designer** focused on **AI-enabled products, complex workflows, and implementation systems**.
 
-I turn ambiguous product problems into clear user flows, interaction systems, accessible interfaces, and working prototypes. My work spans product strategy, UX research, information architecture, interaction design, design systems, prototyping, and technical handoff.
+I turn ambiguous product problems into structured workflows, interaction states, accessible interfaces, working prototypes, and implementation-ready decisions. My strongest work sits where product design meets real system constraints: permissions, trust, state, design systems, mobile and web behavior, AI-assisted workflows, and design-to-code collaboration.
 
-I work in Figma and can carry concepts into React Native, SwiftUI, Firebase, React, and Node.js. This implementation fluency helps me design within real constraints, collaborate closely with engineers, and test product decisions beyond static screens.
+Implementation supports the product-design work. I use Figma, React Native, SwiftUI, React, Firebase, GitHub, Claude, and Codex to test decisions beyond static screens without repositioning the work as general software engineering.
+
+**Selected product work:** [Shiroe](https://github.com/kanadhiayash/shiroe) for human-controlled AI continuity and evidence; [PerFin OS](https://github.com/kanadhiayash/PerfinOS-1/tree/dev) for collaborative mobile fintech and design-system work; [For Rent](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios) for multi-role rental workflows in SwiftUI; and [StreamNexus](https://github.com/kanadhiayash/streamnexus) for role-based web workflows and release discipline.
 
 > **I design and build systems that connect people to outcomes.**
-
-Open to **Product Designer** and **AI Product Designer** roles across Canada, with adjacent interest in Design Technologist and UX Engineering opportunities.
-
----
-
-<a id="selected-work"></a>
-
-## Selected work
-
-### [Zeref Memory Engine](https://github.com/kanadhiayash/zeref-memory-engine)
-
-**Local-first memory, context, conflict, privacy, and evaluation for AI-assisted project work.**
-
-Independent product direction and implementation. Zeref explores how project context can remain inspectable across AI tools without treating an unlimited transcript as trusted memory.
-
-**Product focus:** human-AI interaction, context management, privacy, evidence discipline, conflict handling, cross-tool continuity, and reproducible evaluation.
-
-[Repository](https://github.com/kanadhiayash/zeref-memory-engine)
-·
-[Canonical specification](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/AGENTS.md)
-·
-[Benchmark report](https://github.com/kanadhiayash/zeref-memory-engine/blob/main/docs/BENCHMARK_REPORT.md)
+<!-- 60-SECOND-PROFILE:END -->
 
 ---
 
-### [For Rent](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios)
+<a id="selected-product-work"></a>
 
-**A SwiftUI rental product supporting renter, landlord, guest, and demo journeys.**
+## Selected product work
 
-Product design and SwiftUI implementation across role-aware journeys, protected actions, authentication return paths, accessibility behavior, state coverage, and deterministic demo support.
+The profile is intentionally scan-first. Each project stays concise here, with deeper implementation and verification evidence in the repository.
 
-**Product focus:** mobile product design, role and permission models, information architecture, interaction states, accessibility, and implementation-aware UX.
+<details>
+  <summary><strong>01 · Shiroe</strong> — AI product design, continuity, trust, approvals, and failure recovery</summary>
+
+### Shiroe
+
+**Product statement:** A local-first AI project memory and control runtime that keeps decisions, evidence, privacy rules, approvals, and handoffs inspectable across AI-assisted work.
+
+**My role:** Independent product direction, workflow and interaction modeling, implementation, verification, and public evidence discipline.
+
+**Product focus:** cross-session continuity, human control, contradiction handling, privacy, confidence/evidence boundaries, supervised automation, and failure recovery.
+
+**Current boundary:** Shiroe is alpha software. Public claims stay bounded to current repository evidence; no external benchmark superiority claim is made.
+
+[Repository](https://github.com/kanadhiayash/shiroe)
+·
+[How it works](https://github.com/kanadhiayash/shiroe#how-it-works)
+·
+[Verified evidence](https://github.com/kanadhiayash/shiroe#what-is-actually-verified)
+·
+[Limitations](https://github.com/kanadhiayash/shiroe#limitations)
+
+</details>
+
+<details>
+  <summary><strong>02 · PerFin OS</strong> — mobile fintech, collaborative product design, and design-system implementation</summary>
+
+### PerFin OS
+
+**Product statement:** A collaborative React Native personal-finance product spanning activity, reports, insights, planning, and confirmed actions.
+
+**Team:** **Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq.** This profile does not imply solo ownership.
+
+**My contribution:** Authentication and session ownership, finance-state separation, shared visual-token use, Firebase boundary cleanup, and reviewable pull-request delivery.
+
+**Product focus:** financial workflow clarity, guest and authenticated states, semantic design systems, accessibility, implementation constraints, and responsible team attribution.
+
+**Current boundary:** Public presentation remains a team-project contribution surface. Store release, adoption, behavior-change outcomes, and sole ownership are not claimed here.
+
+[Development branch](https://github.com/kanadhiayash/PerfinOS-1/tree/dev)
+·
+[Session boundary PR #69](https://github.com/kanadhiayash/PerfinOS-1/pull/69)
+·
+[Theme-token PR #68](https://github.com/kanadhiayash/PerfinOS-1/pull/68)
+
+</details>
+
+<details>
+  <summary><strong>03 · For Rent</strong> — multi-role product workflows, interaction states, and SwiftUI</summary>
+
+### For Rent
+
+**Product statement:** A Canadian rental-marketplace prototype supporting guest, renter, and landlord journeys across discovery, conversations, viewings, decisions, offers, and qualification states.
+
+**My role:** Product design and SwiftUI implementation across role-aware journeys, protected actions, authentication return paths, accessibility behavior, state coverage, and deterministic demo support.
+
+**Product focus:** mutual-decision workflows, information architecture, permissions, interaction states, accessibility, and implementation-aware UX.
+
+**Current boundary:** Portfolio prototype. No App Store release, production marketplace, real payments, or real-user adoption is claimed.
 
 [Repository](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios)
 ·
-[Product documentation](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/PRODUCT.md)
+[Product model](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/PRODUCT.md)
 ·
 [Testing and verification](https://github.com/kanadhiayash/forrent-swiftui-firebase-ios/blob/main/docs/05_TESTING_AND_VERIFICATION.md)
 
----
+</details>
 
-### [PerFin OS](https://github.com/SarmadTariq/PerfinOS/tree/dev)
+<details>
+  <summary><strong>04 · StreamNexus</strong> — product pivot, role-based web workflows, and release discipline</summary>
 
-**A team-built React Native personal-finance product with guest and authenticated experiences.**
+### StreamNexus
 
-Team project by **Yash Kanadhia, Alexis Gorospe, and Sarmad Tariq**. This profile does not imply solo ownership.
+**Product statement:** A full-stack portfolio prototype exploring customer and administrator workflows around streaming-rental discovery, catalog management, authentication, authorization, and rental states.
 
-My contribution includes authentication and session ownership, finance-state separation, shared visual-token use, Firebase boundary cleanup, and reviewable pull-request delivery.
+**My role:** Product framing, workflow design, full-stack implementation, testing, security review, and release-boundary documentation.
 
-**Product focus:** personal-finance clarity, guest value, design systems, authentication, team collaboration, and responsible public attribution.
+**Product focus:** role and permission states, administrator UX, system boundaries, failure states, authentication, and implementation evidence.
 
-[Development branch](https://github.com/SarmadTariq/PerfinOS/tree/dev)
-·
-[Authentication and session ownership](https://github.com/SarmadTariq/PerfinOS/pull/69)
-·
-[Theme-token standardization](https://github.com/SarmadTariq/PerfinOS/pull/68)
-
----
-
-### [StreamNexus](https://github.com/kanadhiayash/streamnexus)
-
-**A full-stack streaming-rental product prototype with customer and administrator workflows.**
-
-The product explores the wider system behind discovery and rental, including catalog administration, authentication, authorization, workflow states, testing, and security review.
-
-**Product focus:** end-to-end product flows, administrator UX, system boundaries, failure states, authorization, and implementation evidence.
+**Current boundary:** Portfolio prototype, not a hosted production streaming service. Real users, real payments, and production adoption are not claimed.
 
 [Repository](https://github.com/kanadhiayash/streamnexus)
 ·
@@ -129,105 +161,73 @@ The product explores the wider system behind discovery and rental, including cat
 ·
 [Security review](https://github.com/kanadhiayash/streamnexus/blob/main/docs/security/security-review.md)
 
+</details>
+
 ---
 
-<a id="what-i-do"></a>
+<a id="capabilities"></a>
 
-## What I do
+## Capabilities
 
 ### Product design
 
-- Product framing and problem definition
-- User flows, journeys, and information architecture
-- Interaction design and prototyping
-- Design systems and content hierarchy
-- Accessibility and state completeness
-- Usability planning and evidence-based iteration
+Product framing · workflow architecture · information architecture · interaction design · prototyping · design systems · accessibility · state completeness
 
 ### AI product design
 
-- Human-AI interaction models
-- Context, memory, trust, and privacy workflows
-- Human approval and correction paths
-- Failure-state and boundary design
-- AI evaluation and reproducible product evidence
+Human-AI interaction · human approval · trust and uncertainty · context and continuity · correction and recovery · privacy boundaries · evaluation-aware UX
 
 ### Design-to-build collaboration
 
-- Working prototypes in React Native, SwiftUI, and React
-- Firebase and application-service boundaries
-- Authentication and authorization flows
-- GitHub-based review, documentation, testing, and release evidence
+Figma · React Native · SwiftUI · React · Firebase · Node.js · GitHub · testing · CI/CD · implementation verification
 
-Implementation supports the product-design work. It is not presented as a claim of senior software-engineering positioning.
+Implementation is supporting evidence for product decisions, not a claim of senior software-engineering positioning.
 
 ---
 
-<a id="how-i-work"></a>
+<a id="operating-workflow"></a>
 
-## How I work
+## Operating workflow
 
-1. **Frame the product**
-   Define the users, outcomes, constraints, ownership, evidence gaps, and decisions that matter.
+**Ambiguity → Workflow → Interaction → Prototype → Build → Verification**
 
-2. **Model the system**
-   Map workflows, states, permissions, data relationships, failure conditions, and product boundaries.
-
-3. **Design the experience**
-   Create the interaction model, information hierarchy, content, accessibility behavior, and prototype.
-
-4. **Build enough to test the decision**
-   Use working prototypes and focused implementation to expose constraints that static screens can hide.
-
-5. **Verify the result**
-   Review behavior, edge cases, accessibility, security, links, documentation, and release claims.
-
-6. **Communicate the evidence and limits**
-   Separate confirmed behavior from assumptions, simulations, placeholders, and planned work.
+1. **Find the unknown.** Clarify users, outcomes, constraints, evidence gaps, ownership, and the decision that actually needs to be made.
+2. **Map the workflow.** Model actors, states, permissions, data relationships, failure conditions, and handoffs.
+3. **Design the interaction.** Establish hierarchy, behavior, content, accessibility, and edge states.
+4. **Prototype the decision.** Use realistic flows and working prototypes to expose assumptions static screens can hide.
+5. **Build enough to test.** Carry the interaction model into implementation where technical constraints matter.
+6. **Verify before claiming.** Review behavior, accessibility, privacy, security, links, tests, ownership, and limitations.
 
 ---
 
-## Evidence principles
+<a id="evidence-and-ownership"></a>
 
-- **Evidence before claims.** Metrics and outcomes stay out unless the calculation and source can be reproduced.
-- **Ownership stays explicit.** Independent work, team projects, and personal contributions are clearly separated.
-- **Prototypes stay prototypes.** Demonstrations are not described as production systems.
-- **Accessibility is product quality.** Accessibility belongs in content, states, interaction, motion, validation, and testing.
-- **Security starts before release.** Secrets, permissions, authentication, dependencies, and input boundaries are considered early.
-- **AI assistance requires human judgment.** AI can support research, exploration, implementation, review, testing, and documentation. I remain responsible for product direction, code acceptance, privacy, security, evidence quality, and final decisions.
+## Evidence and ownership
 
----
+**Evidence before claims.** Metrics and outcomes stay out unless their source and method can be reproduced.
 
-<a id="product-and-delivery-stack"></a>
+**Ownership stays explicit.** Independent work, team projects, and personal contributions are separated rather than flattened into “built.”
 
-## Product and delivery stack
+**Prototypes stay prototypes.** A working demo is not described as a production system, launch, adoption signal, or customer outcome without evidence.
 
-**Design and product**  
-Figma · Prototyping · Information Architecture · Interaction Design · Design Systems · Accessibility
+**AI assistance stays attributable.** AI can support research, exploration, implementation, review, testing, and documentation. Product direction, acceptance, privacy, security, evidence quality, and public claims remain human decisions.
 
-**Mobile and web implementation**  
-React Native · SwiftUI · React · Node.js · Firebase · REST APIs
-
-**Workflow and delivery**  
-Linear · Notion · Git · GitHub · Testing · CI/CD · Documentation
-
-**AI-assisted work**  
-Claude · Codex · evaluation workflows · context management · human-in-the-loop review
-
-Tools are selected according to the needs of the product, the team, and the evidence required. Tool choice is not a substitute for product judgment.
+**Accessibility is product quality.** It belongs in content, states, interaction, motion, validation, and testing, including a static alternative for this profile’s motion banner.
 
 ---
+
+<a id="selected-credentials"></a>
 
 ## Selected credentials
 
-### Anthropic
+**Anthropic**
 
 - AI Fluency: Framework & Foundations
 - Claude Code in Action
 - Introduction to Claude Cowork
 - Claude Code 101
 
-### SCRUMstudy
+**SCRUMstudy**
 
 - Scrum Fundamentals Certified
 
@@ -239,9 +239,9 @@ Additional completed credentials are listed on [LinkedIn](https://www.linkedin.c
 
 ## Connect
 
-I’m interested in products where clear workflows, strong interaction design, technical understanding, and responsible AI-assisted delivery need to meet.
+I’m interested in Product Designer and AI Product Designer work where complex workflows, interaction quality, technical constraints, trust, and implementation need to stay coherent from concept through verification.
 
-Based in Toronto and open to **Product Designer** and **AI Product Designer** opportunities across Canada.
+**Toronto, Ontario, Canada** · Open to Canada-relevant Product Design opportunities.
 
 <p align="center">
   <a href="https://www.linkedin.com/in/yashkanadhia"><strong>LinkedIn</strong></a>
